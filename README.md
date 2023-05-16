@@ -29,12 +29,15 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 - [Deep Pwning](https://github.com/cchio/deep-pwning) - Deep-pwning is a lightweight framework for experimenting with machine learning models with the goal of evaluating their robustness against a motivated adversary. 
 - [Privacy Meter](https://github.com/privacytrustlab/ml_privacy_meter) - An open-source library to audit data privacy in statistical and machine learning algorithms.
 - [TensorFlow Model Analysis](https://github.com/tensorflow/model-analysis) - A library for analyzing, validating, and monitoring machine learning models in production.
-- [PromptInject](https://github.com/agencyenterprise/PromptInject) - A framework that assembles adversarial prompts
+- [PromptInject](https://github.com/agencyenterprise/PromptInject) - A framework that assembles adversarial prompts.
+- [TextAttack](https://github.com/QData/TextAttack) - TextAttack is a Python framework for adversarial attacks, data augmentation, and model training in NLP.
+- [OpenAttack](https://github.com/thunlp/OpenAttack) - An Open-Source Package for Textual Adversarial Attack.
+- [TextFooler](https://github.com/jind11/TextFooler) - A Model for Natural Language Attack on Text Classification and Inference.
 
 
 ## Attack Vectors
 
-- [Data Poisoning Exploits](https://github.com/ch-shin/awesome-data-poisoning)
+- [Data Poisoning](https://github.com/ch-shin/awesome-data-poisoning)
 - [Adversarial Prompt Exploits](https://research.nccgroup.com/2022/12/05/exploring-prompt-injection-attacks)
 - [Evasion Attack](https://blogs.rstudio.com/ai/posts/2020-05-15-model-inversion-attacks/)
 - [Membership Inference Exploits](https://arxiv.org/abs/2103.07853)
@@ -48,6 +51,7 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 - [We need a new way to measure AI security](https://blog.trailofbits.com/2023/03/14/ai-security-safety-audit-assurance-heidy-khlaaf-odd/)
 - [PrivacyRaven: Implementing a proof of concept for model inversion](https://blog.trailofbits.com/2021/11/09/privacyraven-implementing-a-proof-of-concept-for-model-inversion/)
 - [Adversarial Prompts Engineering](https://github.com/dair-ai/Prompt-Engineering-Guide/blob/main/guides/prompts-adversarial.md)
+- [TextAttack: A Framework for Adversarial Attacks, Data Augmentation, and Adversarial Training in NLP](https://arxiv.org/abs/2005.05909)
 
 
 ## Community Resources
