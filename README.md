@@ -47,6 +47,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 
 ## Blogs and Publications
 - [Red-Teaming Large Language Models](https://huggingface.co/blog/red-teaming)
+- [The MLSecOps Top 10 vulnerabilities](https://ethical.institute/security.html)
 - [Token Smuggling Jailbreak via Adversarial Prompt](https://www.piratewires.com/p/gpt4-token-smuggling)
 - [Just How Toxic is Data Poisoning? A Unified Benchmark for Backdoor and
 Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
