@@ -35,6 +35,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 - [TextFooler](https://github.com/jind11/TextFooler) - A Model for Natural Language Attack on Text Classification and Inference.
 - [Flawed Machine Learning Security](https://github.com/EthicalML/fml-security) - Practical examples of "Flawed Machine Learning Security" together with ML Security best practice across the end to end stages of the machine learning model lifecycle from training, to packaging, to deployment.
 - [Adversarial Machine Learning CTF](https://github.com/arturmiller/adversarial_ml_ctf) - This repository is a CTF challenge, showing a security flaw in most (all?) common artificial neural networks. They are vulnerable for adversarial images.
+- [Damn Vulnerable LLM Project](https://github.com/harishsg993010/DamnVulnerableLLMProject) - A Large Language Model designed for getting hacked
 
 
 ## Attack Vectors
