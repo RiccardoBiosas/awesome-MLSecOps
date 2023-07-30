@@ -15,7 +15,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 - [Contributions](#contributions)
 
 ## Open Source Security Tools
-- [LLM vulnerability scanner](https://github.com/leondz/garak) -  LLM vulnerability scanner.
+- [Garak](https://github.com/leondz/garak) -  LLM vulnerability scanner.
 - [Adversarial Robustness Toolbox](https://github.com/IBM/adversarial-robustness-toolbox) - A library of defense methods for machine learning models against adversarial attacks.
 - [MLSploit](https://github.com/mlsploit/) - MLsploit is a cloud framework for interactive experimentation with adversarial machine learning research.
 - [TensorFlow Privacy](https://github.com/tensorflow/privacy) - A library of privacy-preserving machine learning algorithms and tools.
@@ -46,8 +46,9 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 - [Membership Inference Exploits](https://arxiv.org/abs/2103.07853)
 
 
-## Blogs and Publications
+## Blogs and Publications 
 - [Red-Teaming Large Language Models](https://huggingface.co/blog/red-teaming)
+- [Google's AI red-team](https://blog.google/technology/safety-security/googles-ai-red-team-the-ethical-hackers-making-ai-safer/)
 - [The MLSecOps Top 10 vulnerabilities](https://ethical.institute/security.html)
 - [Token Smuggling Jailbreak via Adversarial Prompt](https://www.piratewires.com/p/gpt4-token-smuggling)
 - [Just How Toxic is Data Poisoning? A Unified Benchmark for Backdoor and
