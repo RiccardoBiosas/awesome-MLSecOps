@@ -36,10 +36,10 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 - [Flawed Machine Learning Security](https://github.com/EthicalML/fml-security) - Practical examples of "Flawed Machine Learning Security" together with ML Security best practice across the end to end stages of the machine learning model lifecycle from training, to packaging, to deployment.
 - [Adversarial Machine Learning CTF](https://github.com/arturmiller/adversarial_ml_ctf) - This repository is a CTF challenge, showing a security flaw in most (all?) common artificial neural networks. They are vulnerable for adversarial images.
 - [Damn Vulnerable LLM Project](https://github.com/harishsg993010/DamnVulnerableLLMProject) - A Large Language Model designed for getting hacked
+- [Gandalf Lakera](https://gandalf.lakera.ai/) - Prompt Injection CTF playground
 
 
 ## Attack Vectors
-
 - [Data Poisoning](https://github.com/ch-shin/awesome-data-poisoning)
 - [Adversarial Prompt Exploits](https://research.nccgroup.com/2022/12/05/exploring-prompt-injection-attacks)
 - [Evasion Attack](https://blogs.rstudio.com/ai/posts/2020-05-15-model-inversion-attacks/)
