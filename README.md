@@ -66,7 +66,7 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 ## Community Resources
 
 - [MLSecOps](https://mlsecops.com/)
-- [MLSecOps Podcast](https://open.spotify.com/show/2aPGE0PDVH78JSXTFg378w)
+- [MLSecOps Podcast](https://mlsecops.com/podcast)
 
 
 ## Contributions
