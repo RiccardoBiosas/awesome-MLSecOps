@@ -15,6 +15,8 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 - [Contributions](#contributions)
 
 ## Open Source Security Tools
+- [ModelScan](https://github.com/protectai/modelscan) - Protection Against ML Model Serialization Attacks.
+- [NB Defense](https://nbdefense.ai) - Secure Jupyter Notebooks.
 - [Garak](https://github.com/leondz/garak) -  LLM vulnerability scanner.
 - [Adversarial Robustness Toolbox](https://github.com/IBM/adversarial-robustness-toolbox) - A library of defense methods for machine learning models against adversarial attacks.
 - [MLSploit](https://github.com/mlsploit/) - MLsploit is a cloud framework for interactive experimentation with adversarial machine learning research.
@@ -64,7 +66,7 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 ## Community Resources
 
 - [MLSecOps](https://mlsecops.com/)
-- [MLSecOps Podcast](https://open.spotify.com/show/2aPGE0PDVH78JSXTFg378w)
+- [MLSecOps Podcast](https://mlsecops.com/podcast)
 
 
 ## Contributions
