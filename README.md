@@ -39,6 +39,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 - [Adversarial Machine Learning CTF](https://github.com/arturmiller/adversarial_ml_ctf) - This repository is a CTF challenge, showing a security flaw in most (all?) common artificial neural networks. They are vulnerable for adversarial images.
 - [Damn Vulnerable LLM Project](https://github.com/harishsg993010/DamnVulnerableLLMProject) - A Large Language Model designed for getting hacked
 - [Gandalf Lakera](https://gandalf.lakera.ai/) - Prompt Injection CTF playground
+- [Vigil](https://github.com/deadbits/vigil-llm) - LLM prompt injection and security scanner
 
 
 ## Attack Vectors
