@@ -79,6 +79,7 @@ All contributions to this list are welcome!
 ## Contributors ✨
 - [<img src='https://github.com/riccardobiosas.png?size=50'>](https://github.com/riccardobiosas) [@riccardobiosas](https://github.com/riccardobiosas)
 - [<img src='https://github.com/badarahmed.png?size=50'>](https://github.com/badarahmed) [@badarahmed](https://github.com/badarahmed)
+- [<img src='https://github.com/deadbits.png?size=50'>](https://github.com/deadbits) [@deadbits](https://github.com/deadbits)
 - [<img src='https://github.com/wearetyomsmnv.png?size=50'>](https://github.com/wearetyomsmnv) [@wearetyomsmnv](https://github.com/wearetyomsmnv)
 - [<img src='https://github.com/anmorgan24.png?size=50'>](https://github.com/anmorgan24) [@anmorgan24](https://github.com/anmorgan24)
 
