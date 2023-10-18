@@ -40,6 +40,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 - [Damn Vulnerable LLM Project](https://github.com/harishsg993010/DamnVulnerableLLMProject) - A Large Language Model designed for getting hacked
 - [Gandalf Lakera](https://gandalf.lakera.ai/) - Prompt Injection CTF playground
 - [Vigil](https://github.com/deadbits/vigil-llm) - LLM prompt injection and security scanner
+- [PALLMs (Payloads for Attacking Large Language Models)](https://github.com/mik0w/pallms) - list of various payloads for attacking LLMs collected in one place
 
 
 ## Attack Vectors
@@ -63,6 +64,7 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 - [Trail Of Bits' audit of Hugging Face's safetensors library](https://github.com/trailofbits/publications/blob/master/reviews/2023-03-eleutherai-huggingface-safetensors-securityreview.pdf)
 - [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/descriptions/)
 - [LLM Security](https://llmsecurity.net/)
+- [Is you MLOps infrastructure leaking secrets?](https://hackstery.com/2023/10/13/no-one-is-prefect-is-your-mlops-infrastructure-leaking-secrets/) 
 
 
 ## Community Resources
