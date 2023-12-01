@@ -41,6 +41,9 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 - [Gandalf Lakera](https://gandalf.lakera.ai/) - Prompt Injection CTF playground
 - [Vigil](https://github.com/deadbits/vigil-llm) - LLM prompt injection and security scanner
 - [PALLMs (Payloads for Attacking Large Language Models)](https://github.com/mik0w/pallms) - list of various payloads for attacking LLMs collected in one place
+- [AI-exploits](https://github.com/protectai/ai-exploits) - exploits for MlOps systems. It's not just in the inputs given to LLMs such as ChatGPT
+- [Copycat CNN](https://github.com/jeiks/Stealing_DL_Models) - tool for stealing source knowledges for machine learning models
+
 
 
 ## Attack Vectors
