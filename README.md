@@ -43,6 +43,8 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 - [PALLMs (Payloads for Attacking Large Language Models)](https://github.com/mik0w/pallms) - list of various payloads for attacking LLMs collected in one place
 - [AI-exploits](https://github.com/protectai/ai-exploits) - exploits for MlOps systems. It's not just in the inputs given to LLMs such as ChatGPT
 - [Copycat CNN](https://github.com/jeiks/Stealing_DL_Models) - tool for stealing source knowledges for machine learning models
+- [lintML](https://github.com/JosephTLucas/lintML) - security linter for ML, by Nvidia
+- [Offensive ML Playbook](https://wiki.offsecml.com/Welcome+to+the+Offensive+ML+Playbook) - Offensive ML Playbook. Notes on machine learning attacks and pentesting.
 
 
 
@@ -75,6 +77,9 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 - [MLSecOps](https://mlsecops.com/)
 - [MLSecOps Podcast](https://mlsecops.com/podcast)
 - [Awesome LLM Security](https://github.com/corca-ai/awesome-llm-security)
+- [Hackstery](https://hackstery.com/)
+- [PWNAI](https://t.me/pwnai)
+- [HUNTR Discord community](https://discord.com/invite/GBmmty82CM)
 
 
 ## Contributions
