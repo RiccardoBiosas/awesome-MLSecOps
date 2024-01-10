@@ -9,6 +9,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 ## Table of Contents
 
 - [Open Source Security Tools](#open-source-security-tools)
+- [ML code security](#ml-code-security)
 - [Attack Vectors](#attack-vectors)
 - [Blogs and Publications](#blogs-and-publications)
 - [Community Resources](#community-resources)
@@ -43,10 +44,11 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 - [PALLMs (Payloads for Attacking Large Language Models)](https://github.com/mik0w/pallms) - list of various payloads for attacking LLMs collected in one place
 - [AI-exploits](https://github.com/protectai/ai-exploits) - exploits for MlOps systems. It's not just in the inputs given to LLMs such as ChatGPT
 - [Copycat CNN](https://github.com/jeiks/Stealing_DL_Models) - tool for stealing source knowledges for machine learning models
-- [lintML](https://github.com/JosephTLucas/lintML) - security linter for ML, by Nvidia
 - [Offensive ML Playbook](https://wiki.offsecml.com/Welcome+to+the+Offensive+ML+Playbook) - Offensive ML Playbook. Notes on machine learning attacks and pentesting.
 
-
+## ML code security
+- [lintML](https://github.com/JosephTLucas/lintML) - security linter for ML, by Nvidia
+- [HiddenLayer: Model as Code](https://hiddenlayer.com/research/models-are-code/) - research about some vectors in ml libraries.
 
 ## Attack Vectors
 - [Data Poisoning](https://github.com/ch-shin/awesome-data-poisoning)
@@ -80,7 +82,10 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 - [Hackstery](https://hackstery.com/)
 - [PWNAI](https://t.me/pwnai)
 - [HUNTR Discord community](https://discord.com/invite/GBmmty82CM)
-
+- [AIRSK](https://airisk.io)
+- [AI Vulnerability Database](https://avidml.org/)
+- [Incident AI Database](https://incidentdatabase.ai/)
+- [Defcon AI Villiage CTF](https://www.kaggle.com/competitions/ai-village-ctf/overview)
 
 ## Contributions
 All contributions to this list are welcome!
