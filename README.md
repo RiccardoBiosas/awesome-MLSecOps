@@ -90,6 +90,10 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 - [Incident AI Database](https://incidentdatabase.ai/)
 - [Defcon AI Villiage CTF](https://www.kaggle.com/competitions/ai-village-ctf/overview)
 
+
+## Infographics
+<a href="https://www.conf42.com/DevSecOps_2022_Eugene_Neelou_ai_introducing_mlsecops_for_software_20" title="MLSecOps Lifecycle" aria-label="MLSecOps Lifecycle infographics"><img src="https://github.com/RiccardoBiosas/awesome-MLSecOps/assets/129667548/99ab5213-9d74-41d2-9b0a-5a86a109ae08" width="950" height="475"></a>
+
 ## Contributions
 All contributions to this list are welcome!
 
