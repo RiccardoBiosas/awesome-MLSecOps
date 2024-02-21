@@ -92,7 +92,7 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 
 
 ## Infographics
-<a href="https://www.conf42.com/DevSecOps_2022_Eugene_Neelou_ai_introducing_mlsecops_for_software_20" title="MLSecOps Lifecycle" aria-label="MLSecOps Lifecycle infographics"><img src="https://github.com/RiccardoBiosas/awesome-MLSecOps/assets/129667548/99ab5213-9d74-41d2-9b0a-5a86a109ae08" width="1450" height="650"></a>
+[![MLSecOps_Lifecycle](https://github.com/RiccardoBiosas/awesome-MLSecOps/assets/65150720/236cd3f4-bce8-4659-b43f-8d4002df65a5)](https://www.conf42.com/DevSecOps_2022_Eugene_Neelou_ai_introducing_mlsecops_for_software_20)
 
 ## Contributions
 All contributions to this list are welcome!
