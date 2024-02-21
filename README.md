@@ -45,10 +45,15 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 - [AI-exploits](https://github.com/protectai/ai-exploits) - exploits for MlOps systems. It's not just in the inputs given to LLMs such as ChatGPT
 - [Copycat CNN](https://github.com/jeiks/Stealing_DL_Models) - tool for stealing source knowledges for machine learning models
 - [Offensive ML Playbook](https://wiki.offsecml.com/Welcome+to+the+Offensive+ML+Playbook) - Offensive ML Playbook. Notes on machine learning attacks and pentesting.
+- [AI Exploits](https://github.com/protectai/ai-exploits) - Real world AI/ML exploits collection.
+- [AnonLLM](https://github.com/fsndzomga/anonLLM) - Anonymize Personally Identifiable Information (PII) for Large Language Model APIs.
+- [AI Goat](https://github.com/dhammon/ai-goat) - vulnerable LLM CTF challenges.
+
 
 ## ML code security
 - [lintML](https://github.com/JosephTLucas/lintML) - security linter for ML, by Nvidia
 - [HiddenLayer: Model as Code](https://hiddenlayer.com/research/models-are-code/) - research about some vectors in ml libraries.
+- [Copycat CNN](https://github.com/jeiks/Stealing_DL_Models) - proof-of-concept on how to generate a copy of a Convolutional Neural Network by querying it as a black-box with random data and using the output to train a copycat CNN which mimics the target CNN's predictive patterns.
 
 ## Attack Vectors
 - [Data Poisoning](https://github.com/ch-shin/awesome-data-poisoning)
