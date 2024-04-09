@@ -2,6 +2,7 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-YES-green.svg)](https://github.com/RiccardoBiosas/awesome-MLSecOps/graphs/commit-activity)
 ![GitHub](https://img.shields.io/badge/License-MIT-lightgrey.svg)
 [![GitHub](https://img.shields.io/twitter/follow/axsaucedo.svg?label=Follow)](https://twitter.com/RBiosas)
+
 # Awesome MLSecOps
 
 A curated list of awesome open-source tools, resources, and tutorials for MLSecOps (Machine Learning Security Operations).
@@ -9,7 +10,6 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 [![mm.png](https://i.postimg.cc/VL6C6tKF/mm.png)](https://postimg.cc/SjBs1nFX)
 
 ## Table of Contents
-
 - [Open Source Security Tools](#open-source-security-tools)
 - [ML code security](#ml-code-security)
 - [101](#101)
@@ -19,7 +19,6 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 - [Community Resources](#community-resources)
 - [Infographics](#infographics)
 - [Contributions](#contributions)
-
 
 ## Open Source Security Tools
 - [ModelScan](https://github.com/protectai/modelscan) - Protection Against ML Model Serialization Attacks.
@@ -56,7 +55,6 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 - [Raze to the Ground: Query-Efficient Adversarial HTML Attacks on Machine-Learning Phishing Webpage Detectors](https://github.com/advmlphish/raze_to_the_ground_aisec23) - Source code of the paper "Raze to the Ground: Query-Efficient Adversarial HTML Attacks on Machine-Learning Phishing Webpage Detectors" accepted at AISec '23
 - [Giskard](https://github.com/Giskard-AI/giskard) - Open-source testing tool for LLM applications
 
-
 ## ML code security
 - [lintML](https://github.com/JosephTLucas/lintML) - security linter for ML, by Nvidia
 - [HiddenLayer: Model as Code](https://hiddenlayer.com/research/models-are-code/) - research about some vectors in ml libraries.
@@ -67,8 +65,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 - [Web LLM attacks](https://portswigger.net/web-security/llm-attacks)
 - [Microsoft AI Red Team](https://learn.microsoft.com/en-us/security/ai-red-team/)
 - [AI Risk Assessment for ML Engineers](https://learn.microsoft.com/en-us/security/ai-red-team/ai-risk-assessment)
-- 
-  
+
 ## Attack Vectors
 - [Data Poisoning](https://github.com/ch-shin/awesome-data-poisoning)
 - [Adversarial Prompt Exploits](https://research.nccgroup.com/2022/12/05/exploring-prompt-injection-attacks)
@@ -93,7 +90,6 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 - [Embrace The Red, blog where show how u can hack LLM's.](https://embracethered.com/)
 - [Audio-jacking: Using generative AI to distort live audio transactions](https://securityintelligence.com/posts/using-generative-ai-distort-live-audio-transactions/)
 - [HADESS - Web LLM Attacks](https://hadess.io/web-llm-attacks/)
-- 
 
 ## MlOps infrastracture vulnerabilities
 - [SILENT SABOTAGE](https://hiddenlayer.com/research/silent-sabotage/) - A study on bot compromise for converting Pickle to SafeTensors.
@@ -103,7 +99,6 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 - [Confused Learning: Supply Chain Attacks through Machine Learning Models](https://blackhat.com/asia-24/briefings/schedule/#confused-learning-supply-chain-attacks-through-machine-learning-models-37794) - Released in April 2024.
 
 ## Community Resources
-
 - [MLSecOps](https://mlsecops.com/)
 - [MLSecOps Podcast](https://mlsecops.com/podcast)
 - [MITRE ATLAS™ (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/)
@@ -127,13 +122,11 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 ### MlSecOps lifecycle
 [![MLSecOps_Lifecycle](https://github.com/RiccardoBiosas/awesome-MLSecOps/assets/65150720/236cd3f4-bce8-4659-b43f-8d4002df65a5)](https://www.conf42.com/DevSecOps_2022_Eugene_Neelou_ai_introducing_mlsecops_for_software_20)
 
-
 ### Ai Security Market map
 [![Market Map](https://i.postimg.cc/15ZxH0q9/marketmap.png)](https://menlovc.com/perspective/security-for-ai-genai-risks-and-the-emerging-startup-landscape/)
 
 ## Contributions
 All contributions to this list are welcome!
-
 
 ## Contributors ✨
 - [<img src='https://github.com/riccardobiosas.png?size=50'>](https://github.com/riccardobiosas) [@riccardobiosas](https://github.com/riccardobiosas)
