@@ -54,11 +54,31 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 - [Pyrit](https://github.com/Azure/PyRIT) - The Python Risk Identification Tool for generative AI.
 - [Raze to the Ground: Query-Efficient Adversarial HTML Attacks on Machine-Learning Phishing Webpage Detectors](https://github.com/advmlphish/raze_to_the_ground_aisec23) - Source code of the paper "Raze to the Ground: Query-Efficient Adversarial HTML Attacks on Machine-Learning Phishing Webpage Detectors" accepted at AISec '23
 - [Giskard](https://github.com/Giskard-AI/giskard) - Open-source testing tool for LLM applications
+- [Safetensors](https://github.com/huggingface/safetensors) - Convert pickle to a safe serialization option
+- [Citadel Lens](https://www.citadel.co.jp/en/products/lens/)- Quality testing of models according to industry standards
+- [Model-Inversion-Attack-ToolBox](https://github.com/ffhibnese/Model-Inversion-Attack-ToolBox) - A framework for implementing Model Inversion attacks
+- [NeMo-Guardials](https://github.com/NVIDIA/NeMo-Guardrails) - NeMo Guardrails allow developers building LLM-based applications to easily add programmable guardrails between the application code and the LLM.
+- [AugLy](https://github.com/facebookresearch/AugLy) - A tool for generating adversarial attacks.
+- [Knockoffnets](https://github.com/tribhuvanesh/knockoffnets) - PoC to implement BlackBox attacks to steal model data.
+- [Robust Intelligence Continous Validation](https://www.robustintelligence.com/platform/continuous-validation) - Tool for continuous model validation for compliance with standards
+- [VGER](https://github.com/JosephTLucas/vger) - Jupyter Attack framework 
+- [AIShield Watchtower](https://github.com/bosch-aisecurity-aishield/watchtower) - An open source tool from AIShield for studying AI models and scanning for vulnerabilities.
+
+## Commercial
+- [Databricks Platform, Azure Databricks](https://azure.microsoft.com/ru-ru/products/databricks) - Datalake data management and implementation tool
+- [Hidden Layer AI Detection Response](https://hiddenlayer.com/aidr/) - A tool for detecting and responding to incidents.
+- [Guardian](https://protectai.com/guardian) - Model protection in CI/CD.
+
+## DATA
+- [ARX -Data Anonymization Tool](https://arx.deidentifier.org/) - Tool for anonymizing datasets
+- [Data-Veil](https://veil.ai/) - Data masking and anonymization tool
 
 ## ML code security
 - [lintML](https://github.com/JosephTLucas/lintML) - security linter for ML, by Nvidia
 - [HiddenLayer: Model as Code](https://hiddenlayer.com/research/models-are-code/) - research about some vectors in ml libraries.
 - [Copycat CNN](https://github.com/jeiks/Stealing_DL_Models) - proof-of-concept on how to generate a copy of a Convolutional Neural Network by querying it as a black-box with random data and using the output to train a copycat CNN which mimics the target CNN's predictive patterns.
+- [differential-privacy-library](https://github.com/IBM/differential-privacy-library) - It is a library designed for differential privacy and machine learning. Its goal is to allow experimentation, simulation and implementation of differentially private models.
+- 
 
 ## 101
 - [AI Security 101](https://www.nightfall.ai/ai-security-101)
@@ -90,6 +110,7 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 - [Embrace The Red, blog where show how u can hack LLM's.](https://embracethered.com/)
 - [Audio-jacking: Using generative AI to distort live audio transactions](https://securityintelligence.com/posts/using-generative-ai-distort-live-audio-transactions/)
 - [HADESS - Web LLM Attacks](https://hadess.io/web-llm-attacks/)
+- [WTF-blog - MlSecOps frameworks ... Which ones are available and what is the difference?](https://blog.wearetyomsmnv.wtf/articles/mlsecops-frameworks-...-which-ones-are-available-and-what-is-the-difference)
 
 ## MlOps infrastracture vulnerabilities
 - [SILENT SABOTAGE](https://hiddenlayer.com/research/silent-sabotage/) - A study on bot compromise for converting Pickle to SafeTensors.
@@ -104,6 +125,7 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 - [MITRE ATLAS™ (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/)
 - [OWASP Machine Learning Security Top Ten](https://owasp.org/www-project-machine-learning-security-top-10/)
 - [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
+- [OWASP LLMSVS](https://owasp.org/www-project-llm-verification-standard/)
 - [Awesome LLM Security](https://github.com/corca-ai/awesome-llm-security)
 - [Hackstery](https://hackstery.com/)
 - [PWNAI](https://t.me/pwnai)
