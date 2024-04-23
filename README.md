@@ -86,6 +86,13 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 - [Microsoft AI Red Team](https://learn.microsoft.com/en-us/security/ai-red-team/)
 - [AI Risk Assessment for ML Engineers](https://learn.microsoft.com/en-us/security/ai-red-team/ai-risk-assessment)
 
+Do you want to learn AI Security but don't know where to start ? Take a look at this map:
+
+[![map.png](https://i.postimg.cc/G2QdqnK6/map.png)](https://postimg.cc/sQvkg8tJ)
+
+full size in this repository:
+- [AI-LLM-ML_security_study_map](https://github.com/wearetyomsmnv/AI-LLM-ML_security_study_map) - LLM/AI/Security study map.
+
 ## Attack Vectors
 - [Data Poisoning](https://github.com/ch-shin/awesome-data-poisoning)
 - [Adversarial Prompt Exploits](https://research.nccgroup.com/2022/12/05/exploring-prompt-injection-attacks)
@@ -118,6 +125,7 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 - [Uncovering Azure's Silent Threats: A Journey into Cloud Vulnerabilities](https://www.youtube.com/watch?v=tv8tei97Sv8) - This study shows the security issues of Azure MLAAS(Machine Learning As A Service).
 - [The MlOps Security Landscape](https://hackstery.com/wp-content/uploads/2023/11/mlops_owasp_oslo_2023.pdf)
 - [Confused Learning: Supply Chain Attacks through Machine Learning Models](https://blackhat.com/asia-24/briefings/schedule/#confused-learning-supply-chain-attacks-through-machine-learning-models-37794) - Released in April 2024.
+
 
 ## Community Resources
 - [MLSecOps](https://mlsecops.com/)
