@@ -70,7 +70,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [NeMo-Guardials](https://github.com/NVIDIA/NeMo-Guardrails) | NeMo Guardrails allow developers building LLM-based applications to easily add programmable guardrails between the application code and the LLM|
 | [AugLy](https://github.com/facebookresearch/AugLy) | A tool for generating adversarial attacks|
 | [Knockoffnets](https://github.com/tribhuvanesh/knockoffnets) | PoC to implement BlackBox attacks to steal model data|
-| [Robust Intelligence Continous Validation](https://www.robustintelligence.com/platform/continuous-validation) - Tool for continuous model validation for compliance with standards|
+| [Robust Intelligence Continous Validation](https://www.robustintelligence.com/platform/continuous-validation) | Tool for continuous model validation for compliance with standards|
 | [VGER](https://github.com/JosephTLucas/vger) | Jupyter Attack framework |
 | [AIShield Watchtower](https://github.com/bosch-aisecurity-aishield/watchtower) | An open source tool from AIShield for studying AI models and scanning for vulnerabilities|
 | [PS-fuzz](https://github.com/prompt-security/ps-fuzz) | tool for scanning LLM vulnerabilities|
