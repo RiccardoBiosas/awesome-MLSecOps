@@ -311,6 +311,8 @@ Research on privacy in large language models, aiming to protect data and prevent
 - [MLSecOps Podcast](https://mlsecops.com/podcast)
 - [MITRE ATLAS™](https://atlas.mitre.org/) and [SLACK COMMUNITY](https://join.slack.com/t/mitreatlas/shared_invite/zt-10i6ka9xw-~dc70mXWrlbN9dfFNKyyzQ)
 - [MlSecOps communtiy](https://mlsceops.com) and [SLACK COMMUNITY](https://mlsecops.slack.com/)
+- [MITRE ATLAS™ (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/)
+- [OWASP AI Exchange](https://owaspai.org)
 - [OWASP Machine Learning Security Top Ten](https://owasp.org/www-project-machine-learning-security-top-10/)
 - [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
 - [OWASP LLMSVS](https://owasp.org/www-project-llm-verification-standard/)
