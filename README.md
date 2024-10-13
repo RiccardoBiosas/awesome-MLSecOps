@@ -152,8 +152,16 @@ more in **Adversarial AI Attacks, Mitigations, and Defense Strategies: A cyberse
 
 - [Data Poisoning](https://github.com/ch-shin/awesome-data-poisoning)
 - [Adversarial Prompt Exploits](https://research.nccgroup.com/2022/12/05/exploring-prompt-injection-attacks)
-- [Evasion Attack](https://blogs.rstudio.com/ai/posts/2020-05-15-model-inversion-attacks/)
+- [Model Inversion Attacks](https://blogs.rstudio.com/ai/posts/2020-05-15-model-inversion-attacks/)
+- [Model Evasion Attacks](https://www.ibm.com/docs/en/watsonx/saas?topic=atlas-evasion-attack)
 - [Membership Inference Exploits](https://arxiv.org/abs/2103.07853)
+- [Model Stealing Attacks](https://arxiv.org/abs/2206.08451)
+- [ML Supply Chain Attacks](https://owasp.org/www-project-machine-learning-security-top-10/docs/ML06_2023-AI_Supply_Chain_Attacks)
+- [Model Denial Of Service](https://genai.owasp.org/llmrisk/llm04-model-denial-of-service/)
+- [Gradient Leakage Attacks](https://ieeexplore.ieee.org/document/10107713)
+- [Cloud Infrastructure Attacks](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7931962/)
+- [Architecture and Access-control attacks](https://genai.owasp.org/llmrisk/llm08-excessive-agency/)
+
 
 ## Blogs and Publications 
 
