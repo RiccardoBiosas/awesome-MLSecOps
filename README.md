@@ -167,6 +167,7 @@ more in **Adversarial AI Attacks, Mitigations, and Defense Strategies: A cyberse
 
 #### 🌱 The AI security community is growing. New blogs and many researchers are emerging. In this paragraph you can see examples of some blogs.
 
+- 📚 [What is MLSecOps](https://themlsecopshacker.com/p/what-is-mlsecops)
 - 🛡️ [Red-Teaming Large Language Models](https://huggingface.co/blog/red-teaming)
 - 🔍 [Google's AI red-team](https://blog.google/technology/safety-security/googles-ai-red-team-the-ethical-hackers-making-ai-safer/)
 - 🔒 [The MLSecOps Top 10 vulnerabilities](https://ethical.institute/security.html)
