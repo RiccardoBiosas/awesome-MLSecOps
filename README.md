@@ -81,6 +81,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [LangBiTe](https://github.com/SOM-Research/LangBiTe) | A Bias Tester framework for LLMs|
 | [OpenDP](https://github.com/opendp/opendp)| The core library of differential privacy algorithms powering the OpenDP Project|
 | [TF-encrypted](https://tf-encrypted.io/)| Encryption for tensorflow|
+| [Agentic Security](https://github.com/msoedov/agentic_security)| Agentic LLM Vulnerability Scanner / AI red teaming kit|
 
 
 ## Commercial Tools
