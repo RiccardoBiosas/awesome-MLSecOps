@@ -82,6 +82,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [OpenDP](https://github.com/opendp/opendp)| The core library of differential privacy algorithms powering the OpenDP Project|
 | [TF-encrypted](https://tf-encrypted.io/)| Encryption for tensorflow|
 | [Agentic Security](https://github.com/msoedov/agentic_security)| Agentic LLM Vulnerability Scanner / AI red teaming kit|
+| [CircleGuardBench](https://github.com/whitecircle-ai/circle-guard-bench)| A full-fledged benchmark for evaluating protection capabilities of AI models|
 
 
 ## Commercial Tools
@@ -188,6 +189,7 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 - 🌐 [HADESS - Web LLM Attacks](https://hadess.io/web-llm-attacks/)
 - 🧰 [WTF-blog - MlSecOps frameworks ... Which ones are available and what is the difference?](https://blog.wearetyomsmnv.wtf/articles/mlsecops-frameworks-...-which-ones-are-available-and-what-is-the-difference)
 - 📚 [DreadNode Paper Stack](https://dreadnode.notion.site/2582fe5306274c60b85a5e37cf99da7e?v=74ab79ed1452441dab8a1fa02099fed)
+- 🛡️ [CircleGuardBench: New Standard for Evaluating AI Moderation Models](https://huggingface.co/blog/whitecircle-ai/circleguardbench)
 
 ## MLOps Infrastructure Vulnerabilities
 
