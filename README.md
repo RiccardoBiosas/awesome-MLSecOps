@@ -82,6 +82,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [OpenDP](https://github.com/opendp/opendp)| The core library of differential privacy algorithms powering the OpenDP Project|
 | [TF-encrypted](https://tf-encrypted.io/)| Encryption for tensorflow|
 | [Agentic Security](https://github.com/msoedov/agentic_security)| Agentic LLM Vulnerability Scanner / AI red teaming kit|
+| [Promptfoo Scanner](https://github.com/promptfoo/promptfoo) | An open-source LLM red teaming tool |
 
 
 ## Commercial Tools
@@ -91,6 +92,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [Databricks Platform, Azure Databricks](https://azure.microsoft.com/ru-ru/products/databricks) | Datalake data management and implementation tool |
 | [Hidden Layer AI Detection Response](https://hiddenlayer.com/aidr/) | Tool for detecting and responding to incidents |
 | [Guardian](https://protectai.com/guardian) | Model protection in CI/CD |
+| [Promptfoo](https://www.promptfoo.dev/security/) | Continuous monitoring, detection, and remediation for enterprise LLM applications |
 
 ## DATA
 
