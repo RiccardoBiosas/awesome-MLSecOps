@@ -378,6 +378,9 @@ All contributions to this list are welcome! Please feel free to submit a pull re
   <tr>
     <td align="center"><a href="https://github.com/mik0w"><img src="https://github.com/mik0w.png" width="100px;" alt=""/><br /><sub><b>@mik0w</b></sub></a></td>
     <td align="center"><a href="https://github.com/alexcombessie"><img src="https://github.com/alexcombessie.png" width="100px;" alt=""/><br /><sub><b>@alexcombessie</b></sub></a></td>
+    <td align="center"><a href="https://github.com/Igralino"><img src="https://github.com/Igralino.png" width="100px;" alt=""/><br /><sub><b>@Igralino</b></sub></a></td>
+    <td align="center"><a href="https://github.com/typpo"><img src="https://github.com/typpo.png" width="100px;" alt=""/><br /><sub><b>@typpo</b></sub></a></td>
+    <td align="center"><a href="https://github.com/robvanderveer"><img src="https://github.com/robvanderveer.png" width="100px;" alt=""/><br /><sub><b>@robvanderveer</b></sub></a></td>
   </tr>
 </table>
 
