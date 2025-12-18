@@ -84,6 +84,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [Agentic Security](https://github.com/msoedov/agentic_security)| Agentic LLM Vulnerability Scanner / AI red teaming kit|
 | [CircleGuardBench](https://github.com/whitecircle-ai/circle-guard-bench)| A full-fledged benchmark for evaluating protection capabilities of AI models|
 | [Promptfoo Scanner](https://github.com/promptfoo/promptfoo) | An open-source LLM red teaming tool |
+| [TrustGate](https://github.com/NeuralTrust/TrustGate) | An open-source Generative Application Firewall (GAF) |
 
 
 ## Commercial Tools
@@ -94,6 +95,8 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [Hidden Layer AI Detection Response](https://hiddenlayer.com/aidr/) | Tool for detecting and responding to incidents |
 | [Guardian](https://protectai.com/guardian) | Model protection in CI/CD |
 | [Promptfoo](https://www.promptfoo.dev/security/) | Continuous monitoring, detection, and remediation for enterprise LLM applications |
+| [NeuralTrust](https://neuraltrust.ai) | Tools to protect, secure and test GenAI Applications |
+
 
 ## DATA
 
