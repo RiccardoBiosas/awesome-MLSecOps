@@ -10,6 +10,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 ![MLSecOps Banner](https://github.com/user-attachments/assets/966affca-442a-4859-b450-774b8d48c6cc)
 
 
+- [guardian-agent-prompts](https://github.com/milkomida77/guardian-agent-prompts) - 49 production-tested AI agent system prompts including security scanning, vulnerability assessment, and automated security orchestration agents. MIT licensed.
 ## Table of Contents
 - [Open Source Security Tools](#open-source-security-tools)
 - [Commercial Tools](#commercial-tools)
