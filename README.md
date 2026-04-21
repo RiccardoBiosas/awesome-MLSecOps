@@ -61,6 +61,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [Offensive ML Playbook](https://wiki.offsecml.com/Welcome+to+the+Offensive+ML+Playbook) | Offensive ML Playbook. Notes on machine learning attacks and pentesting|
 | [AnonLLM](https://github.com/fsndzomga/anonLLM) | Anonymize Personally Identifiable Information (PII) for Large Language Model APIs|
 | [AI Goat](https://github.com/dhammon/ai-goat) | vulnerable LLM CTF challenges|
+| [GTK Cyber AI Training Dojo](https://ai.gtkcyber.com) | Free AI security training with 14 prompt injection challenges, RAG poisoning labs, and encoding bypass exercises|
 | [Pyrit](https://github.com/Azure/PyRIT) | The Python Risk Identification Tool for generative AI|
 | [Raze to the Ground: Query-Efficient Adversarial HTML Attacks on Machine-Learning Phishing Webpage Detectors](https://github.com/advmlphish/raze_to_the_ground_aisec23) | Source code of the paper "Raze to the Ground: Query-Efficient Adversarial HTML Attacks on Machine-Learning Phishing Webpage Detectors" accepted at AISec '23|
 | [Giskard](https://github.com/Giskard-AI/giskard) | Open-source testing tool for LLM applications|
