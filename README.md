@@ -31,6 +31,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 
 | Tool | Description |
 |------|-------------|
+| [Agent Memory Guard](https://github.com/OWASP/www-project-agent-memory-guard) | OWASP-branded runtime memory defense for AI agents (ASI06: Memory Poisoning) |
 | [ModelScan](https://github.com/protectai/modelscan) | Protection Against ML Model Serialization Attacks |
 | [NB Defense](https://nbdefense.ai) | Secure Jupyter Notebooks |
 | [Garak](https://github.com/leondz/garak) | LLM vulnerability scanner |
