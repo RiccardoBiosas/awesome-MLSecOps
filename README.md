@@ -68,6 +68,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [Citadel Lens](https://www.citadel.co.jp/en/products/lens/)| Quality testing of models according to industry standards|
 | [Model-Inversion-Attack-ToolBox](https://github.com/ffhibnese/Model-Inversion-Attack-ToolBox) | A framework for implementing Model Inversion attacks|
 | [NeMo-Guardials](https://github.com/NVIDIA/NeMo-Guardrails) | NeMo Guardrails allow developers building LLM-based applications to easily add programmable guardrails between the application code and the LLM|
+| [APort Integrations](https://github.com/aporthq/aport-integrations) | Agent identity verification and policy enforcement integrations for AI-agent tool calls, including middleware and guardrail examples for LLM application runtimes|
 | [AugLy](https://github.com/facebookresearch/AugLy) | A tool for generating adversarial attacks|
 | [Knockoffnets](https://github.com/tribhuvanesh/knockoffnets) | PoC to implement BlackBox attacks to steal model data|
 | [Robust Intelligence Continous Validation](https://www.robustintelligence.com/platform/continuous-validation) | Tool for continuous model validation for compliance with standards|
