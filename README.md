@@ -31,6 +31,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 
 | Tool | Description |
 |------|-------------|
+| [APort Agent Guardrails](https://aport.io) | Pre-action authorization guardrails for AI agents and MCP/tool-use workflows. |
 | [ModelScan](https://github.com/protectai/modelscan) | Protection Against ML Model Serialization Attacks |
 | [NB Defense](https://nbdefense.ai) | Secure Jupyter Notebooks |
 | [Garak](https://github.com/leondz/garak) | LLM vulnerability scanner |
