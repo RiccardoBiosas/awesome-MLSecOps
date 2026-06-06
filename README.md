@@ -46,6 +46,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [Audit AI](https://github.com/pymetrics/audit-ai) | Bias Testing for Generalized Machine Learning Applications|
 | [Deep Pwning](https://github.com/cchio/deep-pwning) | Deep-pwning is a lightweight framework for experimenting with machine learning models with the goal of evaluating their robustness against a motivated adversary|
 | [Privacy Meter](https://github.com/privacytrustlab/ml_privacy_meter) | An open-source library to audit data privacy in statistical and machine learning algorithms|
+| [TWZRD Agent Intel](https://intel.twzrd.xyz) | Pre-dispatch trust verification MCP server — verify AI agent identity, query on-chain trust scores, and validate signed receipts before agent actions execute. Tools: `preflight_check`, `score_agent`, `resolve_agent`, `verify_trust_receipt`. |
 | [TensorFlow Model Analysis](https://github.com/tensorflow/model-analysis) | A library for analyzing, validating, and monitoring machine learning models in production|
 | [PromptInject](https://github.com/agencyenterprise/PromptInject) | A framework that assembles adversarial prompts|
 | [TextAttack](https://github.com/QData/TextAttack) | TextAttack is a Python framework for adversarial attacks, data augmentation, and model training in NLP|
