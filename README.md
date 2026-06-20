@@ -213,9 +213,6 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 ![image](https://github.com/user-attachments/assets/8ce8400b-804b-4ce0-9241-30ad5b42b55f)
 
 
-
-# Academic Po(C)ker FACE
-
 ## Repositories
 
 #### [AgentPoison](https://github.com/BillChan226/AgentPoison)
