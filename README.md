@@ -67,6 +67,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [Giskard](https://github.com/Giskard-AI/giskard) | Open-source testing tool for LLM applications|
 | [Safetensors](https://github.com/huggingface/safetensors) | Convert pickle to a safe serialization option|
 | [Citadel Lens](https://www.citadel.co.jp/en/products/lens/)| Quality testing of models according to industry standards|
+| [Prefactor](https://prefactor.tech/) | AI agent runtime control plane with governance and observability for regulated industries |
 | [Model-Inversion-Attack-ToolBox](https://github.com/ffhibnese/Model-Inversion-Attack-ToolBox) | A framework for implementing Model Inversion attacks|
 | [NeMo-Guardials](https://github.com/NVIDIA/NeMo-Guardrails) | NeMo Guardrails allow developers building LLM-based applications to easily add programmable guardrails between the application code and the LLM|
 | [AugLy](https://github.com/facebookresearch/AugLy) | A tool for generating adversarial attacks|
