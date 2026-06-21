@@ -197,6 +197,7 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 - 🧰 [WTF-blog - MlSecOps frameworks ... Which ones are available and what is the difference?](https://blog.wearetyomsmnv.wtf/articles/mlsecops-frameworks-...-which-ones-are-available-and-what-is-the-difference)
 - 📚 [DreadNode Paper Stack](https://dreadnode.notion.site/2582fe5306274c60b85a5e37cf99da7e?v=74ab79ed1452441dab8a1fa02099fed)
 - 🛡️ [CircleGuardBench: New Standard for Evaluating AI Moderation Models](https://huggingface.co/blog/whitecircle-ai/circleguardbench)
+- 🤖 [How to Red Team an LLM-Powered Application](https://gtkcyber.com/blog/red-teaming-llm-powered-applications)
 
 ## MLOps Infrastructure Vulnerabilities
 
