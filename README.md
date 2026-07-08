@@ -86,6 +86,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [CircleGuardBench](https://github.com/whitecircle-ai/circle-guard-bench)| A full-fledged benchmark for evaluating protection capabilities of AI models|
 | [Promptfoo Scanner](https://github.com/promptfoo/promptfoo) | An open-source LLM red teaming tool |
 | [KubeStellar Console](https://github.com/kubestellar/console) | Multi-cluster Kubernetes dashboard with MLSecOps capabilities: GPU workload monitoring, Kyverno policy enforcement, supply chain security (SBOM, SLSA), and AI/ML infrastructure observability. CNCF Sandbox project. |
+| [BomLens](https://github.com/sktelecom/sbom-tools) | Local-first SBOM generator and risk assessor that builds CycloneDX ML-BOMs for HuggingFace models with G7 minimum-elements conformance checks, plus license and known-vulnerability reports |
 | [TrustGate](https://github.com/NeuralTrust/TrustGate) | An open-source Generative Application Firewall (GAF) |
 | [Agent-Wiz](https://github.com/Repello-AI/Agent-Wiz) | Python CLI by Repello AI for extracting agentic workflows from LangChain/LangGraph/CrewAI/AutoGen and running automated threat modeling |
 | [Whistleblower](https://github.com/Repello-AI/whistleblower) | Open-source offensive tool by Repello AI for testing LLM apps against system prompt leakage |
