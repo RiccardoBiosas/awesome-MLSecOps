@@ -60,6 +60,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [PALLMs (Payloads for Attacking Large Language Models)](https://github.com/mik0w/pallms) | list of various payloads for attacking LLMs collected in one place|
 | [AI-exploits](https://github.com/protectai/ai-exploits) | exploits for MlOps systems. It's not just in the inputs given to LLMs such as ChatGPT|
 | [Offensive ML Playbook](https://wiki.offsecml.com/Welcome+to+the+Offensive+ML+Playbook) | Offensive ML Playbook. Notes on machine learning attacks and pentesting|
+| [DarkMoon Privacy Gateway](https://github.com/ASCIT31/Dark-Moon) | Self-hosted proxy that tokenizes sensitive values into deterministic reversible placeholders before prompts reach the LLM and reidentifies them in the response, with an anti-exfiltration command gateway |
 | [AnonLLM](https://github.com/fsndzomga/anonLLM) | Anonymize Personally Identifiable Information (PII) for Large Language Model APIs|
 | [AI Goat](https://github.com/dhammon/ai-goat) | vulnerable LLM CTF challenges|
 | [Pyrit](https://github.com/Azure/PyRIT) | The Python Risk Identification Tool for generative AI|
