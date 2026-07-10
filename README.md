@@ -48,6 +48,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [Privacy Meter](https://github.com/privacytrustlab/ml_privacy_meter) | An open-source library to audit data privacy in statistical and machine learning algorithms|
 | [TensorFlow Model Analysis](https://github.com/tensorflow/model-analysis) | A library for analyzing, validating, and monitoring machine learning models in production|
 | [PromptInject](https://github.com/agencyenterprise/PromptInject) | A framework that assembles adversarial prompts|
+| [Agent Memory Guard](https://github.com/OWASP/www-project-agent-memory-guard) | Official OWASP runtime defense layer that screens AI agent memory reads/writes, blocking prompt injection, secret leakage, and memory poisoning (ASI06) |
 | [TextAttack](https://github.com/QData/TextAttack) | TextAttack is a Python framework for adversarial attacks, data augmentation, and model training in NLP|
 | [OpenAttack](https://github.com/thunlp/OpenAttack) | An Open-Source Package for Textual Adversarial Attack|
 | [TextFooler](https://github.com/jind11/TextFooler) | A Model for Natural Language Attack on Text Classification and Inference|
@@ -85,6 +86,12 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [CircleGuardBench](https://github.com/whitecircle-ai/circle-guard-bench)| A full-fledged benchmark for evaluating protection capabilities of AI models|
 | [Promptfoo Scanner](https://github.com/promptfoo/promptfoo) | An open-source LLM red teaming tool |
 | [AI-Scan-Interceptor](https://github.com/mshirakawa-ssp/ai-scan-interceptor) | Self-hostable DLP gateway for enterprise prompts to ChatGPT/Claude/Gemini (Squid + Go ICAP + mTLS, AGPL-3.0) |
+| [KubeStellar Console](https://github.com/kubestellar/console) | Multi-cluster Kubernetes dashboard with MLSecOps capabilities: GPU workload monitoring, Kyverno policy enforcement, supply chain security (SBOM, SLSA), and AI/ML infrastructure observability. CNCF Sandbox project. |
+| [BomLens](https://github.com/sktelecom/sbom-tools) | Local-first SBOM generator and risk assessor that builds CycloneDX ML-BOMs for HuggingFace models with G7 minimum-elements conformance checks, plus license and known-vulnerability reports |
+| [TrustGate](https://github.com/NeuralTrust/TrustGate) | An open-source Generative Application Firewall (GAF) |
+| [Agent-Wiz](https://github.com/Repello-AI/Agent-Wiz) | Python CLI by Repello AI for extracting agentic workflows from LangChain/LangGraph/CrewAI/AutoGen and running automated threat modeling |
+| [Whistleblower](https://github.com/Repello-AI/whistleblower) | Open-source offensive tool by Repello AI for testing LLM apps against system prompt leakage |
+| [IronClaw](https://github.com/IronSecCo/ironclaw) | Security-hardened, self-hosted runtime that sandboxes autonomous AI agents in a gVisor (runsc) sandbox with network=none, a read-only rootfs, host-side credential injection, and a human-approval gateway; signed and attested supply chain (cosign, SLSA, SBOMs) |
 
 
 ## Commercial Tools
@@ -95,6 +102,8 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [Hidden Layer AI Detection Response](https://hiddenlayer.com/aidr/) | Tool for detecting and responding to incidents |
 | [Guardian](https://protectai.com/guardian) | Model protection in CI/CD |
 | [Promptfoo](https://www.promptfoo.dev/security/) | Continuous monitoring, detection, and remediation for enterprise LLM applications |
+| [NeuralTrust](https://neuraltrust.ai) | Tools to protect, secure and test GenAI Applications |
+
 
 ## DATA
 
@@ -208,9 +217,6 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 
 ![image](https://github.com/user-attachments/assets/8ce8400b-804b-4ce0-9241-30ad5b42b55f)
 
-
-
-# Academic Po(C)ker FACE
 
 ## Repositories
 
