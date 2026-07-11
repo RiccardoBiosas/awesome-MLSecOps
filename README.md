@@ -83,6 +83,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [OpenDP](https://github.com/opendp/opendp)| The core library of differential privacy algorithms powering the OpenDP Project|
 | [TF-encrypted](https://tf-encrypted.io/)| Encryption for tensorflow|
 | [Agentic Security](https://github.com/msoedov/agentic_security)| Agentic LLM Vulnerability Scanner / AI red teaming kit|
+| [Nika](https://github.com/supernovae-st/nika) | AGPL Rust workflow engine for AI with verifiable execution: tamper-evident hash-chained run traces (nika trace verify), default-deny fs/net/exec/tool permits, and pre-run static secret-flow analysis |
 | [CircleGuardBench](https://github.com/whitecircle-ai/circle-guard-bench)| A full-fledged benchmark for evaluating protection capabilities of AI models|
 | [Promptfoo Scanner](https://github.com/promptfoo/promptfoo) | An open-source LLM red teaming tool |
 | [AIsbom](https://github.com/Lab700xOrg/aisbom) | Disassembles Pickle bytecode and parses SafeTensors/GGUF binary headers to detect malware and license risks in ML model files before load. Generates CycloneDX/SPDX SBOMs. |
