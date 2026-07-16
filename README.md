@@ -93,6 +93,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [Agent-Wiz](https://github.com/Repello-AI/Agent-Wiz) | Python CLI by Repello AI for extracting agentic workflows from LangChain/LangGraph/CrewAI/AutoGen and running automated threat modeling |
 | [Whistleblower](https://github.com/Repello-AI/whistleblower) | Open-source offensive tool by Repello AI for testing LLM apps against system prompt leakage |
 | [IronClaw](https://github.com/IronSecCo/ironclaw) | Security-hardened, self-hosted runtime that sandboxes autonomous AI agents in a gVisor (runsc) sandbox with network=none, a read-only rootfs, host-side credential injection, and a human-approval gateway; signed and attested supply chain (cosign, SLSA, SBOMs) |
+| [AgentSentry Gateway](https://github.com/akav-labs/agentsentry-gateway) | Open-source OpenAI-compatible LLM security gateway in Rust that scans requests and responses (including streaming) for prompt injection, jailbreaks, and secret/PII leakage, and blocks violations at the egress |
 
 
 ## Commercial Tools
