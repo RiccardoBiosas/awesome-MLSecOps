@@ -27,7 +27,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 
 ## Open Source Security Tools
 
-#### In this section, you and I can take a look at what opensource solutions and PoCs, exist to accomplish the task of ML protection. Of course, some of them are unsupported or will have difficulties to run. However, not mentioning them is a big crime.
+### In this section, you and I can take a look at what opensource solutions and PoCs, exist to accomplish the task of ML protection. Of course, some of them are unsupported or will have difficulties to run. However, not mentioning them is a big crime.
 
 | Tool | Description |
 |------|-------------|
@@ -127,7 +127,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 
 ## 101 Resources
 
-#### You can find here a list of resources to help you get into the topic of AI security. Understand what attacks exist and how they can be used by an attacker.
+### You can find here a list of resources to help you get into the topic of AI security. Understand what attacks exist and how they can be used by an attacker.
 
 - [AI Security 101](https://www.nightfall.ai/ai-security-101)
 - [Web LLM attacks](https://portswigger.net/web-security/llm-attacks)
@@ -135,7 +135,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 - [AI Risk Assessment for ML Engineers](https://learn.microsoft.com/en-us/security/ai-red-team/ai-risk-assessment)
 - [Microsoft - Generative AI Security for beginners](https://github.com/microsoft/generative-ai-for-beginners/blob/main/13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
-#### AI Security Study Map
+### AI Security Study Map
 
 [![AI Security Study Map](https://i.postimg.cc/G2QdqnK6/map.png)](https://postimg.cc/sQvkg8tJ)
 
@@ -163,7 +163,7 @@ more in **Adversarial AI Attacks, Mitigations, and Defense Strategies: A cyberse
 
 ## Attack Vectors
 
-#### Here we provide a useful list of resources that focus on a specific attack vector.
+### Here we provide a useful list of resources that focus on a specific attack vector.
 
 - [Data Poisoning](https://github.com/ch-shin/awesome-data-poisoning)
 - [Adversarial Prompt Exploits](https://research.nccgroup.com/2022/12/05/exploring-prompt-injection-attacks)
@@ -180,7 +180,7 @@ more in **Adversarial AI Attacks, Mitigations, and Defense Strategies: A cyberse
 
 ## Blogs and Publications 
 
-#### 🌱 The AI security community is growing. New blogs and many researchers are emerging. In this paragraph you can see examples of some blogs.
+### 🌱 The AI security community is growing. New blogs and many researchers are emerging. In this paragraph you can see examples of some blogs.
 
 - 📚 [What is MLSecOps](https://themlsecopshacker.com/p/what-is-mlsecops)
 - 🛡️ [Red-Teaming Large Language Models](https://huggingface.co/blog/red-teaming)
@@ -206,7 +206,7 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 
 ## MLOps Infrastructure Vulnerabilities
 
-#### Very interesting articles on MlOps infrastructure vulnerabilities. In some of them you can even find ready-made exploits.
+### Very interesting articles on MlOps infrastructure vulnerabilities. In some of them you can even find ready-made exploits.
 
 - [SILENT SABOTAGE](https://hiddenlayer.com/research/silent-sabotage/) - Study on bot compromise for converting Pickle to SafeTensors
 - [NOT SO CLEAR: HOW MLOPS SOLUTIONS CAN MUDDY THE WATERS OF YOUR SUPPLY CHAIN](https://hiddenlayer.com/research/not-so-clear-how-mlops-solutions-can-muddy-the-waters-of-your-supply-chain/) - Study on vulnerabilities for the ClearML platform
