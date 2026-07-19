@@ -1,4 +1,4 @@
-# Awesome MLSecOps 🛡️🤖
+# Awesome MLSecOps: Machine Learning and AI Security Resources 🛡️🤖
 
 ## What is MLSecOps?
 
