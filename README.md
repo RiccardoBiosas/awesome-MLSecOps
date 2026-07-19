@@ -305,43 +305,40 @@ These research repositories provide implementations, experiments, benchmarks, at
 
 | Repository | Category | Security focus |
 |---|---|---|
-| [AgentPoison](https://github.com/BillChan226/AgentPoison) | LLM agent backdoor poisoning | Red-teaming LLM agents via memory or knowledge-base poisoning attacks. |
-| [DeepPayload](https://github.com/yuanchun-li/DeepPayload) | Neural trojan research | Explores embedding malicious payload behaviors into deep neural networks. |
-| [backdoor](https://github.com/bolunwang/backdoor) | Backdoor attacks | Investigates hidden-trigger backdoor attacks in deep learning models. |
-| [Stealing_DL_Models](https://github.com/jeiks/Stealing_DL_Models) | Model stealing | Demonstrates model-stealing techniques against deep learning systems. |
-| [datafree-model-extraction](https://github.com/cake-lab/datafree-model-extraction) | Model extraction | Studies data-free extraction of target model behavior. |
-| [LLMmap](https://github.com/pasquini-dario/LLMmap) | LLM attack-surface mapping | Maps and analyzes LLM behavior to support security-oriented assessment. |
-| [Class_Activation_Mapping_Ensemble_Attack](https://github.com/DreamyRainforest/Class_Activation_Mapping_Ensemble_Attack) | Adversarial evasion attacks | Uses CAM-based ensemble methods to craft adversarial examples. |
-| [COLD-Attack](https://github.com/Yu-Fangxu/COLD-Attack) | Adversarial optimization attacks | Implements constrained optimization attacks against deep models. |
-| [pal](https://github.com/chawins/pal) | Adaptive adversarial attacks | Research code for adaptive attack strategies against defended models. |
-| [ZeroShotKnowledgeTransfer](https://github.com/polo5/ZeroShotKnowledgeTransfer) | Model extraction | Zero-shot knowledge-transfer methods relevant to model stealing risk. |
-| [GMI-Attack](https://github.com/AI-secure/GMI-Attack) | Model inversion attacks | Implements generative model inversion attacks against trained models. |
-| [Knowledge-Enriched-DMI](https://github.com/SCccc21/Knowledge-Enriched-DMI) | Model inversion attacks | Extends deep model inversion with auxiliary knowledge priors. |
-| [vmi](https://github.com/wangkua1/vmi) | Model inversion attacks | Implements variational model inversion attacks to recover private training information. |
-| [Plug-and-Play-Attacks](https://github.com/LukasStruppek/Plug-and-Play-Attacks) | Black-box attack methods | Provides plug-and-play attack pipelines for black-box ML models. |
-| [snap-sp23](https://github.com/johnmath/snap-sp23) | Privacy extraction attacks | Implements SNAP poisoning attacks for private-property extraction from models. |
-| [privacy-vs-robustness](https://github.com/inspire-group/privacy-vs-robustness) | Privacy vs robustness research | Evaluates trade-offs between differential privacy and adversarial robustness. |
-| [ML-Leaks](https://github.com/AhmedSalem2/ML-Leaks) | Membership inference attacks | Implements membership-inference attacks to test privacy leakage. |
-| [BlindMI](https://github.com/hyhmia/BlindMI) | Membership inference attacks | Studies label-only and blind membership-inference techniques. |
-| [python-DP-DL](https://github.com/NNToan-apcs/python-DP-DL) | Privacy defenses | Differential privacy utilities for protecting training data in deep learning. |
-| [MMD-mixup-Defense](https://github.com/colaalex111/MMD-mixup-Defense) | Adversarial defenses | Defense approach designed to improve robustness against adversarial attacks. |
-| [MemGuard](https://github.com/jinyuan-jia/MemGuard) | Membership inference defenses | Defends model outputs against membership-inference attacks. |
-| [unsplit](https://github.com/ege-erdogan/unsplit) | Split learning attacks | Demonstrates model inversion, model stealing, and label inference against split learning. |
-| [face_attribute_attack](https://github.com/koushiksrivats/face_attribute_attack) | Biometric adversarial attacks | Explores attacks on face-attribute recognition systems. |
-| [FVB](https://github.com/Sanjana-Sarda/FVB) | Biometric adversarial attacks | Attack methods targeting face-verification models. |
-| [Malware-GAN](https://github.com/yanminglai/Malware-GAN) | Malware evasion research | Uses GAN-generated variants to study ML-based malware detection evasion. |
-| [Generative_Adversarial_Perturbations](https://github.com/OmidPoursaeed/Generative_Adversarial_Perturbations) | Adversarial example generation | Generates adversarial perturbations with generative models. |
-| [Adversarial-Attacks-with-Relativistic-AdvGAN](https://github.com/GiorgosKarantonis/Adversarial-Attacks-with-Relativistic-AdvGAN) | Adversarial example generation | Implements AdvGAN-based adversarial attacks for deep models. |
-| [llm-attacks](https://github.com/llm-attacks/llm-attacks) | LLM jailbreak research | Research code for adversarial prompting and jailbreak attacks on LLMs. |
-| [LLMs-Finetuning-Safety](https://github.com/LLM-Tuning-Safety/LLMs-Finetuning-Safety) | LLM safety defenses | Studies safer LLM fine-tuning under harmful behavior and leakage risks. |
-| [DecodingTrust](https://github.com/AI-secure/DecodingTrust) | Trust and safety benchmarking | Benchmark suite for evaluating trust, safety, and robustness dimensions in LLMs. |
-| [promptbench](https://github.com/microsoft/promptbench) | Prompt robustness benchmarking | Benchmarking framework for evaluating prompt robustness and reliability. |
-| [rome](https://github.com/kmeng01/rome) | Model editing and reliability | Implements factual model editing methods used in reliability and safety research. |
-| [llmprivacy](https://github.com/eth-sri/llmprivacy) | LLM privacy attacks | Research on privacy leakage and protection in large language models. |
-
-
-
-
+| <a id="agentpoison"></a>[AgentPoison](https://github.com/BillChan226/AgentPoison) | LLM agent backdoor poisoning | Red-teaming LLM agents via memory or knowledge-base poisoning attacks. |
+| <a id="deeppayload"></a>[DeepPayload](https://github.com/yuanchun-li/DeepPayload) | Neural trojan research | Explores embedding malicious payload behaviors into deep neural networks. |
+| <a id="backdoor"></a>[backdoor](https://github.com/bolunwang/backdoor) | Backdoor attacks | Investigates hidden-trigger backdoor attacks in deep learning models. |
+| <a id="stealing_dl_models"></a>[Stealing_DL_Models](https://github.com/jeiks/Stealing_DL_Models) | Model stealing | Demonstrates model-stealing techniques against deep learning systems. |
+| <a id="datafree-model-extraction"></a>[datafree-model-extraction](https://github.com/cake-lab/datafree-model-extraction) | Model extraction | Studies data-free extraction of target model behavior. |
+| <a id="llmmap"></a>[LLMmap](https://github.com/pasquini-dario/LLMmap) | LLM attack-surface mapping | Maps and analyzes LLM behavior to support security-oriented assessment. |
+| <a id="googlecloud-federated-ml-pipeline"></a>[GoogleCloud-Federated-ML-Pipeline](https://github.com/raj200501/GoogleCloud-Federated-ML-Pipeline) | Federated learning pipelines | Implements a federated machine-learning pipeline using Google Cloud infrastructure. |
+| <a id="class_activation_mapping_ensemble_attack"></a>[Class_Activation_Mapping_Ensemble_Attack](https://github.com/DreamyRainforest/Class_Activation_Mapping_Ensemble_Attack) | Adversarial evasion attacks | Uses CAM-based ensemble methods to craft adversarial examples. |
+| <a id="cold-attack"></a>[COLD-Attack](https://github.com/Yu-Fangxu/COLD-Attack) | Adversarial optimization attacks | Implements constrained optimization attacks against deep models. |
+| <a id="pal"></a>[pal](https://github.com/chawins/pal) | Adaptive adversarial attacks | Research code for adaptive attack strategies against defended models. |
+| <a id="zeroshotknowledgetransfer"></a>[ZeroShotKnowledgeTransfer](https://github.com/polo5/ZeroShotKnowledgeTransfer) | Model extraction | Zero-shot knowledge-transfer methods relevant to model-stealing risk. |
+| <a id="gmi-attack"></a>[GMI-Attack](https://github.com/AI-secure/GMI-Attack) | Model inversion attacks | Implements generative model inversion attacks against trained models. |
+| <a id="knowledge-enriched-dmi"></a>[Knowledge-Enriched-DMI](https://github.com/SCccc21/Knowledge-Enriched-DMI) | Model inversion attacks | Extends deep model inversion with auxiliary knowledge priors. |
+| <a id="vmi"></a>[vmi](https://github.com/wangkua1/vmi) | Model inversion attacks | Implements variational model inversion attacks to recover private training information. |
+| <a id="plug-and-play-attacks"></a>[Plug-and-Play-Attacks](https://github.com/LukasStruppek/Plug-and-Play-Attacks) | Black-box attack methods | Provides plug-and-play attack pipelines for black-box ML models. |
+| <a id="snap-sp23"></a>[snap-sp23](https://github.com/johnmath/snap-sp23) | Privacy extraction attacks | Implements SNAP poisoning attacks for private-property extraction from models. |
+| <a id="privacy-vs-robustness"></a>[privacy-vs-robustness](https://github.com/inspire-group/privacy-vs-robustness) | Privacy vs. robustness research | Evaluates trade-offs between differential privacy and adversarial robustness. |
+| <a id="ml-leaks"></a>[ML-Leaks](https://github.com/AhmedSalem2/ML-Leaks) | Membership inference attacks | Implements membership-inference attacks to test privacy leakage. |
+| <a id="blindmi"></a>[BlindMI](https://github.com/hyhmia/BlindMI) | Membership inference attacks | Studies label-only and blind membership-inference techniques. |
+| <a id="python-dp-dl"></a>[python-DP-DL](https://github.com/NNToan-apcs/python-DP-DL) | Privacy defenses | Differential privacy utilities for protecting training data in deep learning. |
+| <a id="mmd-mixup-defense"></a>[MMD-mixup-Defense](https://github.com/colaalex111/MMD-mixup-Defense) | Adversarial defenses | Defense approach designed to improve robustness against adversarial attacks. |
+| <a id="memguard"></a>[MemGuard](https://github.com/jinyuan-jia/MemGuard) | Membership inference defenses | Defends model outputs against membership-inference attacks. |
+| <a id="unsplit"></a>[unsplit](https://github.com/ege-erdogan/unsplit) | Split-learning attacks | Demonstrates model inversion, model stealing, and label inference against split learning. |
+| <a id="face_attribute_attack"></a>[face_attribute_attack](https://github.com/koushiksrivats/face_attribute_attack) | Biometric adversarial attacks | Explores attacks on face-attribute recognition systems. |
+| <a id="fvb"></a>[FVB](https://github.com/Sanjana-Sarda/FVB) | Biometric adversarial attacks | Attack methods targeting face-verification models. |
+| <a id="malware-gan"></a>[Malware-GAN](https://github.com/yanminglai/Malware-GAN) | Malware evasion research | Uses GAN-generated variants to study ML-based malware-detection evasion. |
+| <a id="generative_adversarial_perturbations"></a>[Generative_Adversarial_Perturbations](https://github.com/OmidPoursaeed/Generative_Adversarial_Perturbations) | Adversarial example generation | Generates adversarial perturbations with generative models. |
+| <a id="adversarial-attacks-with-relativistic-advgan"></a>[Adversarial-Attacks-with-Relativistic-AdvGAN](https://github.com/GiorgosKarantonis/Adversarial-Attacks-with-Relativistic-AdvGAN) | Adversarial example generation | Implements AdvGAN-based adversarial attacks for deep models. |
+| <a id="llm-attacks"></a>[llm-attacks](https://github.com/llm-attacks/llm-attacks) | LLM jailbreak research | Research code for adversarial prompting and jailbreak attacks on LLMs. |
+| <a id="llms-finetuning-safety"></a>[LLMs-Finetuning-Safety](https://github.com/LLM-Tuning-Safety/LLMs-Finetuning-Safety) | LLM safety defenses | Studies safer LLM fine-tuning under harmful-behavior and leakage risks. |
+| <a id="decodingtrust"></a>[DecodingTrust](https://github.com/AI-secure/DecodingTrust) | Trust and safety benchmarking | Benchmark suite for evaluating trust, safety, and robustness dimensions in LLMs. |
+| <a id="promptbench"></a>[promptbench](https://github.com/microsoft/promptbench) | Prompt robustness benchmarking | Benchmarking framework for evaluating prompt robustness and reliability. |
+| <a id="rome"></a>[rome](https://github.com/kmeng01/rome) | Model editing and reliability | Implements factual model-editing methods used in reliability and safety research. |
+| <a id="llmprivacy"></a>[llmprivacy](https://github.com/eth-sri/llmprivacy) | LLM privacy attacks | Research on privacy leakage and protection in large language models. |
 
 ## Community Resources
 
