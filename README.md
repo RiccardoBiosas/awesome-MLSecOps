@@ -84,6 +84,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [Agentic Security](https://github.com/msoedov/agentic_security)| Agentic LLM Vulnerability Scanner / AI red teaming kit|
 | [CircleGuardBench](https://github.com/whitecircle-ai/circle-guard-bench)| A full-fledged benchmark for evaluating protection capabilities of AI models|
 | [Promptfoo Scanner](https://github.com/promptfoo/promptfoo) | An open-source LLM red teaming tool |
+| [skill-audit-mcp](https://github.com/eltociear/skill-audit-mcp) | Static security scanner for MCP servers, AI agent skills, and plugins. Detects 68 attack patterns across CRITICAL/HIGH/MEDIUM/LOW — credential exfiltration, prompt injection, code execution, seed-phrase harvesting, auth bypass, path traversal. SARIF output, GitHub Action, multi-arch Docker image |
 | [AIsbom](https://github.com/Lab700xOrg/aisbom) | Disassembles Pickle bytecode and parses SafeTensors/GGUF binary headers to detect malware and license risks in ML model files before load. Generates CycloneDX/SPDX SBOMs. |
 | [AI-Scan-Interceptor](https://github.com/mshirakawa-ssp/ai-scan-interceptor) | Self-hostable DLP gateway for enterprise prompts to ChatGPT/Claude/Gemini (Squid + Go ICAP + mTLS, AGPL-3.0) |
 | [KubeStellar Console](https://github.com/kubestellar/console) | Multi-cluster Kubernetes dashboard with MLSecOps capabilities: GPU workload monitoring, Kyverno policy enforcement, supply chain security (SBOM, SLSA), and AI/ML infrastructure observability. CNCF Sandbox project. |
