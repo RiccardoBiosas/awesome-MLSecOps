@@ -2,16 +2,16 @@
 
 ## What is MLSecOps?
 
-**MLSecOps (Machine Learning Security Operations)** is the practice of integrating security controls, threat modeling, testing, supply-chain protection, monitoring, and incident response across machine learning and MLOps lifecycles. This curated list helps security engineers, ML practitioners, and AI red teams find tools, research, standards, communities, and practical learning resources.
+**MLSecOps (Machine Learning Security Operations)** is the practice of integrating security throughout the machine learning lifecycle—from data collection and model development to deployment, monitoring, and incident response. It applies security testing, threat modeling, supply-chain protection, access controls, and continuous monitoring to machine learning models, MLOps pipelines, LLM applications, and AI agents.
 
-⭐ If this catalog saves you time, [star the repository](https://github.com/RiccardoBiosas/awesome-MLSecOps) or read the [contribution guidelines](CONTRIBUTING.md) to suggest a resource.
+This curated catalog helps security engineers, ML practitioners, developers, and AI red teams discover open-source MLSecOps tools, adversarial machine learning research, AI security frameworks, threat-modeling resources, and practical learning materials.
+
+⭐ If this catalog is useful, [star the repository](https://github.com/RiccardoBiosas/awesome-MLSecOps) or read the [contribution guidelines](CONTRIBUTING.md) to suggest a resource.
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-YES-green.svg)](https://github.com/RiccardoBiosas/awesome-MLSecOps/graphs/commit-activity)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)
 [![Follow](https://img.shields.io/twitter/follow/RBiosas.svg?style=social&label=Follow)](https://twitter.com/RBiosas)
-
-A curated list of awesome open-source tools, resources, and tutorials for MLSecOps (Machine Learning Security Operations).
 
 ![MLSecOps Banner](https://github.com/user-attachments/assets/966affca-442a-4859-b450-774b8d48c6cc)
 
@@ -42,7 +42,6 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 
 ## Open Source Security Tools
 
-<a id="in-this-section-you-and-i-can-take-a-look-at-what-opensource-solutions-and-pocs-exist-to-accomplish-the-task-of-ml-protection-of-course-some-of-them-are-unsupported-or-will-have-difficulties-to-run-however-not-mentioning-them-is-a-big-crime"></a>
 Open-source MLSecOps tools help practitioners test, monitor, and protect machine learning models, data, pipelines, LLM applications, and AI agents. The resources below include active projects and proofs of concept; evaluate maintenance status, licensing, threat coverage, and deployment suitability before production use.
 
 ### Model and Artifact Security
@@ -99,9 +98,9 @@ AI supply-chain security tools protect model artifacts, provenance, dependencies
 | [Model transparency](https://github.com/sigstore/model-transparency) | generate model signing |
 | [BomLens](https://github.com/sktelecom/bomlens) | Local-first SBOM generator and risk assessor that builds CycloneDX ML-BOMs for HuggingFace models with G7 minimum-elements conformance checks, plus license and known-vulnerability reports |
 
-### Benchmarks and Evaluation
+### Model Testing, Monitoring, and Evaluation
 
-Security benchmarks and evaluation tools measure model quality, robustness, moderation, validation, and protection capabilities under repeatable conditions.
+These projects support model validation, monitoring, robustness, safety, and comparative evaluation, including both general-purpose and security-focused assessment workflows.
 
 | Tool | Description |
 |------|-------------|
@@ -205,7 +204,6 @@ ML code security resources help practitioners identify vulnerable dependencies, 
 <a id="101-resources"></a>
 ## AI Security and MLSecOps Beginner Resources
 
-<a id="you-can-find-here-a-list-of-resources-to-help-you-get-into-the-topic-of-ai-security-understand-what-attacks-exist-and-how-they-can-be-used-by-an-attacker"></a>
 These foundational resources explain how adversaries attack AI systems and how defenders secure models, prompts, data, and MLOps workflows.
 
 - [AI Security 101](https://www.nightfall.ai/ai-security-101)
@@ -244,7 +242,6 @@ More in **Adversarial AI Attacks, Mitigations, and Defense Strategies: A cyberse
 
 ## Attack Vectors
 
-<a id="here-we-provide-a-useful-list-of-resources-that-focus-on-a-specific-attack-vector"></a>
 Machine learning systems can be attacked through poisoned data, adversarial inputs, model extraction, privacy attacks, compromised artifacts, excessive agent permissions, and vulnerable MLOps infrastructure. The resources below explain individual attack classes and their defensive implications.
 
 - [Data Poisoning](https://github.com/ch-shin/awesome-data-poisoning)
@@ -262,7 +259,6 @@ Machine learning systems can be attacked through poisoned data, adversarial inpu
 
 ## Blogs and Publications
 
-<a id="-the-ai-security-community-is-growing-new-blogs-and-many-researchers-are-emerging-in-this-paragraph-you-can-see-examples-of-some-blogs"></a>
 These publications cover MLSecOps practices, adversarial machine learning research, LLM security, AI red teaming, privacy, and security measurement.
 
 - 📚 [What is MLSecOps](https://themlsecopshacker.com/p/what-is-mlsecops)
@@ -289,7 +285,6 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 
 ## MLOps Infrastructure Vulnerabilities
 
-<a id="very-interesting-articles-on-mlops-infrastructure-vulnerabilities-in-some-of-them-you-can-even-find-ready-made-exploits"></a>
 MLOps infrastructure introduces security risks across notebooks, training pipelines, model registries, artifact formats, cloud services, Kubernetes workloads, and inference endpoints. These resources document vulnerabilities, exploits, and defensive controls affecting the operational ML lifecycle.
 
 - [SILENT SABOTAGE](https://hiddenlayer.com/research/silent-sabotage/) - Study on bot compromise for converting Pickle to SafeTensors
@@ -308,42 +303,41 @@ MLOps infrastructure introduces security risks across notebooks, training pipeli
 
 These research repositories provide implementations, experiments, benchmarks, attacks, and defenses for adversarial machine learning, model privacy, extraction, inversion, robustness, and LLM security.
 
-| Repository | Security focus |
-|---|---|
-| <a id="agentpoison"></a>[AgentPoison](https://github.com/BillChan226/AgentPoison) | Official implementation of "AgentPoison: Red-teaming LLM Agents via Memory or Knowledge Base Backdoor Poisoning". This project explores methods of data poisoning and backdoor insertion in LLM agents to assess their resilience against such attacks. |
-| <a id="deeppayload"></a>[DeepPayload](https://github.com/yuanchun-li/DeepPayload) | Research on methods of embedding malicious payloads into deep neural networks. |
-| <a id="backdoor"></a>[backdoor](https://github.com/bolunwang/backdoor) | Investigation of backdoor attacks on deep learning models, focusing on creating undetectable vulnerabilities within models. |
-| <a id="stealing_dl_models"></a>[Stealing_DL_Models](https://github.com/jeiks/Stealing_DL_Models) | Techniques for stealing deep learning models through various attack vectors, enabling adversaries to replicate or access models. |
-| <a id="datafree-model-extraction"></a>[datafree-model-extraction](https://github.com/cake-lab/datafree-model-extraction) | Model extraction without using data, allowing for the recovery of models without access to the original data. |
-| <a id="llmmap"></a>[LLMmap](https://github.com/pasquini-dario/LLMmap) | Tool for mapping and analyzing large language models (LLMs), exploring the structure and behavior of various LLMs. |
-| <a id="googlecloud-federated-ml-pipeline"></a>[GoogleCloud-Federated-ML-Pipeline](https://github.com/raj200501/GoogleCloud-Federated-ML-Pipeline) | Federated learning pipeline using Google Cloud infrastructure, enabling model training on distributed data. |
-| <a id="class_activation_mapping_ensemble_attack"></a>[Class_Activation_Mapping_Ensemble_Attack](https://github.com/DreamyRainforest/Class_Activation_Mapping_Ensemble_Attack) | Attack using ensemble class activation maps to introduce errors in models by manipulating activation maps. |
-| <a id="cold-attack"></a>[COLD-Attack](https://github.com/Yu-Fangxu/COLD-Attack) | Methods for attacking deep models under various conditions and constraints, focusing on creating more resilient attacks. |
-| <a id="pal"></a>[pal](https://github.com/chawins/pal) | Research on adaptive attacks on machine learning models, enabling the creation of attacks that can adapt to model defenses. |
-| <a id="zeroshotknowledgetransfer"></a>[ZeroShotKnowledgeTransfer](https://github.com/polo5/ZeroShotKnowledgeTransfer) | Knowledge transfer in zero-shot scenarios, exploring methods to transfer knowledge between models without prior training on target data. |
-| <a id="gmi-attack"></a>[GMI-Attack](https://github.com/AI-secure/GMI-Attack) | Attack for generating informative labels, aimed at covertly extracting data from trained models. |
-| <a id="knowledge-enriched-dmi"></a>[Knowledge-Enriched-DMI](https://github.com/SCccc21/Knowledge-Enriched-DMI) | Enhancing DMI (Data Mining and Integration) methods using additional knowledge to improve accuracy and efficiency. |
-| <a id="vmi"></a>[vmi](https://github.com/wangkua1/vmi) | Research on methods for visualizing and interpreting machine learning models, providing insights into model workings. |
-| <a id="plug-and-play-attacks"></a>[Plug-and-Play-Attacks](https://github.com/LukasStruppek/Plug-and-Play-Attacks) | Attacks that can be "plugged and played" without needing model modifications, offering flexible and universal attack methods. |
-| <a id="snap-sp23"></a>[snap-sp23](https://github.com/johnmath/snap-sp23) | Tool for analyzing and processing snapshot data, enabling efficient handling of data snapshots. |
-| <a id="privacy-vs-robustness"></a>[privacy-vs-robustness](https://github.com/inspire-group/privacy-vs-robustness) | Research on the trade-offs between privacy and robustness in models, aiming to balance these two aspects in machine learning. |
-| <a id="ml-leaks"></a>[ML-Leaks](https://github.com/AhmedSalem2/ML-Leaks) | Methods for data leakage from trained models, exploring ways to extract private information from machine learning models. |
-| <a id="blindmi"></a>[BlindMI](https://github.com/hyhmia/BlindMI) | Research on blind information extraction attacks, enabling data retrieval without access to the model's internal structure. |
-| <a id="python-dp-dl"></a>[python-DP-DL](https://github.com/NNToan-apcs/python-DP-DL) | Differential privacy methods for deep learning, ensuring data privacy during model training. |
-| <a id="mmd-mixup-defense"></a>[MMD-mixup-Defense](https://github.com/colaalex111/MMD-mixup-Defense) | Defense methods using MMD-mixup, aimed at improving model robustness against attacks. |
-| <a id="memguard"></a>[MemGuard](https://github.com/jinyuan-jia/MemGuard) | Tools for protecting memory from attacks, exploring ways to prevent data leaks from model memory. |
-| <a id="unsplit"></a>[unsplit](https://github.com/ege-erdogan/unsplit) | Methods for merging and splitting data to improve training, optimizing the use of heterogeneous data in models. |
-| <a id="face_attribute_attack"></a>[face_attribute_attack](https://github.com/koushiksrivats/face_attribute_attack) | Attacks on face recognition models using attributes, exploring ways to manipulate facial attributes to induce errors. |
-| <a id="fvb"></a>[FVB](https://github.com/Sanjana-Sarda/FVB) | Attacks on face verification models, aimed at disrupting authentication systems based on face recognition. |
-| <a id="malware-gan"></a>[Malware-GAN](https://github.com/yanminglai/Malware-GAN) | Using GANs to create malware, exploring methods for generating malicious code with generative models. |
-| <a id="generative_adversarial_perturbations"></a>[Generative_Adversarial_Perturbations](https://github.com/OmidPoursaeed/Generative_Adversarial_Perturbations) | Methods for generating adversarial perturbations using generative models, aimed at introducing errors in deep models. |
-| <a id="adversarial-attacks-with-relativistic-advgan"></a>[Adversarial-Attacks-with-Relativistic-AdvGAN](https://github.com/GiorgosKarantonis/Adversarial-Attacks-with-Relativistic-AdvGAN) | Adversarial attacks using Relativistic AdvGAN, exploring methods for creating more realistic and effective attacks. |
-| <a id="llm-attacks"></a>[llm-attacks](https://github.com/llm-attacks/llm-attacks) | Attacks on large language models, exploring vulnerabilities and protection methods for LLMs. |
-| <a id="llms-finetuning-safety"></a>[LLMs-Finetuning-Safety](https://github.com/LLM-Tuning-Safety/LLMs-Finetuning-Safety) | Safe fine-tuning of large language models, aiming to prevent data leaks and ensure security during LLM tuning. |
-| <a id="decodingtrust"></a>[DecodingTrust](https://github.com/AI-secure/DecodingTrust) | Methods for evaluating trust in models, exploring ways to determine the reliability and safety of machine learning models. |
-| <a id="promptbench"></a>[promptbench](https://github.com/microsoft/promptbench) | Benchmark for evaluating prompts, providing tools for testing and optimizing queries to large language models. |
-| <a id="rome"></a>[rome](https://github.com/kmeng01/rome) | Tool for analyzing and evaluating models based on ROM codes, exploring various aspects of model performance and resilience. |
-| <a id="llmprivacy"></a>[llmprivacy](https://github.com/eth-sri/llmprivacy) | Research on privacy in large language models, aiming to protect data and prevent leaks from LLMs. |
+| Repository | Category | Security focus |
+|---|---|---|
+| [AgentPoison](https://github.com/BillChan226/AgentPoison) | LLM agent backdoor poisoning | Red-teaming LLM agents via memory or knowledge-base poisoning attacks. |
+| [DeepPayload](https://github.com/yuanchun-li/DeepPayload) | Neural trojan research | Explores embedding malicious payload behaviors into deep neural networks. |
+| [backdoor](https://github.com/bolunwang/backdoor) | Backdoor attacks | Investigates hidden-trigger backdoor attacks in deep learning models. |
+| [Stealing_DL_Models](https://github.com/jeiks/Stealing_DL_Models) | Model stealing | Demonstrates model-stealing techniques against deep learning systems. |
+| [datafree-model-extraction](https://github.com/cake-lab/datafree-model-extraction) | Model extraction | Studies data-free extraction of target model behavior. |
+| [LLMmap](https://github.com/pasquini-dario/LLMmap) | LLM attack-surface mapping | Maps and analyzes LLM behavior to support security-oriented assessment. |
+| [Class_Activation_Mapping_Ensemble_Attack](https://github.com/DreamyRainforest/Class_Activation_Mapping_Ensemble_Attack) | Adversarial evasion attacks | Uses CAM-based ensemble methods to craft adversarial examples. |
+| [COLD-Attack](https://github.com/Yu-Fangxu/COLD-Attack) | Adversarial optimization attacks | Implements constrained optimization attacks against deep models. |
+| [pal](https://github.com/chawins/pal) | Adaptive adversarial attacks | Research code for adaptive attack strategies against defended models. |
+| [ZeroShotKnowledgeTransfer](https://github.com/polo5/ZeroShotKnowledgeTransfer) | Model extraction | Zero-shot knowledge-transfer methods relevant to model stealing risk. |
+| [GMI-Attack](https://github.com/AI-secure/GMI-Attack) | Model inversion attacks | Implements generative model inversion attacks against trained models. |
+| [Knowledge-Enriched-DMI](https://github.com/SCccc21/Knowledge-Enriched-DMI) | Model inversion attacks | Extends deep model inversion with auxiliary knowledge priors. |
+| [vmi](https://github.com/wangkua1/vmi) | Model inversion attacks | Implements variational model inversion attacks to recover private training information. |
+| [Plug-and-Play-Attacks](https://github.com/LukasStruppek/Plug-and-Play-Attacks) | Black-box attack methods | Provides plug-and-play attack pipelines for black-box ML models. |
+| [snap-sp23](https://github.com/johnmath/snap-sp23) | Privacy extraction attacks | Implements SNAP poisoning attacks for private-property extraction from models. |
+| [privacy-vs-robustness](https://github.com/inspire-group/privacy-vs-robustness) | Privacy vs robustness research | Evaluates trade-offs between differential privacy and adversarial robustness. |
+| [ML-Leaks](https://github.com/AhmedSalem2/ML-Leaks) | Membership inference attacks | Implements membership-inference attacks to test privacy leakage. |
+| [BlindMI](https://github.com/hyhmia/BlindMI) | Membership inference attacks | Studies label-only and blind membership-inference techniques. |
+| [python-DP-DL](https://github.com/NNToan-apcs/python-DP-DL) | Privacy defenses | Differential privacy utilities for protecting training data in deep learning. |
+| [MMD-mixup-Defense](https://github.com/colaalex111/MMD-mixup-Defense) | Adversarial defenses | Defense approach designed to improve robustness against adversarial attacks. |
+| [MemGuard](https://github.com/jinyuan-jia/MemGuard) | Membership inference defenses | Defends model outputs against membership-inference attacks. |
+| [unsplit](https://github.com/ege-erdogan/unsplit) | Split learning attacks | Demonstrates model inversion, model stealing, and label inference against split learning. |
+| [face_attribute_attack](https://github.com/koushiksrivats/face_attribute_attack) | Biometric adversarial attacks | Explores attacks on face-attribute recognition systems. |
+| [FVB](https://github.com/Sanjana-Sarda/FVB) | Biometric adversarial attacks | Attack methods targeting face-verification models. |
+| [Malware-GAN](https://github.com/yanminglai/Malware-GAN) | Malware evasion research | Uses GAN-generated variants to study ML-based malware detection evasion. |
+| [Generative_Adversarial_Perturbations](https://github.com/OmidPoursaeed/Generative_Adversarial_Perturbations) | Adversarial example generation | Generates adversarial perturbations with generative models. |
+| [Adversarial-Attacks-with-Relativistic-AdvGAN](https://github.com/GiorgosKarantonis/Adversarial-Attacks-with-Relativistic-AdvGAN) | Adversarial example generation | Implements AdvGAN-based adversarial attacks for deep models. |
+| [llm-attacks](https://github.com/llm-attacks/llm-attacks) | LLM jailbreak research | Research code for adversarial prompting and jailbreak attacks on LLMs. |
+| [LLMs-Finetuning-Safety](https://github.com/LLM-Tuning-Safety/LLMs-Finetuning-Safety) | LLM safety defenses | Studies safer LLM fine-tuning under harmful behavior and leakage risks. |
+| [DecodingTrust](https://github.com/AI-secure/DecodingTrust) | Trust and safety benchmarking | Benchmark suite for evaluating trust, safety, and robustness dimensions in LLMs. |
+| [promptbench](https://github.com/microsoft/promptbench) | Prompt robustness benchmarking | Benchmarking framework for evaluating prompt robustness and reliability. |
+| [rome](https://github.com/kmeng01/rome) | Model editing and reliability | Implements factual model editing methods used in reliability and safety research. |
+| [llmprivacy](https://github.com/eth-sri/llmprivacy) | LLM privacy attacks | Research on privacy leakage and protection in large language models. |
 
 
 
@@ -448,7 +442,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <p align="center">Made with ❤️</p>
-
 
 
 
