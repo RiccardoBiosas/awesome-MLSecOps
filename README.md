@@ -51,7 +51,7 @@ Model and artifact security tools detect unsafe serialization, malicious payload
 | Tool | Description |
 |------|-------------|
 | [ModelScan](https://github.com/protectai/modelscan) | Protection Against ML Model Serialization Attacks |
-| [Safetensors](https://github.com/huggingface/safetensors) | Convert pickle to a safe serialization option|
+| [Safetensors](https://github.com/huggingface/safetensors) | Convert pickle to a safe serialization option |
 
 ### Adversarial Machine Learning Testing
 
@@ -87,7 +87,7 @@ Privacy-preserving machine learning tools help limit sensitive-data exposure thr
 | Tool | Description |
 |------|-------------|
 | [TensorFlow Privacy](https://github.com/tensorflow/privacy) | Library of privacy-preserving machine learning algorithms and tools |
-| [OpenDP](https://github.com/opendp/opendp)| The core library of differential privacy algorithms powering the OpenDP Project|
+| [OpenDP](https://github.com/opendp/opendp) | The core library of differential privacy algorithms powering the OpenDP Project |
 
 ### AI Supply-Chain Security
 
@@ -95,7 +95,7 @@ AI supply-chain security tools protect model artifacts, provenance, dependencies
 
 | Tool | Description |
 |------|-------------|
-| [Model transparency](https://github.com/sigstore/model-transparency) | generate model signing |
+| [Model Transparency](https://github.com/sigstore/model-transparency) | Generate model signing metadata for provenance verification |
 | [BomLens](https://github.com/sktelecom/bomlens) | Local-first SBOM generator and risk assessor that builds CycloneDX ML-BOMs for HuggingFace models with G7 minimum-elements conformance checks, plus license and known-vulnerability reports |
 
 ### Model Testing, Monitoring, and Evaluation
@@ -350,7 +350,7 @@ MLSecOps communities and security frameworks connect practitioners with threat k
 - [MLSecOps](https://mlsecops.com/)
 - [MLSecOps Podcast](https://mlsecops.com/podcast)
 - [MITRE ATLAS™](https://atlas.mitre.org/) and [SLACK COMMUNITY](https://join.slack.com/t/mitreatlas/shared_invite/zt-10i6ka9xw-~dc70mXWrlbN9dfFNKyyzQ)
-- [MLSecOps community](https://mlsecops.com) and [Slack community](https://mlsecops.slack.com/)
+- [Slack community](https://mlsecops.slack.com/)
 - [MITRE ATLAS™ (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/)
 - [OWASP AI Exchange](https://owaspai.org)
 - [OWASP Machine Learning Security Top Ten](https://owasp.org/www-project-machine-learning-security-top-10/)
