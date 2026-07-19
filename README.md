@@ -27,7 +27,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 
 ## Open Source Security Tools
 
-#### In this section, you and I can take a look at what opensource solutions and PoCs, exist to accomplish the task of ML protection. Of course, some of them are unsupported or will have difficulties to run. However, not mentioning them is a big crime.
+### In this section, you and I can take a look at what opensource solutions and PoCs, exist to accomplish the task of ML protection. Of course, some of them are unsupported or will have difficulties to run. However, not mentioning them is a big crime.
 
 | Tool | Description |
 |------|-------------|
@@ -39,7 +39,6 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [TensorFlow Privacy](https://github.com/tensorflow/privacy) | Library of privacy-preserving machine learning algorithms and tools |
 | [Foolbox](https://github.com/bethgelab/foolbox) | Python toolbox for creating and evaluating adversarial attacks and defenses |
 | [Advertorch](https://github.com/BorealisAI/advertorch) | Python toolbox for adversarial robustness research |
-| [Artificial Intelligence Threat Matrix](https://collaborativeaicontrols.github.io/ATM/) | Framework for identifying and mitigating threats to machine learning systems |
 | [Adversarial ML Threat Matrix](https://github.com/mitre/advmlthreatmatrix) | Adversarial Threat Landscape for AI Systems |
 | [CleverHans](https://github.com/cleverhans-lab/cleverhans) | A library of adversarial examples and defenses for machine learning models|
 | [AdvBox](https://github.com/advboxes/AdvBox) | Advbox is a toolbox to generate adversarial examples that fool neural networks in PaddlePaddle、PyTorch、Caffe2、MxNet、Keras、TensorFlow|
@@ -48,6 +47,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [Privacy Meter](https://github.com/privacytrustlab/ml_privacy_meter) | An open-source library to audit data privacy in statistical and machine learning algorithms|
 | [TensorFlow Model Analysis](https://github.com/tensorflow/model-analysis) | A library for analyzing, validating, and monitoring machine learning models in production|
 | [PromptInject](https://github.com/agencyenterprise/PromptInject) | A framework that assembles adversarial prompts|
+| [Agent Memory Guard](https://github.com/OWASP/www-project-agent-memory-guard) | Official OWASP runtime defense layer that screens AI agent memory reads/writes, blocking prompt injection, secret leakage, and memory poisoning (ASI06) |
 | [TextAttack](https://github.com/QData/TextAttack) | TextAttack is a Python framework for adversarial attacks, data augmentation, and model training in NLP|
 | [OpenAttack](https://github.com/thunlp/OpenAttack) | An Open-Source Package for Textual Adversarial Attack|
 | [TextFooler](https://github.com/jind11/TextFooler) | A Model for Natural Language Attack on Text Classification and Inference|
@@ -85,6 +85,14 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [CircleGuardBench](https://github.com/whitecircle-ai/circle-guard-bench)| A full-fledged benchmark for evaluating protection capabilities of AI models|
 | [Promptfoo Scanner](https://github.com/promptfoo/promptfoo) | An open-source LLM red teaming tool |
 | [skill-audit-mcp](https://github.com/eltociear/skill-audit-mcp) | Static security scanner for MCP servers, AI agent skills, and plugins. Detects 68 attack patterns across CRITICAL/HIGH/MEDIUM/LOW — credential exfiltration, prompt injection, code execution, seed-phrase harvesting, auth bypass, path traversal. SARIF output, GitHub Action, multi-arch Docker image |
+| [AIsbom](https://github.com/Lab700xOrg/aisbom) | Disassembles Pickle bytecode and parses SafeTensors/GGUF binary headers to detect malware and license risks in ML model files before load. Generates CycloneDX/SPDX SBOMs. |
+| [AI-Scan-Interceptor](https://github.com/mshirakawa-ssp/ai-scan-interceptor) | Self-hostable DLP gateway for enterprise prompts to ChatGPT/Claude/Gemini (Squid + Go ICAP + mTLS, AGPL-3.0) |
+| [KubeStellar Console](https://github.com/kubestellar/console) | Multi-cluster Kubernetes dashboard with MLSecOps capabilities: GPU workload monitoring, Kyverno policy enforcement, supply chain security (SBOM, SLSA), and AI/ML infrastructure observability. CNCF Sandbox project. |
+| [BomLens](https://github.com/sktelecom/sbom-tools) | Local-first SBOM generator and risk assessor that builds CycloneDX ML-BOMs for HuggingFace models with G7 minimum-elements conformance checks, plus license and known-vulnerability reports |
+| [TrustGate](https://github.com/NeuralTrust/TrustGate) | An open-source Generative Application Firewall (GAF) |
+| [Agent-Wiz](https://github.com/Repello-AI/Agent-Wiz) | Python CLI by Repello AI for extracting agentic workflows from LangChain/LangGraph/CrewAI/AutoGen and running automated threat modeling |
+| [Whistleblower](https://github.com/Repello-AI/whistleblower) | Open-source offensive tool by Repello AI for testing LLM apps against system prompt leakage |
+| [IronClaw](https://github.com/IronSecCo/ironclaw) | Security-hardened, self-hosted runtime that sandboxes autonomous AI agents in a gVisor (runsc) sandbox with network=none, a read-only rootfs, host-side credential injection, and a human-approval gateway; signed and attested supply chain (cosign, SLSA, SBOMs) |
 
 
 ## Commercial Tools
@@ -95,6 +103,8 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [Hidden Layer AI Detection Response](https://hiddenlayer.com/aidr/) | Tool for detecting and responding to incidents |
 | [Guardian](https://protectai.com/guardian) | Model protection in CI/CD |
 | [Promptfoo](https://www.promptfoo.dev/security/) | Continuous monitoring, detection, and remediation for enterprise LLM applications |
+| [NeuralTrust](https://neuraltrust.ai) | Tools to protect, secure and test GenAI Applications |
+
 
 ## DATA
 
@@ -117,7 +127,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 
 ## 101 Resources
 
-#### You can find here a list of resources to help you get into the topic of AI security. Understand what attacks exist and how they can be used by an attacker.
+### You can find here a list of resources to help you get into the topic of AI security. Understand what attacks exist and how they can be used by an attacker.
 
 - [AI Security 101](https://www.nightfall.ai/ai-security-101)
 - [Web LLM attacks](https://portswigger.net/web-security/llm-attacks)
@@ -125,7 +135,7 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 - [AI Risk Assessment for ML Engineers](https://learn.microsoft.com/en-us/security/ai-red-team/ai-risk-assessment)
 - [Microsoft - Generative AI Security for beginners](https://github.com/microsoft/generative-ai-for-beginners/blob/main/13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
-#### AI Security Study Map
+### AI Security Study Map
 
 [![AI Security Study Map](https://i.postimg.cc/G2QdqnK6/map.png)](https://postimg.cc/sQvkg8tJ)
 
@@ -153,7 +163,7 @@ more in **Adversarial AI Attacks, Mitigations, and Defense Strategies: A cyberse
 
 ## Attack Vectors
 
-#### Here we provide a useful list of resources that focus on a specific attack vector.
+### Here we provide a useful list of resources that focus on a specific attack vector.
 
 - [Data Poisoning](https://github.com/ch-shin/awesome-data-poisoning)
 - [Adversarial Prompt Exploits](https://research.nccgroup.com/2022/12/05/exploring-prompt-injection-attacks)
@@ -170,7 +180,7 @@ more in **Adversarial AI Attacks, Mitigations, and Defense Strategies: A cyberse
 
 ## Blogs and Publications 
 
-#### 🌱 The AI security community is growing. New blogs and many researchers are emerging. In this paragraph you can see examples of some blogs.
+### 🌱 The AI security community is growing. New blogs and many researchers are emerging. In this paragraph you can see examples of some blogs.
 
 - 📚 [What is MLSecOps](https://themlsecopshacker.com/p/what-is-mlsecops)
 - 🛡️ [Red-Teaming Large Language Models](https://huggingface.co/blog/red-teaming)
@@ -196,7 +206,7 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 
 ## MLOps Infrastructure Vulnerabilities
 
-#### Very interesting articles on MlOps infrastructure vulnerabilities. In some of them you can even find ready-made exploits.
+### Very interesting articles on MlOps infrastructure vulnerabilities. In some of them you can even find ready-made exploits.
 
 - [SILENT SABOTAGE](https://hiddenlayer.com/research/silent-sabotage/) - Study on bot compromise for converting Pickle to SafeTensors
 - [NOT SO CLEAR: HOW MLOPS SOLUTIONS CAN MUDDY THE WATERS OF YOUR SUPPLY CHAIN](https://hiddenlayer.com/research/not-so-clear-how-mlops-solutions-can-muddy-the-waters-of-your-supply-chain/) - Study on vulnerabilities for the ClearML platform
@@ -208,9 +218,6 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 
 ![image](https://github.com/user-attachments/assets/8ce8400b-804b-4ce0-9241-30ad5b42b55f)
 
-
-
-# Academic Po(C)ker FACE
 
 ## Repositories
 
@@ -415,6 +422,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <p align="center">Made with ❤️</p>
+
 
 
 
