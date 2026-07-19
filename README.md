@@ -39,7 +39,6 @@ A curated list of awesome open-source tools, resources, and tutorials for MLSecO
 | [TensorFlow Privacy](https://github.com/tensorflow/privacy) | Library of privacy-preserving machine learning algorithms and tools |
 | [Foolbox](https://github.com/bethgelab/foolbox) | Python toolbox for creating and evaluating adversarial attacks and defenses |
 | [Advertorch](https://github.com/BorealisAI/advertorch) | Python toolbox for adversarial robustness research |
-| [Artificial Intelligence Threat Matrix](https://collaborativeaicontrols.github.io/ATM/) | Framework for identifying and mitigating threats to machine learning systems |
 | [Adversarial ML Threat Matrix](https://github.com/mitre/advmlthreatmatrix) | Adversarial Threat Landscape for AI Systems |
 | [CleverHans](https://github.com/cleverhans-lab/cleverhans) | A library of adversarial examples and defenses for machine learning models|
 | [AdvBox](https://github.com/advboxes/AdvBox) | Advbox is a toolbox to generate adversarial examples that fool neural networks in PaddlePaddle、PyTorch、Caffe2、MxNet、Keras、TensorFlow|
