@@ -161,6 +161,7 @@ The following tools and research prototypes address additional MLSecOps testing,
 | [TrustGate](https://github.com/NeuralTrust/TrustGate) | An open-source Generative Application Firewall (GAF) |
 | [Whistleblower](https://github.com/Repello-AI/whistleblower) | Open-source offensive tool by Repello AI for testing LLM apps against system prompt leakage |
 | [IronClaw](https://github.com/IronSecCo/ironclaw) | Security-hardened, self-hosted runtime that sandboxes autonomous AI agents in a gVisor (runsc) sandbox with network=none, a read-only rootfs, host-side credential injection, and a human-approval gateway; signed and attested supply chain (cosign, SLSA, SBOMs) |
+| [Redcells](https://redcells.net) | Automated adversarial testing for OpenAI-compatible language models. Submit a target model and an intent (prompt injection, jailbreak, data leakage), and it runs an iterative attack→refine pipeline with per-layer prompts, responses, and judge scores. API-first with dashboard, encrypted target credentials, rate limiting, and Stripe billing. |
 
 
 <a id="commercial-tools"></a>
