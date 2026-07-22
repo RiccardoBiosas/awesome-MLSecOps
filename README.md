@@ -175,6 +175,7 @@ Commercial MLSecOps and AI security tools support model protection, application 
 | [Guardian](https://protectai.com/guardian) | Model protection in CI/CD |
 | [Promptfoo](https://www.promptfoo.dev/security/) | Continuous monitoring, detection, and remediation for enterprise LLM applications |
 | [NeuralTrust](https://neuraltrust.ai) | Tools to protect, secure and test GenAI Applications |
+| [SourceryKit](https://github.com/ProvablyAI/sourcerykit) | Verifies an AI agent's outbound requests and MCP handoffs against a source of truth using zero-knowledge proofs, so a call only goes out if its claims check out; hooks the HTTP libraries, logs each outbound call, and blocks endpoints not on the trusted allow-list |
 
 
 <a id="data"></a>
