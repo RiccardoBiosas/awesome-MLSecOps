@@ -1,0 +1,98 @@
+---
+import { getCollection } from "astro:content";
+import type { Graph } from "schema-dts";
+import NewsletterCta from "../components/NewsletterCta.astro";
+// import SponsorRow from "../components/SponsorRow.astro";
+import StructuredData from "../components/StructuredData.astro";
+import { CONTRIBUTE_URL, MLSECOPS_DEFINITION_LEAD, MLSECOPS_DEFINITION_SUPPORT, REPOSITORY_URL, SITE_URL } from "../config/site";
+import { TOOL_CATEGORIES } from "../data/categories";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const tools = await getCollection("tools");
+const counts = new Map(TOOL_CATEGORIES.map((category) => [category.id, tools.filter((tool) => tool.data.category === category.id).length]));
+
+const schema: Graph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": `${SITE_URL}/#page`,
+      url: SITE_URL,
+      name: "Awesome MLSecOps",
+      description: "A citation-friendly guide to MLSecOps, machine learning security, AI security tools, jobs, and research.",
+    },
+    {
+      "@type": "ItemList",
+      name: "MLSecOps tool categories",
+      numberOfItems: TOOL_CATEGORIES.length,
+      itemListElement: TOOL_CATEGORIES.map((category, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: category.name,
+        url: `${SITE_URL}/tools/${category.id}/`,
+      })),
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      name: "Awesome MLSecOps",
+      codeRepository: REPOSITORY_URL,
+      programmingLanguage: "Markdown",
+      license: `${REPOSITORY_URL}/blob/main/LICENSE`,
+      description: "The community-maintained source catalog for Awesome MLSecOps.",
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Awesome MLSecOps | ML & AI Security Resources"
+  description="MLSecOps tools and guidance for machine learning security, MLOps security, LLM security, threat modeling, jobs, and AI red teaming."
+  ogKey="home"
+>
+  <StructuredData data={schema} />
+  <section class="page-hero hub-hero">
+    <div class="shell">
+      <p class="eyebrow">The answer layer for machine learning security</p>
+      <h1>Awesome MLSecOps — Curated ML & AI Security Tools and Resources</h1>
+      <p class="definition"><strong>{MLSECOPS_DEFINITION_LEAD}</strong> {MLSECOPS_DEFINITION_SUPPORT}</p>
+      <div class="button-row">
+        <a class="button" href={REPOSITORY_URL} data-analytics-event="Repo Outbound">Star the catalog on GitHub</a>
+        <a class="button-secondary" href={CONTRIBUTE_URL} data-analytics-event="Repo Outbound">Contribute a resource</a>
+      </div>
+      <NewsletterCta aboveFold compact />
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="shell">
+      <div class="section-heading">
+        <p class="eyebrow">Browse by security problem</p>
+        <h2>Focused guides, one community source</h2>
+        <p>Browse MLSecOps tools and resources by machine learning security category. The GitHub repository contains the complete, community-maintained catalog.</p>
+      </div>
+      <div class="category-grid">
+        {TOOL_CATEGORIES.map((category) => (
+          <a class="category-card" href={`/tools/${category.id}/`}>
+            <span class="count">{counts.get(category.id) ?? 0} catalog entries</span>
+            <h3>{category.name}</h3>
+            <p>{category.shortDescription}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="shell metric-grid">
+      <div class="metric"><strong>{tools.length}</strong><span>synced tool entries</span></div>
+      <div class="metric"><strong>6</strong><span>security category guides</span></div>
+      <div class="metric"><strong>1</strong><span>community-maintained source</span></div>
+    </div>
+  </section>
+
+  {/* Sponsorship is temporarily disabled.
+  <section class="content-section">
+    <div class="shell"><SponsorRow /></div>
+  </section>
+  */}
+</BaseLayout>

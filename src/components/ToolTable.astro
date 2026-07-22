@@ -1,0 +1,29 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  tools: CollectionEntry<"tools">[];
+}
+
+const { tools } = Astro.props;
+const sortedTools = [...tools].sort((left, right) => left.data.name.localeCompare(right.data.name));
+---
+
+<div class="table-scroll">
+  <table class="tool-table">
+    <thead>
+      <tr>
+        <th scope="col">Tool</th>
+        <th scope="col">Security focus</th>
+      </tr>
+    </thead>
+    <tbody>
+      {sortedTools.map((tool) => (
+        <tr>
+          <th scope="row"><a href={tool.data.url}>{tool.data.name}</a></th>
+          <td>{tool.data.description}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

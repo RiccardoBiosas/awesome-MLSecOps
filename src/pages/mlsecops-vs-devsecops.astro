@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="MLSecOps vs DevSecOps | AI Security Comparison"
+  description="Compare MLSecOps, DevSecOps, and AISecOps responsibilities, protected assets, controls, testing, monitoring, and team ownership."
+  ogKey="mlsecops-vs-devsecops"
+>
+  <section class="page-hero">
+    <div class="shell">
+      <p class="eyebrow">Operating-model comparison</p>
+      <h1>MLSecOps vs DevSecOps</h1>
+      <p>MLSecOps extends secure software delivery to the data, models, behavior, and operational risks unique to machine learning systems.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="shell prose">
+      <h2>The short answer</h2>
+      <p><strong>DevSecOps</strong> integrates security into software development and operations. <strong>MLSecOps</strong> applies that operating principle to machine learning while adding controls for training data, model artifacts, inference behavior, privacy leakage, adversarial attacks, and model abuse. <strong>AISecOps</strong> is an ambiguous term that may mean securing AI systems or using AI within security operations.</p>
+
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Dimension</th><th scope="col">DevSecOps</th><th scope="col">MLSecOps</th><th scope="col">AISecOps</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Primary scope</th><td>Software and infrastructure delivery</td><td>Machine learning and AI lifecycles</td><td>Varies by organization</td></tr>
+            <tr><th scope="row">Protected assets</th><td>Code, dependencies, secrets, workloads</td><td>Data, models, prompts, artifacts, agents, pipelines</td><td>AI systems or security operations data</td></tr>
+            <tr><th scope="row">Distinct threats</th><td>Code flaws, dependency compromise, misconfiguration</td><td>Poisoning, evasion, extraction, inversion, prompt injection, unsafe agency</td><td>Depends on the chosen definition</td></tr>
+            <tr><th scope="row">Evidence</th><td>SAST, DAST, SBOM, IaC and runtime findings</td><td>Model scans, provenance, privacy tests, red-team evaluations, behavioral monitoring</td><td>Often analytics or automation outcomes</td></tr>
+            <tr><th scope="row">Owners</th><td>Application, platform, cloud, and security teams</td><td>ML, data, platform, product, safety, and security teams</td><td>Usually security operations or AI governance teams</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Where DevSecOps remains essential</h2>
+      <p>Every AI system still runs on software, identities, networks, cloud services, containers, and dependencies. Secure coding, patching, secret management, least privilege, infrastructure policy, logging, and incident response remain foundational. MLSecOps does not excuse weak DevSecOps; it adds controls where conventional tools cannot evaluate model-specific behavior or lineage.</p>
+
+      <h2>What MLSecOps adds</h2>
+      <p>MLSecOps records where models and data came from, tests artifacts before loading, evaluates adversarial behavior, measures privacy risk, constrains LLM and agent actions, and monitors AI-specific failure signals. It also creates ownership across teams that may otherwise treat model risk as somebody else's problem. The operating model connects threat scenarios to repeatable release evidence and containment actions.</p>
+
+      <h2>How to use the terms</h2>
+      <p>Use DevSecOps for the secure software and infrastructure foundation. Use MLSecOps when discussing the controls and operating practices required across machine learning delivery. Define AISecOps explicitly whenever you use it, because readers may interpret it as either AI security or AI-assisted security operations.</p>
+      <p>Continue with the <a href="/what-is-mlsecops/">MLSecOps lifecycle guide</a> or browse <a href="/tools/">MLSecOps tool categories</a> mapped to specific security problems.</p>
+    </div>
+  </section>
+</BaseLayout>

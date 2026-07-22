@@ -1,0 +1,548 @@
+[
+  {
+    "id": "modelscan",
+    "category": "supply-chain",
+    "name": "ModelScan",
+    "url": "https://github.com/protectai/modelscan",
+    "description": "Protection Against ML Model Serialization Attacks"
+  },
+  {
+    "id": "safetensors",
+    "category": "supply-chain",
+    "name": "Safetensors",
+    "url": "https://github.com/huggingface/safetensors",
+    "description": "Convert pickle to a safe serialization option"
+  },
+  {
+    "id": "adversarial-robustness-toolbox",
+    "category": "adversarial-ml",
+    "name": "Adversarial Robustness Toolbox",
+    "url": "https://github.com/IBM/adversarial-robustness-toolbox",
+    "description": "Library of defense methods for ML models against adversarial attacks"
+  },
+  {
+    "id": "foolbox",
+    "category": "adversarial-ml",
+    "name": "Foolbox",
+    "url": "https://github.com/bethgelab/foolbox",
+    "description": "Python toolbox for creating and evaluating adversarial attacks and defenses"
+  },
+  {
+    "id": "garak",
+    "category": "llm-security",
+    "name": "Garak",
+    "url": "https://github.com/leondz/garak",
+    "description": "LLM vulnerability scanner"
+  },
+  {
+    "id": "promptfoo-scanner",
+    "category": "llm-security",
+    "name": "Promptfoo Scanner",
+    "url": "https://github.com/promptfoo/promptfoo",
+    "description": "An open-source LLM red teaming tool"
+  },
+  {
+    "id": "agent-memory-guard",
+    "category": "agent-security",
+    "name": "Agent Memory Guard",
+    "url": "https://github.com/OWASP/www-project-agent-memory-guard",
+    "description": "Official OWASP runtime defense layer that screens AI agent memory reads/writes, blocking prompt injection, secret leakage, and memory poisoning (ASI06)"
+  },
+  {
+    "id": "agent-wiz",
+    "category": "agent-security",
+    "name": "Agent-Wiz",
+    "url": "https://github.com/Repello-AI/Agent-Wiz",
+    "description": "Python CLI by Repello AI for extracting agentic workflows from LangChain/LangGraph/CrewAI/AutoGen and running automated threat modeling"
+  },
+  {
+    "id": "tensorflow-privacy",
+    "category": "privacy",
+    "name": "TensorFlow Privacy",
+    "url": "https://github.com/tensorflow/privacy",
+    "description": "Library of privacy-preserving machine learning algorithms and tools"
+  },
+  {
+    "id": "opendp",
+    "category": "privacy",
+    "name": "OpenDP",
+    "url": "https://github.com/opendp/opendp",
+    "description": "The core library of differential privacy algorithms powering the OpenDP Project"
+  },
+  {
+    "id": "model-transparency",
+    "category": "supply-chain",
+    "name": "Model Transparency",
+    "url": "https://github.com/sigstore/model-transparency",
+    "description": "Generate model signing metadata for provenance verification"
+  },
+  {
+    "id": "bomlens",
+    "category": "supply-chain",
+    "name": "BomLens",
+    "url": "https://github.com/sktelecom/bomlens",
+    "description": "Local-first SBOM generator and risk assessor that builds CycloneDX ML-BOMs for HuggingFace models with G7 minimum-elements conformance checks, plus license and known-vulnerability reports"
+  },
+  {
+    "id": "tensorflow-model-analysis",
+    "category": "model-scanning",
+    "name": "TensorFlow Model Analysis",
+    "url": "https://github.com/tensorflow/model-analysis",
+    "description": "A library for analyzing, validating, and monitoring machine learning models in production"
+  },
+  {
+    "id": "circleguardbench",
+    "category": "model-scanning",
+    "name": "CircleGuardBench",
+    "url": "https://github.com/whitecircle-ai/circle-guard-bench",
+    "description": "A full-fledged benchmark for evaluating protection capabilities of AI models"
+  },
+  {
+    "id": "nb-defense",
+    "category": "model-scanning",
+    "name": "NB Defense",
+    "url": "https://nbdefense.ai/",
+    "description": "Secure Jupyter Notebooks"
+  },
+  {
+    "id": "mlsploit",
+    "category": "adversarial-ml",
+    "name": "MLSploit",
+    "url": "https://github.com/mlsploit/",
+    "description": "Cloud framework for interactive experimentation with adversarial machine learning research"
+  },
+  {
+    "id": "advertorch",
+    "category": "adversarial-ml",
+    "name": "Advertorch",
+    "url": "https://github.com/BorealisAI/advertorch",
+    "description": "Python toolbox for adversarial robustness research"
+  },
+  {
+    "id": "adversarial-ml-threat-matrix",
+    "category": "adversarial-ml",
+    "name": "Adversarial ML Threat Matrix",
+    "url": "https://github.com/mitre/advmlthreatmatrix",
+    "description": "Adversarial Threat Landscape for AI Systems"
+  },
+  {
+    "id": "cleverhans",
+    "category": "adversarial-ml",
+    "name": "CleverHans",
+    "url": "https://github.com/cleverhans-lab/cleverhans",
+    "description": "A library of adversarial examples and defenses for machine learning models"
+  },
+  {
+    "id": "advbox",
+    "category": "adversarial-ml",
+    "name": "AdvBox",
+    "url": "https://github.com/advboxes/AdvBox",
+    "description": "Advbox is a toolbox to generate adversarial examples that fool neural networks in PaddlePaddle、PyTorch、Caffe2、MxNet、Keras、TensorFlow"
+  },
+  {
+    "id": "audit-ai",
+    "category": "model-scanning",
+    "name": "Audit AI",
+    "url": "https://github.com/pymetrics/audit-ai",
+    "description": "Bias Testing for Generalized Machine Learning Applications"
+  },
+  {
+    "id": "deep-pwning",
+    "category": "adversarial-ml",
+    "name": "Deep Pwning",
+    "url": "https://github.com/cchio/deep-pwning",
+    "description": "Deep-pwning is a lightweight framework for experimenting with machine learning models with the goal of evaluating their robustness against a motivated adversary"
+  },
+  {
+    "id": "privacy-meter",
+    "category": "privacy",
+    "name": "Privacy Meter",
+    "url": "https://github.com/privacytrustlab/ml_privacy_meter",
+    "description": "An open-source library to audit data privacy in statistical and machine learning algorithms"
+  },
+  {
+    "id": "promptinject",
+    "category": "adversarial-ml",
+    "name": "PromptInject",
+    "url": "https://github.com/agencyenterprise/PromptInject",
+    "description": "A framework that assembles adversarial prompts"
+  },
+  {
+    "id": "textattack",
+    "category": "adversarial-ml",
+    "name": "TextAttack",
+    "url": "https://github.com/QData/TextAttack",
+    "description": "TextAttack is a Python framework for adversarial attacks, data augmentation, and model training in NLP"
+  },
+  {
+    "id": "openattack",
+    "category": "adversarial-ml",
+    "name": "OpenAttack",
+    "url": "https://github.com/thunlp/OpenAttack",
+    "description": "An Open-Source Package for Textual Adversarial Attack"
+  },
+  {
+    "id": "textfooler",
+    "category": "adversarial-ml",
+    "name": "TextFooler",
+    "url": "https://github.com/jind11/TextFooler",
+    "description": "A Model for Natural Language Attack on Text Classification and Inference"
+  },
+  {
+    "id": "flawed-machine-learning-security",
+    "category": "model-scanning",
+    "name": "Flawed Machine Learning Security",
+    "url": "https://github.com/EthicalML/fml-security",
+    "description": "Practical examples of \"Flawed Machine Learning Security\" together with ML Security best practice across the end to end stages of the machine learning model lifecycle from training, to packaging, to deployment"
+  },
+  {
+    "id": "adversarial-machine-learning-ctf",
+    "category": "adversarial-ml",
+    "name": "Adversarial Machine Learning CTF",
+    "url": "https://github.com/arturmiller/adversarial_ml_ctf",
+    "description": "This repository is a CTF challenge, showing a security flaw in most (all?) common artificial neural networks. They are vulnerable for adversarial images"
+  },
+  {
+    "id": "damn-vulnerable-llm-project",
+    "category": "llm-security",
+    "name": "Damn Vulnerable LLM Project",
+    "url": "https://github.com/harishsg993010/DamnVulnerableLLMProject",
+    "description": "A Large Language Model designed for getting hacked"
+  },
+  {
+    "id": "gandalf-lakera",
+    "category": "llm-security",
+    "name": "Gandalf Lakera",
+    "url": "https://gandalf.lakera.ai/",
+    "description": "Prompt Injection CTF playground"
+  },
+  {
+    "id": "vigil",
+    "category": "llm-security",
+    "name": "Vigil",
+    "url": "https://github.com/deadbits/vigil-llm",
+    "description": "LLM prompt injection and security scanner"
+  },
+  {
+    "id": "pallms-payloads-for-attacking-large-language-models",
+    "category": "llm-security",
+    "name": "PALLMs (Payloads for Attacking Large Language Models)",
+    "url": "https://github.com/mik0w/pallms",
+    "description": "list of various payloads for attacking LLMs collected in one place"
+  },
+  {
+    "id": "ai-exploits",
+    "category": "supply-chain",
+    "name": "AI-exploits",
+    "url": "https://github.com/protectai/ai-exploits",
+    "description": "Exploits for MLOps systems, extending beyond inputs provided to LLMs such as ChatGPT"
+  },
+  {
+    "id": "offensive-ml-playbook",
+    "category": "adversarial-ml",
+    "name": "Offensive ML Playbook",
+    "url": "https://wiki.offsecml.com/Welcome+to+the+Offensive+ML+Playbook",
+    "description": "Offensive ML Playbook. Notes on machine learning attacks and pentesting"
+  },
+  {
+    "id": "anonllm",
+    "category": "privacy",
+    "name": "AnonLLM",
+    "url": "https://github.com/fsndzomga/anonLLM",
+    "description": "Anonymize Personally Identifiable Information (PII) for Large Language Model APIs"
+  },
+  {
+    "id": "ai-goat",
+    "category": "llm-security",
+    "name": "AI Goat",
+    "url": "https://github.com/dhammon/ai-goat",
+    "description": "vulnerable LLM CTF challenges"
+  },
+  {
+    "id": "pyrit",
+    "category": "llm-security",
+    "name": "Pyrit",
+    "url": "https://github.com/Azure/PyRIT",
+    "description": "The Python Risk Identification Tool for generative AI"
+  },
+  {
+    "id": "raze-to-the-ground-query-efficient-adversarial-html-attacks-on-machine-learning-phishing-webpage-detectors",
+    "category": "adversarial-ml",
+    "name": "Raze to the Ground: Query-Efficient Adversarial HTML Attacks on Machine-Learning Phishing Webpage Detectors",
+    "url": "https://github.com/advmlphish/raze_to_the_ground_aisec23",
+    "description": "Source code of the paper \"Raze to the Ground: Query-Efficient Adversarial HTML Attacks on Machine-Learning Phishing Webpage Detectors\" accepted at AISec '23"
+  },
+  {
+    "id": "giskard",
+    "category": "llm-security",
+    "name": "Giskard",
+    "url": "https://github.com/Giskard-AI/giskard",
+    "description": "Open-source testing tool for LLM applications"
+  },
+  {
+    "id": "citadel-lens",
+    "category": "model-scanning",
+    "name": "Citadel Lens",
+    "url": "https://www.citadel.co.jp/en/products/lens/",
+    "description": "Quality testing of models according to industry standards"
+  },
+  {
+    "id": "model-inversion-attack-toolbox",
+    "category": "adversarial-ml",
+    "name": "Model-Inversion-Attack-ToolBox",
+    "url": "https://github.com/ffhibnese/Model-Inversion-Attack-ToolBox",
+    "description": "A framework for implementing Model Inversion attacks"
+  },
+  {
+    "id": "nemo-guardrails",
+    "category": "llm-security",
+    "name": "NeMo Guardrails",
+    "url": "https://github.com/NVIDIA/NeMo-Guardrails",
+    "description": "NeMo Guardrails allow developers building LLM-based applications to add programmable guardrails between the application code and the LLM"
+  },
+  {
+    "id": "augly",
+    "category": "adversarial-ml",
+    "name": "AugLy",
+    "url": "https://github.com/facebookresearch/AugLy",
+    "description": "A tool for generating adversarial attacks"
+  },
+  {
+    "id": "knockoffnets",
+    "category": "adversarial-ml",
+    "name": "Knockoffnets",
+    "url": "https://github.com/tribhuvanesh/knockoffnets",
+    "description": "PoC to implement BlackBox attacks to steal model data"
+  },
+  {
+    "id": "robust-intelligence-continuous-validation",
+    "category": "adversarial-ml",
+    "name": "Robust Intelligence Continuous Validation",
+    "url": "https://www.robustintelligence.com/platform/continuous-validation",
+    "description": "Tool for continuous model validation for compliance with standards"
+  },
+  {
+    "id": "vger",
+    "category": "adversarial-ml",
+    "name": "VGER",
+    "url": "https://github.com/JosephTLucas/vger",
+    "description": "Jupyter Attack framework"
+  },
+  {
+    "id": "aishield-watchtower",
+    "category": "model-scanning",
+    "name": "AIShield Watchtower",
+    "url": "https://github.com/bosch-aisecurity-aishield/watchtower",
+    "description": "An open-source tool from AIShield for studying AI models and scanning for vulnerabilities"
+  },
+  {
+    "id": "ps-fuzz",
+    "category": "llm-security",
+    "name": "PS-fuzz",
+    "url": "https://github.com/prompt-security/ps-fuzz",
+    "description": "tool for scanning LLM vulnerabilities"
+  },
+  {
+    "id": "mindgard-cli",
+    "category": "model-scanning",
+    "name": "Mindgard CLI",
+    "url": "https://github.com/Mindgard/cli/",
+    "description": "Evaluate the security of AI systems through a CLI"
+  },
+  {
+    "id": "purplellama3",
+    "category": "llm-security",
+    "name": "PurpleLLama3",
+    "url": "https://meta-llama.github.io/PurpleLlama/",
+    "description": "Check LLM security with Meta LLM Benchmark"
+  },
+  {
+    "id": "artkit",
+    "category": "llm-security",
+    "name": "ARTkit",
+    "url": "https://github.com/BCG-X-Official/artkit",
+    "description": "Automated prompt-based testing and evaluation of Gen AI applications"
+  },
+  {
+    "id": "langbite",
+    "category": "llm-security",
+    "name": "LangBiTe",
+    "url": "https://github.com/SOM-Research/LangBiTe",
+    "description": "A Bias Tester framework for LLMs"
+  },
+  {
+    "id": "tf-encrypted",
+    "category": "privacy",
+    "name": "TF-encrypted",
+    "url": "https://tf-encrypted.io/",
+    "description": "Encryption for tensorflow"
+  },
+  {
+    "id": "agentic-security",
+    "category": "agent-security",
+    "name": "Agentic Security",
+    "url": "https://github.com/msoedov/agentic_security",
+    "description": "Agentic LLM Vulnerability Scanner / AI red teaming kit"
+  },
+  {
+    "id": "skill-audit-mcp",
+    "category": "agent-security",
+    "name": "skill-audit-mcp",
+    "url": "https://github.com/eltociear/skill-audit-mcp",
+    "description": "Static security scanner for MCP servers, AI agent skills, and plugins. Detects 68 attack patterns across CRITICAL/HIGH/MEDIUM/LOW — credential exfiltration, prompt injection, code execution, seed-phrase harvesting, auth bypass, path traversal. SARIF output, GitHub Action, multi-arch Docker image"
+  },
+  {
+    "id": "aisbom",
+    "category": "supply-chain",
+    "name": "AIsbom",
+    "url": "https://github.com/Lab700xOrg/aisbom",
+    "description": "Disassembles Pickle bytecode and parses SafeTensors/GGUF binary headers to detect malware and license risks in ML model files before load. Generates CycloneDX/SPDX SBOMs."
+  },
+  {
+    "id": "ai-scan-interceptor",
+    "category": "model-scanning",
+    "name": "AI-Scan-Interceptor",
+    "url": "https://github.com/mshirakawa-ssp/ai-scan-interceptor",
+    "description": "Self-hostable DLP gateway for enterprise prompts to ChatGPT/Claude/Gemini (Squid + Go ICAP + mTLS, AGPL-3.0)"
+  },
+  {
+    "id": "kubestellar-console",
+    "category": "supply-chain",
+    "name": "KubeStellar Console",
+    "url": "https://github.com/kubestellar/console",
+    "description": "Multi-cluster Kubernetes dashboard with MLSecOps capabilities: GPU workload monitoring, Kyverno policy enforcement, supply chain security (SBOM, SLSA), and AI/ML infrastructure observability. CNCF Sandbox project."
+  },
+  {
+    "id": "trustgate",
+    "category": "llm-security",
+    "name": "TrustGate",
+    "url": "https://github.com/NeuralTrust/TrustGate",
+    "description": "An open-source Generative Application Firewall (GAF)"
+  },
+  {
+    "id": "whistleblower",
+    "category": "llm-security",
+    "name": "Whistleblower",
+    "url": "https://github.com/Repello-AI/whistleblower",
+    "description": "Open-source offensive tool by Repello AI for testing LLM apps against system prompt leakage"
+  },
+  {
+    "id": "ironclaw",
+    "category": "supply-chain",
+    "name": "IronClaw",
+    "url": "https://github.com/IronSecCo/ironclaw",
+    "description": "Security-hardened, self-hosted runtime that sandboxes autonomous AI agents in a gVisor (runsc) sandbox with network=none, a read-only rootfs, host-side credential injection, and a human-approval gateway; signed and attested supply chain (cosign, SLSA, SBOMs)"
+  },
+  {
+    "id": "databricks-platform-azure-databricks",
+    "category": "supply-chain",
+    "name": "Databricks Platform, Azure Databricks",
+    "url": "https://azure.microsoft.com/ru-ru/products/databricks",
+    "description": "Datalake data management and implementation tool"
+  },
+  {
+    "id": "hidden-layer-ai-detection-response",
+    "category": "model-scanning",
+    "name": "Hidden Layer AI Detection Response",
+    "url": "https://hiddenlayer.com/aidr/",
+    "description": "Tool for detecting and responding to incidents"
+  },
+  {
+    "id": "guardian",
+    "category": "model-scanning",
+    "name": "Guardian",
+    "url": "https://protectai.com/guardian",
+    "description": "Model protection in CI/CD"
+  },
+  {
+    "id": "promptfoo",
+    "category": "llm-security",
+    "name": "Promptfoo",
+    "url": "https://www.promptfoo.dev/security/",
+    "description": "Continuous monitoring, detection, and remediation for enterprise LLM applications"
+  },
+  {
+    "id": "neuraltrust",
+    "category": "llm-security",
+    "name": "NeuralTrust",
+    "url": "https://neuraltrust.ai/",
+    "description": "Tools to protect, secure and test GenAI Applications"
+  },
+  {
+    "id": "arx-data-anonymization-tool",
+    "category": "privacy",
+    "name": "ARX - Data Anonymization Tool",
+    "url": "https://arx.deidentifier.org/",
+    "description": "Tool for anonymizing datasets"
+  },
+  {
+    "id": "data-veil",
+    "category": "privacy",
+    "name": "Data-Veil",
+    "url": "https://veil.ai/",
+    "description": "Data masking and anonymization tool"
+  },
+  {
+    "id": "tool-for-img-anonymization",
+    "category": "privacy",
+    "name": "Tool for IMG anonymization",
+    "url": "https://github.com/PacktPublishing/Adversarial-AI---Attacks-Mitigations-and-Defense-Strategies/blob/main/ch10/notebooks/Image%20Anonymization.ipynb",
+    "description": "Image anonymization"
+  },
+  {
+    "id": "tool-for-data-anonymization",
+    "category": "privacy",
+    "name": "Tool for DATA anonymization",
+    "url": "https://github.com/PacktPublishing/Adversarial-AI---Attacks-Mitigations-and-Defense-Strategies/blob/main/ch10/notebooks/Data%20Anonymization.ipynb",
+    "description": "Data anonymization"
+  },
+  {
+    "id": "bmw-anonymization-api",
+    "category": "privacy",
+    "name": "BMW Anonymization API",
+    "url": "https://github.com/BMW-InnovationLab/BMW-Anonymization-API",
+    "description": "This repository allows you to anonymize sensitive information in images/videos. The solution is fully compatible with the DL-based training/inference solutions that we already published/will publish for Object Detection and Semantic Segmentation"
+  },
+  {
+    "id": "deepprivacy2",
+    "category": "privacy",
+    "name": "DeepPrivacy2",
+    "url": "https://github.com/hukkelas/deep_privacy2",
+    "description": "A Toolbox for Realistic Image Anonymization"
+  },
+  {
+    "id": "ppap",
+    "category": "privacy",
+    "name": "PPAP",
+    "url": "https://github.com/tgisaturday/PPAP",
+    "description": "Latent-space-level Image Anonymization with Adversarial Protector Networks"
+  },
+  {
+    "id": "lintml",
+    "category": "model-scanning",
+    "name": "lintML",
+    "url": "https://github.com/JosephTLucas/lintML",
+    "description": "Security linter for ML, by Nvidia"
+  },
+  {
+    "id": "hiddenlayer-model-as-code",
+    "category": "model-scanning",
+    "name": "HiddenLayer: Model as Code",
+    "url": "https://hiddenlayer.com/research/models-are-code/",
+    "description": "Research about some vectors in ML libraries"
+  },
+  {
+    "id": "copycat-cnn",
+    "category": "adversarial-ml",
+    "name": "Copycat CNN",
+    "url": "https://github.com/jeiks/Stealing_DL_Models",
+    "description": "Proof-of-concept on how to generate a copy of a Convolutional Neural Network"
+  },
+  {
+    "id": "differential-privacy-library",
+    "category": "privacy",
+    "name": "differential-privacy-library",
+    "url": "https://github.com/IBM/differential-privacy-library",
+    "description": "Library designed for differential privacy and machine learning"
+  }
+]

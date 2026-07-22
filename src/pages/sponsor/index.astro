@@ -1,0 +1,69 @@
+{/* Sponsorship is temporarily disabled.
+---
+import { CONTACT_EMAIL } from "../../config/site";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const sponsorMail = `mailto:${CONTACT_EMAIL}?subject=Awesome%20MLSecOps%20sponsorship`;
+const advisoryMail = `mailto:${CONTACT_EMAIL}?subject=MLSecOps%20advisory%20inquiry`;
+---
+
+<BaseLayout
+  title="Sponsor Awesome MLSecOps | Audience and Media Kit"
+  description="Sponsor Awesome MLSecOps with one of three clearly labeled site-only positions for AI security, MLOps, and security engineering audiences."
+  ogKey="sponsor"
+>
+  <section class="page-hero">
+    <div class="shell">
+      <p class="eyebrow">Three site-only positions</p>
+      <h1>Sponsor Awesome MLSecOps</h1>
+      <p>Reach practitioners evaluating machine learning, LLM, agent, and MLOps security without buying influence over the community catalog.</p>
+      <div class="button-row"><a class="button" href={sponsorMail} data-analytics-event="Sponsor Inquiry">Request the media kit</a></div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="shell comparison-grid">
+      <article class="comparison-card">
+        <p class="eyebrow">Audience</p>
+        <h2>Security and ML decision-makers</h2>
+        <p>Readers include security engineers, ML and MLOps engineers, AI red-teamers, researchers, platform leaders, and technical buyers evaluating security controls.</p>
+      </article>
+      <article class="comparison-card">
+        <p class="eyebrow">Placement</p>
+        <h2>Clearly labeled and separate</h2>
+        <p>Sponsors appear in equal-sized cards outside tool tables. Every outbound sponsor link uses <code>rel="sponsored"</code> and a distinct analytics event.</p>
+      </article>
+      <article class="comparison-card">
+        <p class="eyebrow">Availability</p>
+        <h2>Maximum three sponsors</h2>
+        <p>The site caps sponsorship at three concurrent organizations. Scarcity protects attention and prevents the directory from becoming an advertising surface.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="shell prose">
+      <h2>Editorial independence</h2>
+      <p>Sponsorship supports hosting, research, data maintenance, and editorial work. It never guarantees inclusion, placement, favorable wording, or continued listing in the GitHub catalog. Sponsored organizations and unsponsored projects are evaluated under the same public contribution criteria.</p>
+      <p>No sponsor appears inside a tool table. Sponsor records live in a separate validated content collection, and the site automatically replaces an empty sponsor row with a neutral invitation to this page.</p>
+
+      <h2>What a sponsorship can include</h2>
+      <ul>
+        <li>A clearly labeled logo, one-line factual description, and sponsored link.</li>
+        <li>Aggregate privacy-friendly reporting for sponsor-link clicks.</li>
+        <li>Optional coordination around an original educational webinar or technical briefing, subject to editorial review.</li>
+      </ul>
+      <p><a class="button" href={sponsorMail} data-analytics-event="Sponsor Inquiry">Discuss sponsorship</a></p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="shell prose">
+      <p class="eyebrow">Services</p>
+      <h2>Work with the maintainer</h2>
+      <p>Organizations can engage the maintainer separately for MLSecOps advisory work, AI threat modeling, security architecture reviews, tool and control evaluations, or practitioner education. Consulting engagements do not purchase editorial treatment in the catalog.</p>
+      <p><a class="button-secondary" href={advisoryMail} data-analytics-event="Advisory Inquiry">Start an advisory conversation</a></p>
+    </div>
+  </section>
+</BaseLayout>
+*/}

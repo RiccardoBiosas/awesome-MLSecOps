@@ -1,0 +1,47 @@
+---
+import {
+  BUILD_DATE,
+  ENTITY_DESCRIPTION,
+  // GITHUB_SPONSORS_URL,
+  NEWSLETTER_URL,
+  REPOSITORY_URL,
+  formattedBuildDate,
+} from "../config/site";
+---
+
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div>
+      <a class="brand footer-brand" href="/">
+        <span class="brand-mark" aria-hidden="true">ML</span>
+        <span>Awesome MLSecOps</span>
+      </a>
+      <p>{ENTITY_DESCRIPTION}</p>
+      <p class="updated">Last updated: <time datetime={BUILD_DATE}>{formattedBuildDate()}</time></p>
+    </div>
+    <div>
+      <h2>Explore</h2>
+      <a href="/what-is-mlsecops/">MLSecOps definition</a>
+      <a href="/tools/">Security tool categories</a>
+      <a href="/faq/">MLSecOps FAQ</a>
+      <a href="/jobs/">AI security jobs</a>
+    </div>
+    <div>
+      <h2>Connect</h2>
+      <a href={REPOSITORY_URL} data-analytics-event="Repo Outbound">GitHub repository</a>
+      <a href={NEWSLETTER_URL}>The MLSecOps Hacker</a>
+      {/* Sponsorship is temporarily disabled.
+      <a href="/sponsor/">Sponsor the project</a>
+      <a href={GITHUB_SPONSORS_URL}>GitHub Sponsors</a>
+      */}
+    </div>
+    <div>
+      <h2>Machine-readable</h2>
+      <a href="/tools.json">Tools JSON</a>
+      <a href="/llms.txt">llms.txt</a>
+      <a href="/rss.xml">Newsletter RSS</a>
+      <a href="/sitemap-index.xml">XML sitemap</a>
+    </div>
+  </div>
+  <div class="shell footer-bottom">© {new Date(BUILD_DATE).getUTCFullYear()} Awesome MLSecOps. Repository content is available under its stated license.</div>
+</footer>

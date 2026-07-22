@@ -1,0 +1,86 @@
+---
+import type { FAQPage, WithContext } from "schema-dts";
+import StructuredData from "../components/StructuredData.astro";
+import { MLSECOPS_DEFINITION_LEAD, MLSECOPS_DEFINITION_SUPPORT } from "../config/site";
+import { TOOL_CATEGORIES } from "../data/categories";
+import { WHAT_IS_FAQS } from "../data/faqs";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const faqSchema: WithContext<FAQPage> = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: WHAT_IS_FAQS.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+
+<BaseLayout
+  title="What Is MLSecOps? Definition and Security Lifecycle"
+  description="What MLSecOps means, why machine learning security needs it, how its lifecycle works, and how it differs from DevSecOps and AISecOps."
+  ogKey="what-is-mlsecops"
+>
+  <StructuredData data={faqSchema} />
+  <section class="page-hero">
+    <div class="shell">
+      <p class="eyebrow">Definition and operating model</p>
+      <h1>What is MLSecOps?</h1>
+      <p class="definition"><strong>{MLSECOPS_DEFINITION_LEAD}</strong> {MLSECOPS_DEFINITION_SUPPORT}</p>
+    </div>
+  </section>
+
+  <article class="content-section">
+    <div class="shell prose">
+      <h2>Why MLSecOps exists</h2>
+      <p>Machine learning systems inherit conventional software and cloud risks, but they also introduce assets and behaviors that security programs were not designed to govern. Training data can be poisoned. Models can memorize sensitive records, execute unsafe serialized instructions, or be copied through repeated queries. LLM applications can follow malicious instructions retrieved from external content. Agents can convert a model mistake into an action against a real system.</p>
+      <p>MLSecOps makes these risks part of normal engineering operations. It connects security decisions to the teams that collect data, train models, package artifacts, deploy endpoints, operate AI applications, and respond to incidents. The objective is not a one-time model audit. The objective is a repeatable control system that produces evidence before release and remains effective as data, models, dependencies, and attacker behavior change.</p>
+
+      <h2>The MLSecOps lifecycle</h2>
+      <p>An MLSecOps lifecycle begins before model training and continues after deployment. Each phase has a distinct security question and an accountable owner.</p>
+      <ol>
+        <li><strong>Discover and classify.</strong> Inventory datasets, models, prompts, tools, registries, pipelines, endpoints, owners, and external dependencies. Classify sensitive data and high-impact decisions.</li>
+        <li><strong>Threat-model.</strong> Define attackers, trust boundaries, abuse cases, model access, data flows, tool permissions, and the consequences of failure. Convert those scenarios into testable requirements.</li>
+        <li><strong>Build securely.</strong> Restrict data and service access, review training code, pin dependencies, use approved artifact formats, protect secrets, and record provenance for every release candidate.</li>
+        <li><strong>Test and assure.</strong> Scan artifacts, evaluate adversarial robustness, test privacy leakage, red-team LLM behavior, validate guardrails, and document accepted residual risk.</li>
+        <li><strong>Release with evidence.</strong> Sign artifacts, enforce deployment policy, attach model and data documentation, record approvals, and preserve a rollback path.</li>
+        <li><strong>Monitor and respond.</strong> Observe abuse, drift, anomalous access, policy failures, and data exposure. Maintain incident playbooks that can disable tools, revoke credentials, isolate models, and notify affected owners.</li>
+      </ol>
+
+      <figure class="lifecycle-figure">
+        <img src="https://github.com/RiccardoBiosas/awesome-MLSecOps/assets/65150720/236cd3f4-bce8-4659-b43f-8d4002df65a5" alt="MLSecOps lifecycle showing security activities across machine learning delivery" loading="lazy" />
+        <figcaption>MLSecOps lifecycle visual from the Awesome MLSecOps repository.</figcaption>
+      </figure>
+
+      <h2>MLSecOps, DevSecOps, and AISecOps</h2>
+      <p>DevSecOps integrates security into software delivery. It protects source code, dependencies, build systems, infrastructure, identities, and production services. MLSecOps retains those controls and adds protections for data, training, model artifacts, inference behavior, privacy, and adversarial manipulation. A secure model still depends on secure software and infrastructure, so MLSecOps extends DevSecOps rather than replacing it.</p>
+      <p>AISecOps is used less consistently. Some teams use it as a broad label for securing AI systems; others use it for applying AI to security operations. MLSecOps is narrower and operationally precise: it focuses on security throughout machine learning and MLOps lifecycles, including LLM and agent systems. See the <a href="/mlsecops-vs-devsecops/">full MLSecOps versus DevSecOps comparison</a> for ownership and control examples.</p>
+
+      <h2>Core tool categories</h2>
+      <p>No single product provides MLSecOps. A practical program combines controls that address different assets and failure modes.</p>
+      <div class="category-grid">
+        {TOOL_CATEGORIES.map((category) => (
+          <a class="category-card" href={`/tools/${category.id}/`}>
+            <h3>{category.name}</h3>
+            <p>{category.shortDescription}</p>
+          </a>
+        ))}
+      </div>
+
+      <h2>How to begin</h2>
+      <p>Begin with one important AI service instead of a company-wide tooling purchase. Map its data, model, prompt, dependency, and tool-call paths. Identify the two or three failures with the greatest business or user impact. Add controls that produce reviewable evidence, assign an owner for every unresolved risk, and rehearse one containment scenario. Repeat the process as a release gate, then automate stable checks in the training and deployment pipeline.</p>
+      <p>The <a href="/tools/">MLSecOps tools directory</a> organizes the community catalog by security problem. The <a href="/faq/">MLSecOps FAQ</a> answers implementation questions, while the GitHub repository remains the canonical place to evaluate and contribute resources.</p>
+
+      <h2>Frequently asked questions</h2>
+      <div class="faq-grid">
+        {WHAT_IS_FAQS.map((item) => (
+          <section class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </section>
+        ))}
+      </div>
+    </div>
+  </article>
+</BaseLayout>

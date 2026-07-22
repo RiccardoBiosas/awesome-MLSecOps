@@ -1,0 +1,81 @@
+---
+import { getCollection } from "astro:content";
+import type { ItemList, WithContext } from "schema-dts";
+import StructuredData from "../../components/StructuredData.astro";
+import ToolTable from "../../components/ToolTable.astro";
+import { TOOL_CATEGORIES, type ToolCategory } from "../../data/categories";
+import type { OgPageKey } from "../../data/pageMeta";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export function getStaticPaths() {
+  return TOOL_CATEGORIES.map((category) => ({ params: { category: category.id }, props: { category } }));
+}
+
+interface Props {
+  category: ToolCategory;
+}
+
+const { category } = Astro.props as Props;
+const allTools = await getCollection("tools");
+const tools = allTools.filter((tool) => tool.data.category === category.id);
+const schema: WithContext<ItemList> = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: `${category.name} tools`,
+  description: category.shortDescription,
+  numberOfItems: tools.length,
+  itemListElement: tools.map((tool, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: tool.data.name,
+    description: tool.data.description,
+    url: tool.data.url,
+  })),
+};
+const titleByCategory: Record<ToolCategory["id"], string> = {
+  "llm-security": "Open-Source LLM Security Tools",
+  "model-scanning": "ML Model Scanning Tools",
+  "adversarial-ml": "Adversarial Machine Learning Tools",
+  "supply-chain": "AI Supply-Chain Security Tools",
+  "agent-security": "AI Agent and MCP Security Tools",
+  privacy: "Privacy-Preserving ML Tools",
+};
+---
+
+<BaseLayout title={titleByCategory[category.id]} description={category.metaDescription} ogKey={`tools/${category.id}` as OgPageKey}>
+  <StructuredData data={schema} />
+  <section class="page-hero">
+    <div class="shell">
+      <p class="eyebrow">{tools.length} entries synced from GitHub</p>
+      <h1>{category.name}</h1>
+      <p>{category.shortDescription}</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="shell prose category-intro">
+      {category.intro.map((paragraph) => <p>{paragraph}</p>)}
+      <h2>What to evaluate</h2>
+      <ul class="tag-list">{category.evaluation.map((item) => <li>{item}</li>)}</ul>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="shell">
+      <div class="section-heading">
+        <p class="eyebrow">Community catalog</p>
+        <h2>{category.name} tools</h2>
+        <p>Listings are editorial resources, not endorsements. Confirm maintenance, licensing, deployment fit, and technical evidence before production use.</p>
+      </div>
+      <ToolTable tools={tools} />
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="shell prose">
+      <h2>Related attack vectors</h2>
+      <ul class="related-links">{category.attackVectors.map((item) => <li><a href={item.url}>{item.name}</a></li>)}</ul>
+      <p>Review the <a href={category.readmeUrl} data-analytics-event="Repo Outbound">source README section</a>, browse <a href="/tools/">all MLSecOps tool categories</a>, or read the <a href="/what-is-mlsecops/">MLSecOps lifecycle guide</a>.</p>
+    </div>
+  </section>
+</BaseLayout>

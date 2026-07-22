@@ -1,0 +1,86 @@
+---
+import { getCollection } from "astro:content";
+import type { Graph, JobPosting } from "schema-dts";
+import StructuredData from "../../components/StructuredData.astro";
+import { BUILD_DATE } from "../../config/site";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { activeJobs } from "../../lib/activeJobs";
+
+const jobs = activeJobs(await getCollection("jobs"), new Date(BUILD_DATE)).sort((left, right) => {
+  if (left.data.featured !== right.data.featured) return left.data.featured ? -1 : 1;
+  return right.data.posted_date.getTime() - left.data.posted_date.getTime();
+});
+
+const postings: JobPosting[] = jobs.map((job) => ({
+  "@type": "JobPosting",
+  identifier: {
+    "@type": "PropertyValue",
+    name: job.data.company,
+    value: job.id,
+  },
+  title: job.data.title,
+  description: job.data.description,
+  datePosted: job.data.posted_date.toISOString().slice(0, 10),
+  validThrough: `${job.data.expires_date.toISOString().slice(0, 10)}T23:59:59Z`,
+  employmentType: job.data.employment_type,
+  url: job.data.url,
+  hiringOrganization: {
+    "@type": "Organization",
+    name: job.data.company,
+    sameAs: job.data.company_url,
+  },
+  jobLocation: {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: job.data.location,
+      addressCountry: job.data.country,
+    },
+  },
+}));
+
+const schema: Graph = { "@context": "https://schema.org", "@graph": postings };
+const formatDate = (date: Date) => new Intl.DateTimeFormat("en", { dateStyle: "medium", timeZone: "UTC" }).format(date);
+---
+
+<BaseLayout
+  title="AI and ML Security Jobs | MLSecOps Careers"
+  description="Curated live jobs in MLSecOps, AI security, model safety, privacy, red teaming, application security, and cybersecurity research."
+  ogKey="jobs"
+>
+  <StructuredData data={schema} />
+  <section class="page-hero">
+    <div class="shell">
+      <p class="eyebrow">Free and manually curated</p>
+      <h1>AI and ML security jobs</h1>
+      <p>Current roles for practitioners working across model safety, AI red teaming, application security, privacy, and cybersecurity research.</p>
+      <div class="button-row"><a class="button" href="mailto:riccardobiosas@gmail.com?subject=Feature%20an%20MLSecOps%20role" data-analytics-event="Job Inquiry">Feature your role</a></div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="shell">
+      <div class="section-heading">
+        <h2>{jobs.length} active roles</h2>
+        <p>Listings disappear automatically after their declared expiration date. Verify availability and requirements on the employer's page.</p>
+      </div>
+      {jobs.length ? (
+        <div class="job-grid">
+          {jobs.map((job) => (
+            <article class="job-card">
+              {job.data.featured && <span class="sponsor-label">Featured</span>}
+              <p class="eyebrow">{job.data.company}</p>
+              <h3>{job.data.title}</h3>
+              <p>{job.data.description}</p>
+              <p><strong>Location:</strong> {job.data.location}</p>
+              <p class="updated">Posted {formatDate(job.data.posted_date)} · Expires {formatDate(job.data.expires_date)}</p>
+              <a class="text-link" href={job.data.url} data-analytics-event="Job Outbound">View role at {job.data.company}</a>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <div class="sponsor-empty"><strong>No verified roles are currently active.</strong><span>Subscribe to the newsletter for future board updates.</span></div>
+      )}
+    </div>
+  </section>
+</BaseLayout>

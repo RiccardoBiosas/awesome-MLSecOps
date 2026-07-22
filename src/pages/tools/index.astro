@@ -1,0 +1,61 @@
+---
+import { getCollection } from "astro:content";
+import type { ItemList, WithContext } from "schema-dts";
+import StructuredData from "../../components/StructuredData.astro";
+import { SITE_URL } from "../../config/site";
+import { TOOL_CATEGORIES } from "../../data/categories";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const tools = await getCollection("tools");
+const schema: WithContext<ItemList> = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "MLSecOps security tool categories",
+  numberOfItems: TOOL_CATEGORIES.length,
+  itemListElement: TOOL_CATEGORIES.map((category, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: category.name,
+    url: `${SITE_URL}/tools/${category.id}/`,
+  })),
+};
+---
+
+<BaseLayout
+  title="MLSecOps Tools by Security Category"
+  description="Browse MLSecOps tools for LLM security, model scanning, adversarial ML, AI supply chains, agent security, MCP security, and privacy."
+  ogKey="tools"
+>
+  <StructuredData data={schema} />
+  <section class="page-hero">
+    <div class="shell">
+      <p class="eyebrow">Synced from the GitHub catalog</p>
+      <h1>MLSecOps tools by security category</h1>
+      <p>Focused guides explain what each class of tool does and what to evaluate. The community repository remains the source of truth for every listing.</p>
+    </div>
+  </section>
+  <section class="content-section">
+    <div class="shell category-grid">
+      {TOOL_CATEGORIES.map((category) => {
+        const count = tools.filter((tool) => tool.data.category === category.id).length;
+        return (
+          <a class="category-card" href={`/tools/${category.id}/`}>
+            <span class="count">{count} tools</span>
+            <h2>{category.name}</h2>
+            <p>{category.shortDescription}</p>
+            <strong>Browse {category.shortName.toLowerCase()} tools</strong>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+  <section class="content-section">
+    <div class="shell prose">
+      <h2>How this directory stays independent</h2>
+      {/* Sponsorship is temporarily disabled.
+      <p>The tool tables are generated from the public Awesome MLSecOps README during every build. Sponsors are stored and rendered separately, cannot enter category tables, and do not influence descriptions or ordering. Propose additions through the repository's documented contribution process.</p>
+      */}
+      <p>Agents and researchers can consume the same catalog through <a href="/tools.json">tools.json</a>, while citation-oriented route summaries are available in <a href="/llms.txt">llms.txt</a>.</p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,24 @@
+---
+import { REPOSITORY_URL } from "../config/site";
+
+const navigation = [
+  { href: "/what-is-mlsecops/", label: "What is MLSecOps" },
+  { href: "/tools/", label: "Tools" },
+  { href: "/jobs/", label: "Jobs" },
+  { href: "/newsletter/", label: "Newsletter" },
+  // { href: "/sponsor/", label: "Sponsor" },
+];
+---
+
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="/" aria-label="Awesome MLSecOps home">
+      <span class="brand-mark" aria-hidden="true">ML</span>
+      <span>Awesome MLSecOps</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      {navigation.map((item) => <a href={item.href}>{item.label}</a>)}
+      <a class="repo-link" href={REPOSITORY_URL} data-analytics-event="Repo Outbound">GitHub</a>
+    </nav>
+  </div>
+</header>
