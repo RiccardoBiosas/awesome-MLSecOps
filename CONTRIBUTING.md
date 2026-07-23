@@ -181,6 +181,23 @@ Each pull request must:
 - Avoid unrelated formatting or structural changes
 - Pass automated link and formatting checks
 
+## Catalog Review Record
+
+Every pull request that adds or materially changes a catalog entry must record the review date and evidence checked. Reviewers verify:
+
+- The canonical URL resolves to the project, product, or publication being described.
+- The description is supported by first-party technical documentation rather than a marketing tagline.
+- Open-source or commercial status and the license, when applicable, are represented accurately.
+- Maintenance status and release activity are sufficient for the stated use, or the entry is identified as a historical research artifact.
+- The resource has a concrete MLSecOps security use case and is assigned to the most relevant category.
+- The entry does not duplicate another edition, product surface, or URL already in the catalog.
+
+Use this pull request note:
+
+> **Technical review:** Reviewed YYYY-MM-DD. Evidence checked: [canonical documentation, license, release, paper, or evaluation links].
+
+Third-party capabilities and maintenance can change after merge. Corrections should cite current first-party documentation and use the same review record.
+
 Include this information in the PR description:
 
 | Field | Required information |
