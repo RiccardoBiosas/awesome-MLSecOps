@@ -44,6 +44,14 @@ const CATEGORY_RULES: Array<[ToolCategoryId, RegExp]> = [
   ["model-scanning", /\b(scan|scanner|lint\w*|validation|evaluation|benchmark|bias testing|watchtower|model analysis|model protection|vulnerabilit\w*|secure jupyter|model as code|security best practice|detection and response)\b/i],
 ];
 
+const CATEGORY_OVERRIDES = new Map<string, ToolCategoryId>([
+  ["PromptInject", "llm-security"],
+  ["AI-Scan-Interceptor", "llm-security"],
+  ["IronClaw", "agent-security"],
+  ["PALLMs (Payloads for Attacking Large Language Models)", "llm-security"],
+  ["AugLy", "adversarial-ml"],
+]);
+
 function normalizeHeading(value: string): string {
   return value.trim().toLowerCase().replace(/\s+/g, " ");
 }
@@ -73,6 +81,8 @@ function canonicalizeUrl(value: string): string {
 
 function classify(name: string, description: string, section: string): ToolCategoryId {
   if (section.includes("data privacy") || section === "data") return "privacy";
+  const override = CATEGORY_OVERRIDES.get(name);
+  if (override) return override;
   const text = `${name} ${description}`;
   return CATEGORY_RULES.find(([, pattern]) => pattern.test(text))?.[0] ?? "model-scanning";
 }

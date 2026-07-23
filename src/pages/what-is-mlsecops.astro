@@ -34,7 +34,7 @@ const faqSchema: WithContext<FAQPage> = {
   <article class="content-section">
     <div class="shell prose">
       <h2>Why MLSecOps exists</h2>
-      <p>Machine learning systems inherit conventional software and cloud risks, but they also introduce assets and behaviors that security programs were not designed to govern. Training data can be poisoned. Models can memorize sensitive records, execute unsafe serialized instructions, or be copied through repeated queries. LLM applications can follow malicious instructions retrieved from external content. Agents can convert a model mistake into an action against a real system.</p>
+      <p>Machine learning systems inherit conventional software and cloud risks, but they also introduce assets and behaviors that security programs were not designed to govern. Training data can be poisoned. Models can memorize sensitive records or be packaged in formats that execute code when loaded. Repeated black-box queries can let an attacker train a functional surrogate without recovering the original weights. LLM applications can follow malicious instructions retrieved from external content. Agents can convert a model mistake into an action against a real system.</p>
       <p>MLSecOps makes these risks part of normal engineering operations. It connects security decisions to the teams that collect data, train models, package artifacts, deploy endpoints, operate AI applications, and respond to incidents. The objective is not a one-time model audit. The objective is a repeatable control system that produces evidence before release and remains effective as data, models, dependencies, and attacker behavior change.</p>
 
       <h2>The MLSecOps lifecycle</h2>
@@ -42,7 +42,7 @@ const faqSchema: WithContext<FAQPage> = {
       <ol>
         <li><strong>Discover and classify.</strong> Inventory datasets, models, prompts, tools, registries, pipelines, endpoints, owners, and external dependencies. Classify sensitive data and high-impact decisions.</li>
         <li><strong>Threat-model.</strong> Define attackers, trust boundaries, abuse cases, model access, data flows, tool permissions, and the consequences of failure. Convert those scenarios into testable requirements.</li>
-        <li><strong>Build securely.</strong> Restrict data and service access, review training code, pin dependencies, use approved artifact formats, protect secrets, and record provenance for every release candidate.</li>
+        <li><strong>Build securely.</strong> Separate training and inference identities, restrict data and service access, record dataset lineage and labeling provenance, test for poisoning indicators and distribution anomalies, review training and ingestion code for unsafe deserialization, pin dependencies, protect secrets, and record reproducible provenance for every release candidate.</li>
         <li><strong>Test and assure.</strong> Scan artifacts, evaluate adversarial robustness, test privacy leakage, red-team LLM behavior, validate guardrails, and document accepted residual risk.</li>
         <li><strong>Release with evidence.</strong> Sign artifacts, enforce deployment policy, attach model and data documentation, record approvals, and preserve a rollback path.</li>
         <li><strong>Monitor and respond.</strong> Observe abuse, drift, anomalous access, policy failures, and data exposure. Maintain incident playbooks that can disable tools, revoke credentials, isolate models, and notify affected owners.</li>
@@ -70,7 +70,10 @@ const faqSchema: WithContext<FAQPage> = {
 
       <h2>How to begin</h2>
       <p>Begin with one important AI service instead of a company-wide tooling purchase. Map its data, model, prompt, dependency, and tool-call paths. Identify the two or three failures with the greatest business or user impact. Add controls that produce reviewable evidence, assign an owner for every unresolved risk, and rehearse one containment scenario. Repeat the process as a release gate, then automate stable checks in the training and deployment pipeline.</p>
-      <p>The <a href="/tools/">MLSecOps tools directory</a> organizes the community catalog by security problem. The <a href="/faq/">MLSecOps FAQ</a> answers implementation questions, while the GitHub repository remains the canonical place to evaluate and contribute resources.</p>
+      <p>The <a href="/tools/">MLSecOps tools and resources directory</a> organizes the community catalog by security problem. The <a href="/faq/">MLSecOps FAQ</a> answers implementation questions, while the GitHub repository remains the canonical place to evaluate and contribute resources.</p>
+
+      <h2>Primary references</h2>
+      <p>This operating model synthesizes established security guidance rather than defining a new standard. Use the <a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI Risk Management Framework</a> for governance and lifecycle outcomes, <a href="https://atlas.mitre.org/">MITRE ATLAS</a> and <a href="https://csrc.nist.gov/pubs/ai/100/2/e2023/final">NIST AI 100-2</a> for adversarial-ML terminology, the <a href="https://genai.owasp.org/llm-top-10/">OWASP Top 10 for LLM Applications</a> for generative-AI risks, and <a href="https://slsa.dev/">SLSA</a> with <a href="https://www.sigstore.dev/">Sigstore</a> for software and artifact provenance controls. Apply each source within its stated scope; none independently establishes that an ML system is secure.</p>
 
       <h2>Frequently asked questions</h2>
       <div class="faq-grid">

@@ -15,7 +15,7 @@ export const MLSECOPS_DEFINITION_LEAD =
   "MLSecOps (Machine Learning Security Operations) integrates security engineering, threat modeling, testing, supply-chain controls, monitoring, and incident response across the machine-learning lifecycle.";
 
 export const MLSECOPS_DEFINITION_SUPPORT =
-  "It protects data, models, pipelines, infrastructure, LLM applications, and AI agents against adversarial attacks, compromise, privacy leakage, model theft, and abuse.";
+  "It protects data, models, pipelines, infrastructure, LLM applications, and AI agents against poisoning, adversarial manipulation, unsafe artifacts, privacy leakage, model extraction, prompt injection, and excessive agency.";
 
 export const MLSECOPS_DEFINITION = `${MLSECOPS_DEFINITION_LEAD} ${MLSECOPS_DEFINITION_SUPPORT}`;
 

@@ -51,7 +51,7 @@ Model and artifact security tools detect unsafe serialization, malicious payload
 | Tool | Description |
 |------|-------------|
 | [ModelScan](https://github.com/protectai/modelscan) | Protection Against ML Model Serialization Attacks |
-| [Safetensors](https://github.com/huggingface/safetensors) | Convert pickle to a safe serialization option |
+| [Safetensors](https://github.com/huggingface/safetensors) | Tensor storage format designed to avoid executable deserialization; it does not establish model provenance or behavioral safety |
 
 ### Adversarial Machine Learning Testing
 
@@ -113,7 +113,6 @@ The following tools and research prototypes address additional MLSecOps testing,
 
 | Tool | Description |
 |------|-------------|
-| [NB Defense](https://nbdefense.ai) | Secure Jupyter Notebooks |
 | [MLSploit](https://github.com/mlsploit/) | Cloud framework for interactive experimentation with adversarial machine learning research |
 | [Advertorch](https://github.com/BorealisAI/advertorch) | Python toolbox for adversarial robustness research |
 | [Adversarial ML Threat Matrix](https://github.com/mitre/advmlthreatmatrix) | Adversarial Threat Landscape for AI Systems |
@@ -127,7 +126,7 @@ The following tools and research prototypes address additional MLSecOps testing,
 | [OpenAttack](https://github.com/thunlp/OpenAttack) | An Open-Source Package for Textual Adversarial Attack|
 | [TextFooler](https://github.com/jind11/TextFooler) | A Model for Natural Language Attack on Text Classification and Inference|
 | [Flawed Machine Learning Security](https://github.com/EthicalML/fml-security) | Practical examples of "Flawed Machine Learning Security" together with ML Security best practice across the end to end stages of the machine learning model lifecycle from training, to packaging, to deployment|
-| [Adversarial Machine Learning CTF](https://github.com/arturmiller/adversarial_ml_ctf) | This repository is a CTF challenge, showing a security flaw in most (all?) common artificial neural networks. They are vulnerable for adversarial images|
+| [Adversarial Machine Learning CTF](https://github.com/arturmiller/adversarial_ml_ctf) | CTF challenge demonstrating adversarial-image attacks against neural-network image classifiers |
 | [Damn Vulnerable LLM Project](https://github.com/harishsg993010/DamnVulnerableLLMProject) | A Large Language Model designed for getting hacked|
 | [Gandalf Lakera](https://gandalf.lakera.ai/) | Prompt Injection CTF playground|
 | [Vigil](https://github.com/deadbits/vigil-llm) | LLM prompt injection and security scanner|
@@ -139,12 +138,10 @@ The following tools and research prototypes address additional MLSecOps testing,
 | [Pyrit](https://github.com/Azure/PyRIT) | The Python Risk Identification Tool for generative AI|
 | [Raze to the Ground: Query-Efficient Adversarial HTML Attacks on Machine-Learning Phishing Webpage Detectors](https://github.com/advmlphish/raze_to_the_ground_aisec23) | Source code of the paper "Raze to the Ground: Query-Efficient Adversarial HTML Attacks on Machine-Learning Phishing Webpage Detectors" accepted at AISec '23|
 | [Giskard](https://github.com/Giskard-AI/giskard) | Open-source testing tool for LLM applications|
-| [Citadel Lens](https://www.citadel.co.jp/en/products/lens/)| Quality testing of models according to industry standards|
 | [Model-Inversion-Attack-ToolBox](https://github.com/ffhibnese/Model-Inversion-Attack-ToolBox) | A framework for implementing Model Inversion attacks|
 | [NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails) | NeMo Guardrails allow developers building LLM-based applications to add programmable guardrails between the application code and the LLM |
-| [AugLy](https://github.com/facebookresearch/AugLy) | A tool for generating adversarial attacks|
-| [Knockoffnets](https://github.com/tribhuvanesh/knockoffnets) | PoC to implement BlackBox attacks to steal model data|
-| [Robust Intelligence Continuous Validation](https://www.robustintelligence.com/platform/continuous-validation) | Tool for continuous model validation for compliance with standards |
+| [AugLy](https://github.com/facebookresearch/AugLy) | Multimodal data-augmentation library for evaluating and improving model robustness; it is not an adversarial-attack generator |
+| [Knockoffnets](https://github.com/tribhuvanesh/knockoffnets) | Proof of concept for training a functional surrogate from black-box model queries |
 | [VGER](https://github.com/JosephTLucas/vger) | Jupyter Attack framework |
 | [AIShield Watchtower](https://github.com/bosch-aisecurity-aishield/watchtower) | An open-source tool from AIShield for studying AI models and scanning for vulnerabilities |
 | [PS-fuzz](https://github.com/prompt-security/ps-fuzz) | tool for scanning LLM vulnerabilities|
@@ -157,7 +154,6 @@ The following tools and research prototypes address additional MLSecOps testing,
 | [skill-audit-mcp](https://github.com/eltociear/skill-audit-mcp) | Static security scanner for MCP servers, AI agent skills, and plugins. Detects 68 attack patterns across CRITICAL/HIGH/MEDIUM/LOW — credential exfiltration, prompt injection, code execution, seed-phrase harvesting, auth bypass, path traversal. SARIF output, GitHub Action, multi-arch Docker image |
 | [AIsbom](https://github.com/Lab700xOrg/aisbom) | Disassembles Pickle bytecode and parses SafeTensors/GGUF binary headers to detect malware and license risks in ML model files before load. Generates CycloneDX/SPDX SBOMs. |
 | [AI-Scan-Interceptor](https://github.com/mshirakawa-ssp/ai-scan-interceptor) | Self-hostable DLP gateway for enterprise prompts to ChatGPT/Claude/Gemini (Squid + Go ICAP + mTLS, AGPL-3.0) |
-| [KubeStellar Console](https://github.com/kubestellar/console) | Multi-cluster Kubernetes dashboard with MLSecOps capabilities: GPU workload monitoring, Kyverno policy enforcement, supply chain security (SBOM, SLSA), and AI/ML infrastructure observability. CNCF Sandbox project. |
 | [TrustGate](https://github.com/NeuralTrust/TrustGate) | An open-source Generative Application Firewall (GAF) |
 | [Whistleblower](https://github.com/Repello-AI/whistleblower) | Open-source offensive tool by Repello AI for testing LLM apps against system prompt leakage |
 | [IronClaw](https://github.com/IronSecCo/ironclaw) | Security-hardened, self-hosted runtime that sandboxes autonomous AI agents in a gVisor (runsc) sandbox with network=none, a read-only rootfs, host-side credential injection, and a human-approval gateway; signed and attested supply chain (cosign, SLSA, SBOMs) |
@@ -170,10 +166,11 @@ Commercial MLSecOps and AI security tools support model protection, application 
 
 | Tool | Description |
 |------|-------------|
-| [Databricks Platform, Azure Databricks](https://azure.microsoft.com/ru-ru/products/databricks) | Datalake data management and implementation tool |
+| [NB Defense](https://nbdefense.ai) | Commercial security platform for identifying risks in Jupyter notebooks |
+| [Citadel Lens](https://www.citadel.co.jp/en/products/lens/) | Commercial model-testing platform; verify supported standards and security checks in current product documentation |
+| [Robust Intelligence Continuous Validation](https://www.robustintelligence.com/platform/continuous-validation) | Commercial platform for continuous model validation and policy testing |
 | [Hidden Layer AI Detection Response](https://hiddenlayer.com/aidr/) | Tool for detecting and responding to incidents |
 | [Guardian](https://protectai.com/guardian) | Model protection in CI/CD |
-| [Promptfoo](https://www.promptfoo.dev/security/) | Continuous monitoring, detection, and remediation for enterprise LLM applications |
 | [NeuralTrust](https://neuraltrust.ai) | Tools to protect, secure and test GenAI Applications |
 
 
@@ -197,8 +194,8 @@ Data privacy and anonymization tools help reduce exposure of personal or sensiti
 ML code security resources help practitioners identify vulnerable dependencies, unsafe model formats, insecure library behavior, and model-extraction risks in machine learning software.
 
 - [lintML](https://github.com/JosephTLucas/lintML) - Security linter for ML, by Nvidia
-- [HiddenLayer: Model as Code](https://hiddenlayer.com/research/models-are-code/) - Research about some vectors in ML libraries
-- [Copycat CNN](https://github.com/jeiks/Stealing_DL_Models) - Proof-of-concept on how to generate a copy of a Convolutional Neural Network
+- [HiddenLayer: Model as Code](https://hiddenlayer.com/research/models-are-code/) - Research article on executable model formats and unsafe deserialization paths in ML libraries
+- [Copycat CNN](https://github.com/jeiks/Stealing_DL_Models) - Proof of concept for training a surrogate convolutional neural network from black-box queries
 - [differential-privacy-library](https://github.com/IBM/differential-privacy-library) - Library designed for differential privacy and machine learning
 
 <a id="101-resources"></a>

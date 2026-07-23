@@ -33,12 +33,12 @@ const schema: WithContext<ItemList> = {
   })),
 };
 const titleByCategory: Record<ToolCategory["id"], string> = {
-  "llm-security": "Open-Source LLM Security Tools",
-  "model-scanning": "ML Model Scanning Tools",
-  "adversarial-ml": "Adversarial Machine Learning Tools",
-  "supply-chain": "AI Supply-Chain Security Tools",
-  "agent-security": "AI Agent and MCP Security Tools",
-  privacy: "Privacy-Preserving ML Tools",
+  "llm-security": "LLM Security Tools and Resources",
+  "model-scanning": "ML Model Scanning Tools and Resources",
+  "adversarial-ml": "Adversarial Machine Learning Tools and Resources",
+  "supply-chain": "AI Supply-Chain Security Tools and Resources",
+  "agent-security": "AI Agent and MCP Security Tools and Resources",
+  privacy: "Privacy-Preserving ML Tools and Resources",
 };
 ---
 
@@ -64,8 +64,8 @@ const titleByCategory: Record<ToolCategory["id"], string> = {
     <div class="shell">
       <div class="section-heading">
         <p class="eyebrow">Community catalog</p>
-        <h2>{category.name} tools</h2>
-        <p>Listings are editorial resources, not endorsements. Confirm maintenance, licensing, deployment fit, and technical evidence before production use.</p>
+        <h2>{category.name} tools and resources</h2>
+        <p>The catalog includes software, commercial products, research artifacts, benchmarks, playbooks, and training projects. Listings support discovery and are not endorsements or evidence of production safety. Confirm resource type, maintenance, licensing, deployment fit, and technical claims before use.</p>
       </div>
       <ToolTable tools={tools} />
     </div>

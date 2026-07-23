@@ -11,7 +11,7 @@
     "category": "supply-chain",
     "name": "Safetensors",
     "url": "https://github.com/huggingface/safetensors",
-    "description": "Convert pickle to a safe serialization option"
+    "description": "Tensor storage format designed to avoid executable deserialization; it does not establish model provenance or behavioral safety"
   },
   {
     "id": "adversarial-robustness-toolbox",
@@ -98,13 +98,6 @@
     "description": "A full-fledged benchmark for evaluating protection capabilities of AI models"
   },
   {
-    "id": "nb-defense",
-    "category": "model-scanning",
-    "name": "NB Defense",
-    "url": "https://nbdefense.ai/",
-    "description": "Secure Jupyter Notebooks"
-  },
-  {
     "id": "mlsploit",
     "category": "adversarial-ml",
     "name": "MLSploit",
@@ -162,7 +155,7 @@
   },
   {
     "id": "promptinject",
-    "category": "adversarial-ml",
+    "category": "llm-security",
     "name": "PromptInject",
     "url": "https://github.com/agencyenterprise/PromptInject",
     "description": "A framework that assembles adversarial prompts"
@@ -200,7 +193,7 @@
     "category": "adversarial-ml",
     "name": "Adversarial Machine Learning CTF",
     "url": "https://github.com/arturmiller/adversarial_ml_ctf",
-    "description": "This repository is a CTF challenge, showing a security flaw in most (all?) common artificial neural networks. They are vulnerable for adversarial images"
+    "description": "CTF challenge demonstrating adversarial-image attacks against neural-network image classifiers"
   },
   {
     "id": "damn-vulnerable-llm-project",
@@ -280,13 +273,6 @@
     "description": "Open-source testing tool for LLM applications"
   },
   {
-    "id": "citadel-lens",
-    "category": "model-scanning",
-    "name": "Citadel Lens",
-    "url": "https://www.citadel.co.jp/en/products/lens/",
-    "description": "Quality testing of models according to industry standards"
-  },
-  {
     "id": "model-inversion-attack-toolbox",
     "category": "adversarial-ml",
     "name": "Model-Inversion-Attack-ToolBox",
@@ -305,21 +291,14 @@
     "category": "adversarial-ml",
     "name": "AugLy",
     "url": "https://github.com/facebookresearch/AugLy",
-    "description": "A tool for generating adversarial attacks"
+    "description": "Multimodal data-augmentation library for evaluating and improving model robustness; it is not an adversarial-attack generator"
   },
   {
     "id": "knockoffnets",
-    "category": "adversarial-ml",
+    "category": "model-scanning",
     "name": "Knockoffnets",
     "url": "https://github.com/tribhuvanesh/knockoffnets",
-    "description": "PoC to implement BlackBox attacks to steal model data"
-  },
-  {
-    "id": "robust-intelligence-continuous-validation",
-    "category": "adversarial-ml",
-    "name": "Robust Intelligence Continuous Validation",
-    "url": "https://www.robustintelligence.com/platform/continuous-validation",
-    "description": "Tool for continuous model validation for compliance with standards"
+    "description": "Proof of concept for training a functional surrogate from black-box model queries"
   },
   {
     "id": "vger",
@@ -400,17 +379,10 @@
   },
   {
     "id": "ai-scan-interceptor",
-    "category": "model-scanning",
+    "category": "llm-security",
     "name": "AI-Scan-Interceptor",
     "url": "https://github.com/mshirakawa-ssp/ai-scan-interceptor",
     "description": "Self-hostable DLP gateway for enterprise prompts to ChatGPT/Claude/Gemini (Squid + Go ICAP + mTLS, AGPL-3.0)"
-  },
-  {
-    "id": "kubestellar-console",
-    "category": "supply-chain",
-    "name": "KubeStellar Console",
-    "url": "https://github.com/kubestellar/console",
-    "description": "Multi-cluster Kubernetes dashboard with MLSecOps capabilities: GPU workload monitoring, Kyverno policy enforcement, supply chain security (SBOM, SLSA), and AI/ML infrastructure observability. CNCF Sandbox project."
   },
   {
     "id": "trustgate",
@@ -428,17 +400,31 @@
   },
   {
     "id": "ironclaw",
-    "category": "supply-chain",
+    "category": "agent-security",
     "name": "IronClaw",
     "url": "https://github.com/IronSecCo/ironclaw",
     "description": "Security-hardened, self-hosted runtime that sandboxes autonomous AI agents in a gVisor (runsc) sandbox with network=none, a read-only rootfs, host-side credential injection, and a human-approval gateway; signed and attested supply chain (cosign, SLSA, SBOMs)"
   },
   {
-    "id": "databricks-platform-azure-databricks",
-    "category": "supply-chain",
-    "name": "Databricks Platform, Azure Databricks",
-    "url": "https://azure.microsoft.com/ru-ru/products/databricks",
-    "description": "Datalake data management and implementation tool"
+    "id": "nb-defense",
+    "category": "model-scanning",
+    "name": "NB Defense",
+    "url": "https://nbdefense.ai/",
+    "description": "Commercial security platform for identifying risks in Jupyter notebooks"
+  },
+  {
+    "id": "citadel-lens",
+    "category": "model-scanning",
+    "name": "Citadel Lens",
+    "url": "https://www.citadel.co.jp/en/products/lens/",
+    "description": "Commercial model-testing platform; verify supported standards and security checks in current product documentation"
+  },
+  {
+    "id": "robust-intelligence-continuous-validation",
+    "category": "adversarial-ml",
+    "name": "Robust Intelligence Continuous Validation",
+    "url": "https://www.robustintelligence.com/platform/continuous-validation",
+    "description": "Commercial platform for continuous model validation and policy testing"
   },
   {
     "id": "hidden-layer-ai-detection-response",
@@ -453,13 +439,6 @@
     "name": "Guardian",
     "url": "https://protectai.com/guardian",
     "description": "Model protection in CI/CD"
-  },
-  {
-    "id": "promptfoo",
-    "category": "llm-security",
-    "name": "Promptfoo",
-    "url": "https://www.promptfoo.dev/security/",
-    "description": "Continuous monitoring, detection, and remediation for enterprise LLM applications"
   },
   {
     "id": "neuraltrust",
@@ -529,14 +508,14 @@
     "category": "model-scanning",
     "name": "HiddenLayer: Model as Code",
     "url": "https://hiddenlayer.com/research/models-are-code/",
-    "description": "Research about some vectors in ML libraries"
+    "description": "Research article on executable model formats and unsafe deserialization paths in ML libraries"
   },
   {
     "id": "copycat-cnn",
     "category": "adversarial-ml",
     "name": "Copycat CNN",
     "url": "https://github.com/jeiks/Stealing_DL_Models",
-    "description": "Proof-of-concept on how to generate a copy of a Convolutional Neural Network"
+    "description": "Proof of concept for training a surrogate convolutional neural network from black-box queries"
   },
   {
     "id": "differential-privacy-library",

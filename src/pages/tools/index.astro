@@ -10,7 +10,7 @@ const tools = await getCollection("tools");
 const schema: WithContext<ItemList> = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "MLSecOps security tool categories",
+  name: "MLSecOps security tool and resource categories",
   numberOfItems: TOOL_CATEGORIES.length,
   itemListElement: TOOL_CATEGORIES.map((category, index) => ({
     "@type": "ListItem",
@@ -22,16 +22,16 @@ const schema: WithContext<ItemList> = {
 ---
 
 <BaseLayout
-  title="MLSecOps Tools by Security Category"
-  description="Browse MLSecOps tools for LLM security, model scanning, adversarial ML, AI supply chains, agent security, MCP security, and privacy."
+  title="MLSecOps Tools and Resources by Security Category"
+  description="Browse MLSecOps tools and technical resources for LLM security, model scanning, adversarial ML, AI supply chains, agent security, MCP security, and privacy."
   ogKey="tools"
 >
   <StructuredData data={schema} />
   <section class="page-hero">
     <div class="shell">
       <p class="eyebrow">Synced from the GitHub catalog</p>
-      <h1>MLSecOps tools by security category</h1>
-      <p>Focused guides explain what each class of tool does and what to evaluate. The community repository remains the source of truth for every listing.</p>
+      <h1>MLSecOps tools and resources by security category</h1>
+      <p>Focused guides explain each security problem and what to evaluate. The community repository remains the source of truth for every listing.</p>
     </div>
   </section>
   <section class="content-section">
@@ -40,10 +40,10 @@ const schema: WithContext<ItemList> = {
         const count = tools.filter((tool) => tool.data.category === category.id).length;
         return (
           <a class="category-card" href={`/tools/${category.id}/`}>
-            <span class="count">{count} tools</span>
+            <span class="count">{count} entries</span>
             <h2>{category.name}</h2>
             <p>{category.shortDescription}</p>
-            <strong>Browse {category.shortName.toLowerCase()} tools</strong>
+            <strong>Browse {category.shortName.toLowerCase()} resources</strong>
           </a>
         );
       })}
@@ -55,6 +55,7 @@ const schema: WithContext<ItemList> = {
       {/* Sponsorship is temporarily disabled.
       <p>The tool tables are generated from the public Awesome MLSecOps README during every build. Sponsors are stored and rendered separately, cannot enter category tables, and do not influence descriptions or ordering. Propose additions through the repository's documented contribution process.</p>
       */}
+      <p>The catalog is synchronized from the public README and reviewed for security relevance, neutral wording, and duplicate entries. Inclusion is not a technical certification. Capabilities, maintenance, licensing, and commercial status can change after review, so production adopters must verify claims against first-party documentation. Corrections follow the repository's <a href="https://github.com/RiccardoBiosas/awesome-MLSecOps/blob/main/CONTRIBUTING.md">contribution process</a>. The current technical content review was completed in July 2026 against NIST AI RMF, NIST AI 100-2, MITRE ATLAS, OWASP LLM guidance, SLSA, and Sigstore.</p>
       <p>Agents and researchers can consume the same catalog through <a href="/tools.json">tools.json</a>, while citation-oriented route summaries are available in <a href="/llms.txt">llms.txt</a>.</p>
     </div>
   </section>

@@ -20,10 +20,6 @@ export default defineConfig({
         if (pathname === "/sponsor/") return false; // Sponsorship is temporarily disabled.
         return !pathname.startsWith("/og/") && !["/llms.txt", "/rss.xml", "/sitemap.xml", "/tools.json"].includes(pathname);
       },
-      serialize(item) {
-        item.lastmod = BUILD_DATE;
-        return item;
-      },
     }),
   ],
 });

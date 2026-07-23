@@ -11,33 +11,48 @@ const jobs = activeJobs(await getCollection("jobs"), new Date(BUILD_DATE)).sort(
   return right.data.posted_date.getTime() - left.data.posted_date.getTime();
 });
 
-const postings: JobPosting[] = jobs.map((job) => ({
-  "@type": "JobPosting",
-  identifier: {
-    "@type": "PropertyValue",
-    name: job.data.company,
-    value: job.id,
-  },
-  title: job.data.title,
-  description: job.data.description,
-  datePosted: job.data.posted_date.toISOString().slice(0, 10),
-  validThrough: `${job.data.expires_date.toISOString().slice(0, 10)}T23:59:59Z`,
-  employmentType: job.data.employment_type,
-  url: job.data.url,
-  hiringOrganization: {
-    "@type": "Organization",
-    name: job.data.company,
-    sameAs: job.data.company_url,
-  },
-  jobLocation: {
-    "@type": "Place",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: job.data.location,
-      addressCountry: job.data.country,
+const postings: JobPosting[] = jobs.map((job) => {
+  const locations = job.data.location.split("|").map((location) => location.trim());
+  const remote = locations.some((location) => /remote/i.test(location));
+  const physicalLocations = locations.filter((location) => !/remote/i.test(location));
+
+  return {
+    "@type": "JobPosting",
+    identifier: {
+      "@type": "PropertyValue",
+      name: job.data.company,
+      value: job.id,
     },
-  },
-}));
+    title: job.data.title,
+    description: job.data.description,
+    datePosted: job.data.posted_date.toISOString().slice(0, 10),
+    validThrough: `${job.data.expires_date.toISOString().slice(0, 10)}T23:59:59Z`,
+    employmentType: job.data.employment_type,
+    url: job.data.url,
+    hiringOrganization: {
+      "@type": "Organization",
+      name: job.data.company,
+      sameAs: job.data.company_url,
+    },
+    ...(physicalLocations.length > 0 && {
+      jobLocation: physicalLocations.map((location) => ({
+        "@type": "Place" as const,
+        address: {
+          "@type": "PostalAddress" as const,
+          addressLocality: location,
+          addressCountry: job.data.country,
+        },
+      })),
+    }),
+    ...(remote && {
+      jobLocationType: "TELECOMMUTE",
+      applicantLocationRequirements: {
+        "@type": "Country",
+        name: job.data.country,
+      },
+    }),
+  };
+});
 
 const schema: Graph = { "@context": "https://schema.org", "@graph": postings };
 const formatDate = (date: Date) => new Intl.DateTimeFormat("en", { dateStyle: "medium", timeZone: "UTC" }).format(date);
@@ -79,7 +94,7 @@ const formatDate = (date: Date) => new Intl.DateTimeFormat("en", { dateStyle: "m
           ))}
         </div>
       ) : (
-        <div class="sponsor-empty"><strong>No verified roles are currently active.</strong><span>Subscribe to the newsletter for future board updates.</span></div>
+        <div class="sponsor-empty"><strong>No roles are currently active.</strong><span>Subscribe to the newsletter for future board updates.</span></div>
       )}
     </div>
   </section>

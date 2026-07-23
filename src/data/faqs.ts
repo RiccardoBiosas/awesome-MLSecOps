@@ -15,7 +15,7 @@ export const WHAT_IS_FAQS: FaqItem[] = [
   },
   {
     question: "Who owns MLSecOps?",
-    answer: "MLSecOps is a shared operating responsibility. Security engineers define controls and testing, ML engineers secure models and data, platform teams protect pipelines, and product owners manage acceptable risk and response decisions.",
+    answer: "MLSecOps is a shared operating responsibility. Security engineers define controls and testing; ML researchers and engineers secure training and model behavior; data engineers manage data access, quality, and lineage; platform teams protect pipelines and infrastructure; and product owners make risk-acceptance and response decisions.",
   },
   {
     question: "Where should a team start with MLSecOps?",
@@ -47,7 +47,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     question: "How is MLSecOps measured?",
-    answer: "Useful MLSecOps measures include asset coverage, signed-artifact coverage, security-test pass rates, unresolved high-risk findings, privacy-budget compliance, time to detect model abuse, and time to contain AI-related incidents.",
+    answer: "Useful MLSecOps measures include inventory and control coverage by system criticality, signed-artifact coverage, attack success rates under a documented threat model, unresolved findings by severity and service-level objective, and detection and containment time for confirmed AI-security incidents. Differential-privacy reporting should state the approved epsilon and delta values, accounting method, and composition assumptions rather than report a binary compliance result.",
   },
   {
     question: "Is MLSecOps only for large organizations?",
