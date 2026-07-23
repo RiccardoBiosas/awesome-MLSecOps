@@ -31,7 +31,7 @@
     "id": "garak",
     "category": "llm-security",
     "name": "Garak",
-    "url": "https://github.com/leondz/garak",
+    "url": "https://github.com/NVIDIA/garak",
     "description": "LLM vulnerability scanner"
   },
   {
@@ -46,7 +46,7 @@
     "category": "agent-security",
     "name": "Agent Memory Guard",
     "url": "https://github.com/OWASP/www-project-agent-memory-guard",
-    "description": "Official OWASP runtime defense layer that screens AI agent memory reads/writes, blocking prompt injection, secret leakage, and memory poisoning (ASI06)"
+    "description": "OWASP project providing a runtime defense layer that screens AI agent memory reads and writes against prompt injection, secret leakage, and memory poisoning"
   },
   {
     "id": "agent-wiz",
@@ -81,7 +81,7 @@
     "category": "supply-chain",
     "name": "BomLens",
     "url": "https://github.com/sktelecom/bomlens",
-    "description": "Local-first SBOM generator and risk assessor that builds CycloneDX ML-BOMs for HuggingFace models with G7 minimum-elements conformance checks, plus license and known-vulnerability reports"
+    "description": "Local-first SBOM generator that builds CycloneDX ML-BOMs for Hugging Face models, with license and known-vulnerability reports"
   },
   {
     "id": "tensorflow-model-analysis",
@@ -94,7 +94,7 @@
     "id": "circleguardbench",
     "category": "model-scanning",
     "name": "CircleGuardBench",
-    "url": "https://github.com/whitecircle-ai/circle-guard-bench",
+    "url": "https://github.com/whitecircle/circle-guard-bench",
     "description": "A full-fledged benchmark for evaluating protection capabilities of AI models"
   },
   {
@@ -112,11 +112,11 @@
     "description": "Python toolbox for adversarial robustness research"
   },
   {
-    "id": "adversarial-ml-threat-matrix",
+    "id": "mitre-atlas",
     "category": "adversarial-ml",
-    "name": "Adversarial ML Threat Matrix",
-    "url": "https://github.com/mitre/advmlthreatmatrix",
-    "description": "Adversarial Threat Landscape for AI Systems"
+    "name": "MITRE ATLAS",
+    "url": "https://atlas.mitre.org/",
+    "description": "Knowledge base of adversary tactics and techniques against AI systems; successor to the deprecated Adversarial ML Threat Matrix"
   },
   {
     "id": "cleverhans",
@@ -295,7 +295,7 @@
   },
   {
     "id": "knockoffnets",
-    "category": "model-scanning",
+    "category": "adversarial-ml",
     "name": "Knockoffnets",
     "url": "https://github.com/tribhuvanesh/knockoffnets",
     "description": "Proof of concept for training a functional surrogate from black-box model queries"
@@ -329,11 +329,11 @@
     "description": "Evaluate the security of AI systems through a CLI"
   },
   {
-    "id": "purplellama3",
+    "id": "purple-llama",
     "category": "llm-security",
-    "name": "PurpleLLama3",
+    "name": "Purple Llama",
     "url": "https://meta-llama.github.io/PurpleLlama/",
-    "description": "Check LLM security with Meta LLM Benchmark"
+    "description": "Meta's umbrella suite of LLM safety and security tooling, including Llama Guard, Code Shield, and CyberSecEval"
   },
   {
     "id": "artkit",
@@ -352,9 +352,9 @@
   {
     "id": "tf-encrypted",
     "category": "privacy",
-    "name": "TF-encrypted",
-    "url": "https://tf-encrypted.io/",
-    "description": "Encryption for tensorflow"
+    "name": "TF Encrypted",
+    "url": "https://github.com/tf-encrypted/tf-encrypted",
+    "description": "Framework for encrypted deep learning in TensorFlow using secure multi-party computation"
   },
   {
     "id": "agentic-security",
@@ -368,7 +368,7 @@
     "category": "agent-security",
     "name": "skill-audit-mcp",
     "url": "https://github.com/eltociear/skill-audit-mcp",
-    "description": "Static security scanner for MCP servers, AI agent skills, and plugins. Detects 68 attack patterns across CRITICAL/HIGH/MEDIUM/LOW — credential exfiltration, prompt injection, code execution, seed-phrase harvesting, auth bypass, path traversal. SARIF output, GitHub Action, multi-arch Docker image"
+    "description": "Static security scanner for MCP servers, AI agent skills, and plugins, with SARIF output and CI integration"
   },
   {
     "id": "aisbom",
@@ -383,6 +383,13 @@
     "name": "AI-Scan-Interceptor",
     "url": "https://github.com/mshirakawa-ssp/ai-scan-interceptor",
     "description": "Self-hostable DLP gateway for enterprise prompts to ChatGPT/Claude/Gemini (Squid + Go ICAP + mTLS, AGPL-3.0)"
+  },
+  {
+    "id": "nb-defense",
+    "category": "model-scanning",
+    "name": "NB Defense",
+    "url": "https://github.com/protectai/nbdefense",
+    "description": "Jupyter notebook security scanner from Protect AI (now part of Palo Alto Networks)"
   },
   {
     "id": "trustgate",
@@ -403,35 +410,28 @@
     "category": "agent-security",
     "name": "IronClaw",
     "url": "https://github.com/IronSecCo/ironclaw",
-    "description": "Security-hardened, self-hosted runtime that sandboxes autonomous AI agents in a gVisor (runsc) sandbox with network=none, a read-only rootfs, host-side credential injection, and a human-approval gateway; signed and attested supply chain (cosign, SLSA, SBOMs)"
-  },
-  {
-    "id": "nb-defense",
-    "category": "model-scanning",
-    "name": "NB Defense",
-    "url": "https://nbdefense.ai/",
-    "description": "Commercial security platform for identifying risks in Jupyter notebooks"
+    "description": "Self-hosted runtime that sandboxes autonomous AI agents with isolated execution, restricted networking, and human-approval gating"
   },
   {
     "id": "citadel-lens",
     "category": "model-scanning",
     "name": "Citadel Lens",
-    "url": "https://www.citadel.co.jp/en/products/lens/",
+    "url": "https://citadel-ai.com/products/lens/",
     "description": "Commercial model-testing platform; verify supported standards and security checks in current product documentation"
   },
   {
-    "id": "robust-intelligence-continuous-validation",
-    "category": "adversarial-ml",
-    "name": "Robust Intelligence Continuous Validation",
-    "url": "https://www.robustintelligence.com/platform/continuous-validation",
-    "description": "Commercial platform for continuous model validation and policy testing"
+    "id": "cisco-ai-defense-formerly-robust-intelligence",
+    "category": "model-scanning",
+    "name": "Cisco AI Defense (formerly Robust Intelligence)",
+    "url": "https://www.cisco.com/site/us/en/products/security/ai-defense/index.html",
+    "description": "Commercial platform for AI model validation and runtime protection; Robust Intelligence was acquired by Cisco"
   },
   {
-    "id": "hidden-layer-ai-detection-response",
+    "id": "hiddenlayer-ai-detection-and-response",
     "category": "model-scanning",
-    "name": "Hidden Layer AI Detection Response",
-    "url": "https://hiddenlayer.com/aidr/",
-    "description": "Tool for detecting and responding to incidents"
+    "name": "HiddenLayer AI Detection and Response",
+    "url": "https://www.hiddenlayer.com/platform",
+    "description": "Commercial AI detection and response platform from HiddenLayer"
   },
   {
     "id": "guardian",
@@ -490,18 +490,11 @@
     "description": "A Toolbox for Realistic Image Anonymization"
   },
   {
-    "id": "ppap",
-    "category": "privacy",
-    "name": "PPAP",
-    "url": "https://github.com/tgisaturday/PPAP",
-    "description": "Latent-space-level Image Anonymization with Adversarial Protector Networks"
-  },
-  {
     "id": "lintml",
     "category": "model-scanning",
     "name": "lintML",
     "url": "https://github.com/JosephTLucas/lintML",
-    "description": "Security linter for ML, by Nvidia"
+    "description": "Security linter for ML training code, maintained by a member of the NVIDIA AI red team"
   },
   {
     "id": "hiddenlayer-model-as-code",

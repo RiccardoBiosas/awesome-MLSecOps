@@ -50,7 +50,11 @@ const CATEGORY_OVERRIDES = new Map<string, ToolCategoryId>([
   ["IronClaw", "agent-security"],
   ["PALLMs (Payloads for Attacking Large Language Models)", "llm-security"],
   ["AugLy", "adversarial-ml"],
+  ["Knockoffnets", "adversarial-ml"],
+  ["Cisco AI Defense (formerly Robust Intelligence)", "model-scanning"],
 ]);
+
+const fallbackCategorized: string[] = [];
 
 function normalizeHeading(value: string): string {
   return value.trim().toLowerCase().replace(/\s+/g, " ");
@@ -84,7 +88,9 @@ function classify(name: string, description: string, section: string): ToolCateg
   const override = CATEGORY_OVERRIDES.get(name);
   if (override) return override;
   const text = `${name} ${description}`;
-  return CATEGORY_RULES.find(([, pattern]) => pattern.test(text))?.[0] ?? "model-scanning";
+  const matched = CATEGORY_RULES.find(([, pattern]) => pattern.test(text))?.[0];
+  if (!matched) fallbackCategorized.push(name);
+  return matched ?? "model-scanning";
 }
 
 function makeId(name: string, url: string, seen: Set<string>): string {
@@ -172,6 +178,12 @@ function parseTools(markdown: string): ParsedTool[] {
 const tools = parseTools(await loadReadme());
 if (tools.length < 60) {
   throw new Error(`README sync found only ${tools.length} tools; refusing to overwrite the collection.`);
+}
+
+if (fallbackCategorized.length > 0) {
+  console.warn(
+    `Warning: ${fallbackCategorized.length} entries matched no category rule and defaulted to model-scanning: ${fallbackCategorized.join(", ")}. Verify the category or add a CATEGORY_OVERRIDES entry.`,
+  );
 }
 
 await mkdir(resolve("src/data"), { recursive: true });

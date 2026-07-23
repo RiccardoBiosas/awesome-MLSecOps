@@ -30,9 +30,9 @@ export const TOOL_CATEGORIES: ToolCategory[] = [
     ],
     evaluation: ["Threat and model coverage", "Reproducible evaluations", "CI and reporting support", "Sensitive-data handling"],
     attackVectors: [
-      { name: "Prompt injection attacks", url: "https://research.nccgroup.com/2022/12/05/exploring-prompt-injection-attacks" },
-      { name: "Excessive agent permissions", url: "https://genai.owasp.org/llmrisk/llm08-excessive-agency/" },
-      { name: "Model denial of service", url: "https://genai.owasp.org/llmrisk/llm04-model-denial-of-service/" },
+      { name: "Prompt injection (LLM01:2025)", url: "https://genai.owasp.org/llmrisk/llm01-prompt-injection/" },
+      { name: "Excessive agency (LLM06:2025)", url: "https://genai.owasp.org/llmrisk/llm062025-excessive-agency/" },
+      { name: "Unbounded consumption and model denial of service (LLM10:2025)", url: "https://genai.owasp.org/llmrisk/llm102025-unbounded-consumption/" },
     ],
     readmeUrl: `${REPOSITORY_URL}#open-source-security-tools`,
   },
@@ -105,8 +105,8 @@ export const TOOL_CATEGORIES: ToolCategory[] = [
     ],
     evaluation: ["Tool-level authorization", "Memory and context controls", "Sandbox boundaries", "Audit and approval workflows"],
     attackVectors: [
-      { name: "Excessive agency", url: "https://genai.owasp.org/llmrisk/llm08-excessive-agency/" },
-      { name: "Prompt injection", url: "https://research.nccgroup.com/2022/12/05/exploring-prompt-injection-attacks" },
+      { name: "Excessive agency (LLM06:2025)", url: "https://genai.owasp.org/llmrisk/llm062025-excessive-agency/" },
+      { name: "Prompt injection (LLM01:2025)", url: "https://genai.owasp.org/llmrisk/llm01-prompt-injection/" },
       { name: "Agent memory poisoning defense", url: "https://github.com/OWASP/www-project-agent-memory-guard" },
     ],
     readmeUrl: `${REPOSITORY_URL}#open-source-security-tools`,

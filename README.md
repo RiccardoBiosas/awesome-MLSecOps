@@ -68,7 +68,7 @@ LLM security and red-teaming tools test prompts, model behavior, application con
 
 | Tool | Description |
 |------|-------------|
-| [Garak](https://github.com/leondz/garak) | LLM vulnerability scanner |
+| [Garak](https://github.com/NVIDIA/garak) | LLM vulnerability scanner |
 | [Promptfoo Scanner](https://github.com/promptfoo/promptfoo) | An open-source LLM red teaming tool |
 
 ### AI Agent Security
@@ -77,7 +77,7 @@ AI agent security tools assess memory, tools, permissions, workflows, and runtim
 
 | Tool | Description |
 |------|-------------|
-| [Agent Memory Guard](https://github.com/OWASP/www-project-agent-memory-guard) | Official OWASP runtime defense layer that screens AI agent memory reads/writes, blocking prompt injection, secret leakage, and memory poisoning (ASI06) |
+| [Agent Memory Guard](https://github.com/OWASP/www-project-agent-memory-guard) | OWASP project providing a runtime defense layer that screens AI agent memory reads and writes against prompt injection, secret leakage, and memory poisoning |
 | [Agent-Wiz](https://github.com/Repello-AI/Agent-Wiz) | Python CLI by Repello AI for extracting agentic workflows from LangChain/LangGraph/CrewAI/AutoGen and running automated threat modeling |
 
 ### Privacy-Preserving Machine Learning
@@ -96,7 +96,7 @@ AI supply-chain security tools protect model artifacts, provenance, dependencies
 | Tool | Description |
 |------|-------------|
 | [Model Transparency](https://github.com/sigstore/model-transparency) | Generate model signing metadata for provenance verification |
-| [BomLens](https://github.com/sktelecom/bomlens) | Local-first SBOM generator and risk assessor that builds CycloneDX ML-BOMs for HuggingFace models with G7 minimum-elements conformance checks, plus license and known-vulnerability reports |
+| [BomLens](https://github.com/sktelecom/bomlens) | Local-first SBOM generator that builds CycloneDX ML-BOMs for Hugging Face models, with license and known-vulnerability reports |
 
 ### Model Testing, Monitoring, and Evaluation
 
@@ -105,7 +105,7 @@ These projects support model validation, monitoring, robustness, safety, and com
 | Tool | Description |
 |------|-------------|
 | [TensorFlow Model Analysis](https://github.com/tensorflow/model-analysis) | A library for analyzing, validating, and monitoring machine learning models in production|
-| [CircleGuardBench](https://github.com/whitecircle-ai/circle-guard-bench)| A full-fledged benchmark for evaluating protection capabilities of AI models|
+| [CircleGuardBench](https://github.com/whitecircle/circle-guard-bench)| A full-fledged benchmark for evaluating protection capabilities of AI models|
 
 ### Additional Open-Source Tools
 
@@ -115,7 +115,7 @@ The following tools and research prototypes address additional MLSecOps testing,
 |------|-------------|
 | [MLSploit](https://github.com/mlsploit/) | Cloud framework for interactive experimentation with adversarial machine learning research |
 | [Advertorch](https://github.com/BorealisAI/advertorch) | Python toolbox for adversarial robustness research |
-| [Adversarial ML Threat Matrix](https://github.com/mitre/advmlthreatmatrix) | Adversarial Threat Landscape for AI Systems |
+| [MITRE ATLAS](https://atlas.mitre.org/) | Knowledge base of adversary tactics and techniques against AI systems; successor to the deprecated Adversarial ML Threat Matrix |
 | [CleverHans](https://github.com/cleverhans-lab/cleverhans) | A library of adversarial examples and defenses for machine learning models|
 | [AdvBox](https://github.com/advboxes/AdvBox) | Advbox is a toolbox to generate adversarial examples that fool neural networks in PaddlePaddle、PyTorch、Caffe2、MxNet、Keras、TensorFlow|
 | [Audit AI](https://github.com/pymetrics/audit-ai) | Bias Testing for Generalized Machine Learning Applications|
@@ -146,17 +146,18 @@ The following tools and research prototypes address additional MLSecOps testing,
 | [AIShield Watchtower](https://github.com/bosch-aisecurity-aishield/watchtower) | An open-source tool from AIShield for studying AI models and scanning for vulnerabilities |
 | [PS-fuzz](https://github.com/prompt-security/ps-fuzz) | tool for scanning LLM vulnerabilities|
 | [Mindgard CLI](https://github.com/Mindgard/cli/) | Evaluate the security of AI systems through a CLI |
-| [PurpleLLama3](https://meta-llama.github.io/PurpleLlama/)| Check LLM security with Meta LLM Benchmark |
+| [Purple Llama](https://meta-llama.github.io/PurpleLlama/)| Meta's umbrella suite of LLM safety and security tooling, including Llama Guard, Code Shield, and CyberSecEval |
 | [ARTkit](https://github.com/BCG-X-Official/artkit)|Automated prompt-based testing and evaluation of Gen AI applications|
 | [LangBiTe](https://github.com/SOM-Research/LangBiTe) | A Bias Tester framework for LLMs|
-| [TF-encrypted](https://tf-encrypted.io/)| Encryption for tensorflow|
+| [TF Encrypted](https://github.com/tf-encrypted/tf-encrypted)| Framework for encrypted deep learning in TensorFlow using secure multi-party computation|
 | [Agentic Security](https://github.com/msoedov/agentic_security)| Agentic LLM Vulnerability Scanner / AI red teaming kit|
-| [skill-audit-mcp](https://github.com/eltociear/skill-audit-mcp) | Static security scanner for MCP servers, AI agent skills, and plugins. Detects 68 attack patterns across CRITICAL/HIGH/MEDIUM/LOW — credential exfiltration, prompt injection, code execution, seed-phrase harvesting, auth bypass, path traversal. SARIF output, GitHub Action, multi-arch Docker image |
+| [skill-audit-mcp](https://github.com/eltociear/skill-audit-mcp) | Static security scanner for MCP servers, AI agent skills, and plugins, with SARIF output and CI integration |
 | [AIsbom](https://github.com/Lab700xOrg/aisbom) | Disassembles Pickle bytecode and parses SafeTensors/GGUF binary headers to detect malware and license risks in ML model files before load. Generates CycloneDX/SPDX SBOMs. |
 | [AI-Scan-Interceptor](https://github.com/mshirakawa-ssp/ai-scan-interceptor) | Self-hostable DLP gateway for enterprise prompts to ChatGPT/Claude/Gemini (Squid + Go ICAP + mTLS, AGPL-3.0) |
+| [NB Defense](https://github.com/protectai/nbdefense) | Jupyter notebook security scanner from Protect AI (now part of Palo Alto Networks) |
 | [TrustGate](https://github.com/NeuralTrust/TrustGate) | An open-source Generative Application Firewall (GAF) |
 | [Whistleblower](https://github.com/Repello-AI/whistleblower) | Open-source offensive tool by Repello AI for testing LLM apps against system prompt leakage |
-| [IronClaw](https://github.com/IronSecCo/ironclaw) | Security-hardened, self-hosted runtime that sandboxes autonomous AI agents in a gVisor (runsc) sandbox with network=none, a read-only rootfs, host-side credential injection, and a human-approval gateway; signed and attested supply chain (cosign, SLSA, SBOMs) |
+| [IronClaw](https://github.com/IronSecCo/ironclaw) | Self-hosted runtime that sandboxes autonomous AI agents with isolated execution, restricted networking, and human-approval gating |
 
 
 <a id="commercial-tools"></a>
@@ -166,10 +167,9 @@ Commercial MLSecOps and AI security tools support model protection, application 
 
 | Tool | Description |
 |------|-------------|
-| [NB Defense](https://nbdefense.ai) | Commercial security platform for identifying risks in Jupyter notebooks |
-| [Citadel Lens](https://www.citadel.co.jp/en/products/lens/) | Commercial model-testing platform; verify supported standards and security checks in current product documentation |
-| [Robust Intelligence Continuous Validation](https://www.robustintelligence.com/platform/continuous-validation) | Commercial platform for continuous model validation and policy testing |
-| [Hidden Layer AI Detection Response](https://hiddenlayer.com/aidr/) | Tool for detecting and responding to incidents |
+| [Citadel Lens](https://citadel-ai.com/products/lens/) | Commercial model-testing platform; verify supported standards and security checks in current product documentation |
+| [Cisco AI Defense (formerly Robust Intelligence)](https://www.cisco.com/site/us/en/products/security/ai-defense/index.html) | Commercial platform for AI model validation and runtime protection; Robust Intelligence was acquired by Cisco |
+| [HiddenLayer AI Detection and Response](https://www.hiddenlayer.com/platform) | Commercial AI detection and response platform from HiddenLayer |
 | [Guardian](https://protectai.com/guardian) | Model protection in CI/CD |
 | [NeuralTrust](https://neuraltrust.ai) | Tools to protect, secure and test GenAI Applications |
 
@@ -187,13 +187,12 @@ Data privacy and anonymization tools help reduce exposure of personal or sensiti
 | [Tool for DATA anonymization](https://github.com/PacktPublishing/Adversarial-AI---Attacks-Mitigations-and-Defense-Strategies/blob/main/ch10/notebooks/Data%20Anonymization.ipynb)| Data anonymization|
 | [BMW Anonymization API](https://github.com/BMW-InnovationLab/BMW-Anonymization-API) | This repository allows you to anonymize sensitive information in images/videos. The solution is fully compatible with the DL-based training/inference solutions that we already published/will publish for Object Detection and Semantic Segmentation |
 | [DeepPrivacy2](https://github.com/hukkelas/deep_privacy2)| A Toolbox for Realistic Image Anonymization |
-| [PPAP](https://github.com/tgisaturday/PPAP)|Latent-space-level Image Anonymization with Adversarial Protector Networks|
 
 ## ML Code Security
 
 ML code security resources help practitioners identify vulnerable dependencies, unsafe model formats, insecure library behavior, and model-extraction risks in machine learning software.
 
-- [lintML](https://github.com/JosephTLucas/lintML) - Security linter for ML, by Nvidia
+- [lintML](https://github.com/JosephTLucas/lintML) - Security linter for ML training code, maintained by a member of the NVIDIA AI red team
 - [HiddenLayer: Model as Code](https://hiddenlayer.com/research/models-are-code/) - Research article on executable model formats and unsafe deserialization paths in ML libraries
 - [Copycat CNN](https://github.com/jeiks/Stealing_DL_Models) - Proof of concept for training a surrogate convolutional neural network from black-box queries
 - [differential-privacy-library](https://github.com/IBM/differential-privacy-library) - Library designed for differential privacy and machine learning
