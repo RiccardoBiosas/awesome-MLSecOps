@@ -29,7 +29,8 @@ jobs:
           package-manager: npm
           build-cmd: npm run build
         env:
-          BUILD_DATE: ${{ github.event.head_commit.timestamp || github.run_started_at }}
+          BUILD_DATE: ${{ github.event.head_commit.timestamp }}
+          PUBLIC_GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
           PUBLIC_GOOGLE_SITE_VERIFICATION: ${{ secrets.GOOGLE_SITE_VERIFICATION }}
 
   deploy:

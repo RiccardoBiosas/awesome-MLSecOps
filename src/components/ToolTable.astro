@@ -47,18 +47,20 @@ const searchId = `catalog-search-${categoryId}`;
 
 <script>
   document.querySelectorAll("[data-tool-catalog]").forEach((catalog) => {
+    if (!(catalog instanceof HTMLElement)) return;
     const search = catalog.querySelector("[data-tool-search]");
     const count = catalog.querySelector("[data-tool-count]");
     const empty = catalog.querySelector("[data-tool-empty]");
     const entries = [...catalog.querySelectorAll("[data-tool-entry]")];
 
-    if (!search || !count || !empty) return;
+    if (!(search instanceof HTMLInputElement) || !count || !(empty instanceof HTMLElement)) return;
 
     search.addEventListener("input", () => {
       const query = search.value.trim().toLocaleLowerCase("en");
       let visible = 0;
 
       entries.forEach((entry) => {
+        if (!(entry instanceof HTMLElement)) return;
         const matches = !query || entry.dataset.search?.includes(query) === true;
         entry.hidden = !matches;
         if (matches) visible += 1;

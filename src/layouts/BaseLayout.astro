@@ -26,6 +26,7 @@ const {
 const canonical = absoluteUrl(Astro.url.pathname);
 const image = absoluteUrl(`/og/${ogKey}.png`);
 const verification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
+const googleAnalyticsId = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID?.trim();
 ---
 
 <!doctype html>
@@ -52,6 +53,22 @@ const verification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
     {verification && <meta name="google-site-verification" content={verification} />}
+    {googleAnalyticsId && (
+      <>
+        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}></script>
+        <script is:inline define:vars={{ googleAnalyticsId }}>
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = window.gtag || function () {
+            window.dataLayer.push(arguments);
+          };
+          window.gtag("js", new Date());
+          window.gtag("config", googleAnalyticsId, {
+            page_location: window.location.href,
+            page_title: document.title,
+          });
+        </script>
+      </>
+    )}
     <script is:inline defer data-domain="awesomemlsecops.com" src="https://plausible.io/js/script.js"></script>
     <script is:inline>
       window.plausible = window.plausible || function () {
@@ -66,6 +83,19 @@ const verification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
         });
       });
     </script>
+    {googleAnalyticsId && (
+      <script is:inline>
+        document.addEventListener("click", function (event) {
+          var target = event.target;
+          var link = target && target.closest ? target.closest("[data-analytics-event]") : null;
+          if (!link || !window.gtag) return;
+          window.gtag("event", link.dataset.analyticsEvent.toLowerCase().replace(/[^a-z0-9]+/g, "_"), {
+            event_category: "engagement",
+            link_url: link.href || link.src || "unknown",
+          });
+        });
+      </script>
+    )}
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
