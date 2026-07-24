@@ -18,6 +18,7 @@ export default defineConfig({
         const pathname = new URL(page).pathname;
         if (pathname === "/jobs/" && !hasActiveJobs) return false;
         if (pathname === "/sponsor/") return false; // Sponsorship is temporarily disabled.
+        if (pathname.startsWith("/tools/entries/")) return false;
         return !pathname.startsWith("/og/") && !["/llms.txt", "/rss.xml", "/sitemap.xml", "/tools.json"].includes(pathname);
       },
     }),

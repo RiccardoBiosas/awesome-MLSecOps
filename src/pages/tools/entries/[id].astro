@@ -3,7 +3,13 @@ import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import type { Graph } from "schema-dts";
 import StructuredData from "../../../components/StructuredData.astro";
-import { absoluteUrl, toolEntryPath } from "../../../config/site";
+import {
+  CATALOG_REVIEW_DATE,
+  REPOSITORY_URL,
+  absoluteUrl,
+  formattedCatalogReviewDate,
+  toolEntryPath,
+} from "../../../config/site";
 import { CATEGORY_BY_ID } from "../../../data/categories";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 
@@ -22,13 +28,16 @@ const allTools = await getCollection("tools");
 const relatedTools = allTools
   .filter((entry) => entry.data.category === tool.data.category && entry.id !== tool.id)
   .sort((left, right) => left.data.name.localeCompare(right.data.name))
-  .slice(0, 8);
+  .slice(0, 6);
 
 if (!category) {
   throw new Error(`Unknown tool category: ${tool.data.category}`);
 }
 
 const canonical = absoluteUrl(toolEntryPath(tool.id));
+const categoryUrl = absoluteUrl(`/tools/${category.id}/`);
+const breadcrumbId = `${canonical}#breadcrumb`;
+const sourceHost = new URL(tool.data.url).hostname.replace(/^www\./, "");
 const schema: Graph = {
   "@context": "https://schema.org",
   "@graph": [
@@ -40,60 +49,125 @@ const schema: Graph = {
       description: tool.data.description,
       isPartOf: {
         "@type": "CollectionPage",
-        "@id": `${absoluteUrl("/tools/")}#page`,
-        url: absoluteUrl("/tools/"),
-        name: "MLSecOps Tools and Resources",
+        "@id": `${categoryUrl}#page`,
+        url: categoryUrl,
+        name: `${category.name} evaluation guide`,
       },
+      isBasedOn: [tool.data.url, category.readmeUrl],
       about: { "@id": `${canonical}#tool` },
+      breadcrumb: { "@id": breadcrumbId },
     },
     {
       "@type": "Thing",
       "@id": `${canonical}#tool`,
       name: tool.data.name,
       description: tool.data.description,
-      url: canonical,
-      sameAs: tool.data.url,
+      url: tool.data.url,
+      mainEntityOfPage: { "@id": `${canonical}#page` },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": breadcrumbId,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+        { "@type": "ListItem", position: 2, name: "Tool evaluation guides", item: absoluteUrl("/tools/") },
+        { "@type": "ListItem", position: 3, name: category.name, item: categoryUrl },
+        { "@type": "ListItem", position: 4, name: tool.data.name, item: canonical },
+      ],
     },
   ],
 };
 ---
 
 <BaseLayout
-  title={`${tool.data.name} | ${category.shortName} | Awesome MLSecOps`}
-  description={`${tool.data.description} Browse the Awesome MLSecOps directory entry, security category, and source link for ${tool.data.name}.`}
+  title={`${tool.data.name} Directory Context | Awesome MLSecOps`}
+  description={`${tool.data.name} directory context, neutral catalog description, evaluation criteria, and first-party source from the Awesome MLSecOps catalog.`}
   ogKey="tools"
+  newsletterAtEnd={false}
+  robots="noindex,follow"
 >
   <StructuredData data={schema} />
-  <section class="page-hero">
-    <div class="shell">
-      <p class="eyebrow">Directory entry in {category.name}</p>
-      <h1>{tool.data.name}</h1>
-      <p>{tool.data.description}</p>
-      <div class="button-row">
-        <a class="button" href={tool.data.url}>Visit project source</a>
-        <a class="button-secondary" href={`/tools/${category.id}/`}>Browse {category.shortName.toLowerCase()}</a>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol class="shell">
+      <li><a href="/">Home</a></li>
+      <li><a href="/tools/">Tool guides</a></li>
+      <li><a href={`/tools/${category.id}/`}>{category.shortName}</a></li>
+      <li aria-current="page">{tool.data.name}</li>
+    </ol>
+  </nav>
+
+  <section class="page-hero entry-hero">
+    <div class="shell entry-hero-grid">
+      <div>
+        <p class="eyebrow">Directory context | {category.name}</p>
+        <h1>{tool.data.name}</h1>
+        <p>{tool.data.description}</p>
+        <div class="button-row">
+          <a class="button" href={tool.data.url} data-analytics-event="Tool Outbound">Visit first-party source</a>
+          <a class="button-secondary" href={category.readmeUrl} data-analytics-event="Repo Outbound">View README source</a>
+        </div>
       </div>
+      <aside class="entry-source-panel">
+        <p class="eyebrow">Source record</p>
+        <dl class="catalog-facts">
+          <div><dt>Host</dt><dd>{sourceHost}</dd></div>
+          <div><dt>Category</dt><dd><a href={`/tools/${category.id}/`}>{category.shortName}</a></dd></div>
+          <div><dt>Reviewed</dt><dd><time datetime={CATALOG_REVIEW_DATE}>{formattedCatalogReviewDate()}</time></dd></div>
+          <div><dt>Indexing</dt><dd>Directory support page</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section class="content-section entry-context-section">
+    <div class="shell entry-context-grid">
+      <div>
+        <div class="section-heading">
+          <p class="eyebrow">Catalog scope</p>
+          <h2>What does this listing establish?</h2>
+        </div>
+        <div class="prose">
+          <p>The directory records {tool.data.name} as a resource relevant to {category.name.toLowerCase()}. Its short description is synchronized from the community-maintained README.</p>
+          <p>The listing does not establish current maintenance, licensing, security effectiveness, or deployment suitability. Verify those details at the first-party source before adoption.</p>
+        </div>
+      </div>
+      <aside class="entry-boundary-note">
+        <p class="eyebrow">Canonical catalog</p>
+        <h2>GitHub remains the source of truth</h2>
+        <p>Propose additions and corrections through the <a href={REPOSITORY_URL}>Awesome MLSecOps repository</a>. This support page exists for navigation and machine-readable entity mapping.</p>
+      </aside>
     </div>
   </section>
 
   <section class="content-section">
-    <div class="shell prose">
-      <h2>Why this entry exists</h2>
-      <p>This page gives the directory its own canonical reference for {tool.data.name} while preserving the upstream project link as the primary source for implementation details, release history, and maintainer claims.</p>
-      <p>Awesome MLSecOps includes software, commercial products, research artifacts, benchmarks, playbooks, and training projects. Inclusion supports discovery, not endorsement or proof of production safety. Verify maintenance status, licensing, threat coverage, and deployment fit against first-party documentation before adoption.</p>
-
-      <h2>Directory context</h2>
-      <p><strong>Category:</strong> <a href={`/tools/${category.id}/`}>{category.name}</a></p>
-      <p><strong>Canonical directory URL:</strong> <a href={canonical}>{canonical}</a></p>
-      <p><strong>External project URL:</strong> <a href={tool.data.url}>{tool.data.url}</a></p>
-      <p><strong>Source of truth:</strong> The community-maintained GitHub catalog remains the editorial source for inclusion and corrections.</p>
-
-      {relatedTools.length > 0 && (
-        <>
-          <h2>More {category.shortName.toLowerCase()} tools</h2>
-          <ul class="related-links">{relatedTools.map((entry) => <li><a href={toolEntryPath(entry.id)}>{entry.data.name}</a></li>)}</ul>
-        </>
-      )}
+    <div class="shell entry-evaluation-grid">
+      <div class="section-heading">
+        <p class="eyebrow">Before adoption</p>
+        <h2>Evaluate against the category criteria</h2>
+        <p>Use the category guide to define evidence requirements before comparing implementation claims.</p>
+      </div>
+      <ol class="evaluation-grid">
+        {category.evaluation.map((item, index) => (
+          <li><span>{String(index + 1).padStart(2, "0")}</span><strong>{item}</strong></li>
+        ))}
+      </ol>
     </div>
   </section>
+
+  {relatedTools.length > 0 && (
+    <section class="content-section related-entry-section">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="eyebrow">Same evaluation guide</p>
+          <h2>Related {category.shortName.toLowerCase()} entries</h2>
+        </div>
+        <ul class="related-entry-grid">
+          {relatedTools.map((entry) => (
+            <li><a href={toolEntryPath(entry.id)}><strong>{entry.data.name}</strong><span>{entry.data.description}</span></a></li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
 </BaseLayout>

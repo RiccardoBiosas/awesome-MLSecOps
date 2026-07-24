@@ -7,6 +7,7 @@ export const NEWSLETTER_URL = "https://themlsecopshacker.com";
 export const NEWSLETTER_EMBED_URL = "https://themlsecopshacker.com/embed";
 export const CONTACT_EMAIL = "riccardobiosas@gmail.com";
 export const BUILD_DATE = process.env.BUILD_DATE || new Date().toISOString();
+export const CATALOG_REVIEW_DATE = "2026-07-23";
 
 export const ENTITY_DESCRIPTION =
   "A curated list of awesome open-source tools, resources, and tutorials for MLSecOps (Machine Learning Security Operations).";
@@ -36,4 +37,11 @@ export function formattedBuildDate(): string {
     dateStyle: "long",
     timeZone: "UTC",
   }).format(new Date(BUILD_DATE));
+}
+
+export function formattedCatalogReviewDate(): string {
+  return new Intl.DateTimeFormat("en", {
+    dateStyle: "long",
+    timeZone: "UTC",
+  }).format(new Date(`${CATALOG_REVIEW_DATE}T00:00:00Z`));
 }

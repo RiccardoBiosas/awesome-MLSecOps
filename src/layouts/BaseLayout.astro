@@ -13,9 +13,16 @@ interface Props {
   description: string;
   ogKey: OgPageKey;
   newsletterAtEnd?: boolean;
+  robots?: string;
 }
 
-const { title, description, ogKey, newsletterAtEnd = true } = Astro.props;
+const {
+  title,
+  description,
+  ogKey,
+  newsletterAtEnd = true,
+  robots = "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+} = Astro.props;
 const canonical = absoluteUrl(Astro.url.pathname);
 const image = absoluteUrl(`/og/${ogKey}.png`);
 const verification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
@@ -29,7 +36,7 @@ const verification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="robots" content={robots} />
     <link rel="canonical" href={canonical} />
     <link rel="alternate" type="application/rss+xml" title={`${SITE_NAME} newsletter feed`} href={absoluteUrl("/rss.xml")} />
     <meta property="og:type" content="website" />
