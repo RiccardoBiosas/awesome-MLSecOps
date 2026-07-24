@@ -52,7 +52,7 @@ export const GET: APIRoute = async () => {
     "",
     "## Machine-Readable Discovery",
     "",
-    `- [Tools JSON](${SITE_URL}/tools.json): Full typed catalog with stable IDs, directory context URLs, category guides, first-party source URLs, and descriptions.`,
+    `- [Tools JSON](${SITE_URL}/tools.json): Full typed catalog with stable IDs, source-bounded directory descriptions, category guides, and first-party source URLs.`,
     `- [Newsletter RSS](${SITE_URL}/rss.xml): Feed of dated newsletter archive entries.`,
     `- [XML sitemap](${SITE_URL}/sitemap.xml): Index of canonical human-readable routes.`,
     `- [Crawler policy](${SITE_URL}/robots.txt): Search and AI crawler access policy.`,

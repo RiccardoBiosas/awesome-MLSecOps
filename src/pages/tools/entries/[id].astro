@@ -12,6 +12,7 @@ import {
 } from "../../../config/site";
 import { CATEGORY_BY_ID } from "../../../data/categories";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { createToolEntryContent } from "../../../lib/toolEntryContent";
 
 export async function getStaticPaths() {
   const tools = await getCollection("tools");
@@ -34,6 +35,7 @@ if (!category) {
   throw new Error(`Unknown tool category: ${tool.data.category}`);
 }
 
+const entryContent = createToolEntryContent(tool.data, category);
 const canonical = absoluteUrl(toolEntryPath(tool.id));
 const categoryUrl = absoluteUrl(`/tools/${category.id}/`);
 const breadcrumbId = `${canonical}#breadcrumb`;
@@ -46,7 +48,8 @@ const schema: Graph = {
       "@id": `${canonical}#page`,
       url: canonical,
       name: `${tool.data.name} | Awesome MLSecOps`,
-      description: tool.data.description,
+      description: entryContent.answer,
+      dateModified: CATALOG_REVIEW_DATE,
       isPartOf: {
         "@type": "CollectionPage",
         "@id": `${categoryUrl}#page`,
@@ -80,8 +83,8 @@ const schema: Graph = {
 ---
 
 <BaseLayout
-  title={`${tool.data.name} Directory Context | Awesome MLSecOps`}
-  description={`${tool.data.name} directory context, neutral catalog description, evaluation criteria, and first-party source from the Awesome MLSecOps catalog.`}
+  title={entryContent.title}
+  description={entryContent.metaDescription}
   ogKey="tools"
   newsletterAtEnd={false}
   robots="noindex,follow"
@@ -124,18 +127,22 @@ const schema: Graph = {
     <div class="shell entry-context-grid">
       <div>
         <div class="section-heading">
-          <p class="eyebrow">Catalog scope</p>
-          <h2>What does this listing establish?</h2>
+          <p class="eyebrow">Direct answer</p>
+          <h2>What is {tool.data.name}?</h2>
         </div>
-        <div class="prose">
-          <p>The directory records {tool.data.name} as a resource relevant to {category.name.toLowerCase()}. Its short description is synchronized from the community-maintained README.</p>
-          <p>The listing does not establish current maintenance, licensing, security effectiveness, or deployment suitability. Verify those details at the first-party source before adoption.</p>
+        <div class="entry-answer prose">
+          <p>{entryContent.answer}</p>
+          <blockquote>
+            <p>{tool.data.description}</p>
+            <cite>Neutral catalog description synchronized from the Awesome MLSecOps README</cite>
+          </blockquote>
         </div>
       </div>
       <aside class="entry-boundary-note">
-        <p class="eyebrow">Canonical catalog</p>
-        <h2>GitHub remains the source of truth</h2>
-        <p>Propose additions and corrections through the <a href={REPOSITORY_URL}>Awesome MLSecOps repository</a>. This support page exists for navigation and machine-readable entity mapping.</p>
+        <p class="eyebrow">Evidence boundary</p>
+        <h2>What should this description not imply?</h2>
+        <p>{entryContent.sourceStatement} The directory does not independently verify current capabilities, maintenance, licensing, or security effectiveness.</p>
+        <p>Propose corrections through the <a href={REPOSITORY_URL}>Awesome MLSecOps repository</a>.</p>
       </aside>
     </div>
   </section>
@@ -144,12 +151,12 @@ const schema: Graph = {
     <div class="shell entry-evaluation-grid">
       <div class="section-heading">
         <p class="eyebrow">Before adoption</p>
-        <h2>Evaluate against the category criteria</h2>
-        <p>Use the category guide to define evidence requirements before comparing implementation claims.</p>
+        <h2>What should teams verify about {tool.data.name}?</h2>
+        <p>Answer these questions from current first-party documentation and testing evidence rather than relying on the directory listing alone.</p>
       </div>
-      <ol class="evaluation-grid">
-        {category.evaluation.map((item, index) => (
-          <li><span>{String(index + 1).padStart(2, "0")}</span><strong>{item}</strong></li>
+      <ol class="verification-list">
+        {category.verificationQuestions.map((question, index) => (
+          <li><span>{String(index + 1).padStart(2, "0")}</span><p>{question}</p></li>
         ))}
       </ol>
     </div>

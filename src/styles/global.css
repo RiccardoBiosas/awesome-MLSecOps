@@ -905,6 +905,62 @@ tbody tr:last-child > * {
   color: var(--muted);
 }
 
+.entry-answer > p:first-child {
+  font-size: 1.04rem;
+}
+
+.entry-answer blockquote {
+  margin-inline: 0;
+  padding: 20px;
+  border-left: 5px solid var(--yellow);
+  background: var(--surface);
+}
+
+.entry-answer blockquote p {
+  color: var(--ink);
+  font-family: "Newsreader Variable", serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.entry-answer blockquote cite {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  font-family: "IBM Plex Sans Variable", sans-serif;
+  font-size: 0.78rem;
+  font-style: normal;
+}
+
+.verification-list {
+  display: grid;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.verification-list li {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  padding: 17px 18px;
+  border-top: 1px solid var(--line);
+}
+
+.verification-list span {
+  color: var(--coral);
+  font-size: 0.8rem;
+  font-weight: 750;
+}
+
+.verification-list p {
+  color: var(--ink);
+  font-weight: 600;
+}
+
 .entry-evaluation-grid .section-heading {
   margin-bottom: 0;
 }
