@@ -36,7 +36,19 @@ DNS verification and sitemap submission require access to the domain and Google 
 
 ## Analytics
 
-The static layout loads Plausible for `awesomemlsecops.com`. Create or connect that domain in Plausible before production measurement. The only local browser script is the event bridge required for these goals:
+The static layout loads Plausible for `awesomemlsecops.com` and conditionally loads Google Analytics 4 when a measurement ID is available.
+
+To enable GA4 on GitHub Pages:
+
+1. Create a GA4 web data stream for `https://awesomemlsecops.com`.
+2. Copy its measurement ID, which has the form `G-XXXXXXXXXX`.
+3. Add it as the GitHub Actions repository secret `GOOGLE_ANALYTICS_ID`.
+4. Run the Pages workflow or push to `main`.
+5. Open GA4 Realtime and visit the deployed site to verify a page view.
+
+The measurement ID is public by design, but keeping deployment configuration in an Actions secret avoids hard-coding environment-specific values. Local and pull-request builds omit GA4 unless `PUBLIC_GOOGLE_ANALYTICS_ID` is set.
+
+Create or connect the domain in Plausible before production measurement. The shared event bridge sends these goals to Plausible and sends normalized equivalents such as `repo_outbound` to GA4:
 
 - `Newsletter Signup`
 - `Repo Outbound`
