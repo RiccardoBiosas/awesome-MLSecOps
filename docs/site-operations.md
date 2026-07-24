@@ -10,7 +10,7 @@ npm install
 npm run dev
 ```
 
-`npm run dev` and `npm run build` run `scripts/sync-readme.ts` first. The script parses the checked-out `README.md`, classifies eligible tool sections, removes known tracking parameters, validates the generated collection, and refuses to overwrite it if fewer than 60 entries are found.
+`npm run dev`, `npm run build`, and `npm run check` run `scripts/sync-readme.ts` first. The script parses the checked-out `README.md`, classifies eligible tool sections, removes known tracking parameters, validates the generated collection, and refuses to overwrite it if fewer than 60 entries are found. The output, `src/data/tools.json`, is generated and gitignored — edit the README, never the JSON.
 
 To test a remote source explicitly:
 
@@ -22,7 +22,7 @@ README_SOURCE=https://raw.githubusercontent.com/RiccardoBiosas/awesome-MLSecOps/
 
 `.github/workflows/deploy-pages.yml` builds and deploys with `withastro/action`. It runs on every push to `main`, on manual dispatch, and once daily so expired jobs and freshness metadata are rebuilt even when the repository has no commit.
 
-The root `CNAME` remains the repository record. `public/CNAME` ensures Astro copies the same custom domain into the Pages artifact.
+`public/CNAME` is the single custom-domain record; Astro copies it into the Pages artifact.
 
 ## Google Search Console
 

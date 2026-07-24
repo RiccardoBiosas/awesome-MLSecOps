@@ -2,3 +2,6 @@
 dist/
 node_modules/
 local/
+
+# Generated from README.md by scripts/sync-readme.ts (runs via predev/prebuild/precheck).
+src/data/tools.json

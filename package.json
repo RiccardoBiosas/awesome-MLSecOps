@@ -8,6 +8,7 @@
   },
   "scripts": {
     "prebuild": "npm run sync",
+    "precheck": "npm run sync",
     "predev": "npm run sync",
     "build": "tsx scripts/build.ts",
     "check": "astro check",
