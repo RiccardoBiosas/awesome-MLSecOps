@@ -1,0 +1,83 @@
+---
+import "@fontsource-variable/ibm-plex-sans";
+import "@fontsource-variable/newsreader";
+import "../styles/global.css";
+import NewsletterCta from "../components/NewsletterCta.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import { absoluteUrl, SITE_NAME } from "../config/site";
+import type { OgPageKey } from "../data/pageMeta";
+
+interface Props {
+  title: string;
+  description: string;
+  ogKey: OgPageKey;
+  newsletterAtEnd?: boolean;
+  robots?: string;
+}
+
+const {
+  title,
+  description,
+  ogKey,
+  newsletterAtEnd = true,
+  robots = "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+} = Astro.props;
+const canonical = absoluteUrl(Astro.url.pathname);
+const image = absoluteUrl(`/og/${ogKey}.png`);
+const verification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" type="application/rss+xml" title={`${SITE_NAME} newsletter feed`} href={absoluteUrl("/rss.xml")} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    {verification && <meta name="google-site-verification" content={verification} />}
+    <script is:inline defer data-domain="awesomemlsecops.com" src="https://plausible.io/js/script.js"></script>
+    <script is:inline>
+      window.plausible = window.plausible || function () {
+        (window.plausible.q = window.plausible.q || []).push(arguments);
+      };
+      document.addEventListener("click", function (event) {
+        var target = event.target;
+        var link = target && target.closest ? target.closest("[data-analytics-event]") : null;
+        if (!link) return;
+        window.plausible(link.dataset.analyticsEvent, {
+          props: { destination: link.href || link.src || "unknown" },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <SiteHeader />
+    <main id="main-content">
+      <slot />
+      {newsletterAtEnd && (
+        <div class="shell page-newsletter">
+          <NewsletterCta />
+        </div>
+      )}
+    </main>
+    <SiteFooter />
+  </body>
+</html>

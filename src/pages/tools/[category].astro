@@ -1,0 +1,206 @@
+---
+import { getCollection } from "astro:content";
+import type { Graph } from "schema-dts";
+import StructuredData from "../../components/StructuredData.astro";
+import ToolTable from "../../components/ToolTable.astro";
+import {
+  CATALOG_REVIEW_DATE,
+  REPOSITORY_URL,
+  SITE_NAME,
+  SITE_URL,
+  absoluteUrl,
+  formattedCatalogReviewDate,
+} from "../../config/site";
+import { TOOL_CATEGORIES, type ToolCategory } from "../../data/categories";
+import type { OgPageKey } from "../../data/pageMeta";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export function getStaticPaths() {
+  return TOOL_CATEGORIES.map((category) => ({ params: { category: category.id }, props: { category } }));
+}
+
+interface Props {
+  category: ToolCategory;
+}
+
+const { category } = Astro.props as Props;
+const allTools = await getCollection("tools");
+const tools = allTools
+  .filter((tool) => tool.data.category === category.id)
+  .sort((left, right) => left.data.name.localeCompare(right.data.name));
+const categoryUrl = absoluteUrl(`/tools/${category.id}/`);
+const listId = `${categoryUrl}#catalog`;
+const breadcrumbId = `${categoryUrl}#breadcrumb`;
+const schema: Graph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": `${categoryUrl}#page`,
+      url: categoryUrl,
+      name: `${category.name} evaluation guide`,
+      description: category.metaDescription,
+      dateModified: CATALOG_REVIEW_DATE,
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        url: SITE_URL,
+        name: SITE_NAME,
+      },
+      isBasedOn: category.readmeUrl,
+      mainEntity: { "@id": listId },
+      breadcrumb: { "@id": breadcrumbId },
+    },
+    {
+      "@type": "ItemList",
+      "@id": listId,
+      name: `${category.name} catalog entries`,
+      description: category.shortDescription,
+      numberOfItems: tools.length,
+      itemListElement: tools.map((tool, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: tool.data.name,
+        description: tool.data.description,
+        url: tool.data.url,
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": breadcrumbId,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: "Tool evaluation guides", item: absoluteUrl("/tools/") },
+        { "@type": "ListItem", position: 3, name: category.name, item: categoryUrl },
+      ],
+    },
+  ],
+};
+const titleByCategory: Record<ToolCategory["id"], string> = {
+  "llm-security": "LLM Security Tool Evaluation Guide | Awesome MLSecOps",
+  "model-scanning": "ML Model Scanner Evaluation Guide | Awesome MLSecOps",
+  "adversarial-ml": "Adversarial ML Tool Evaluation Guide | Awesome MLSecOps",
+  "supply-chain": "AI Supply Chain Tool Evaluation Guide | Awesome MLSecOps",
+  "agent-security": "AI Agent Security Tool Evaluation Guide | Awesome MLSecOps",
+  privacy: "Privacy ML Tool Evaluation Guide | Awesome MLSecOps",
+};
+const headingByCategory: Record<ToolCategory["id"], string> = {
+  "llm-security": "How to evaluate LLM security and red-team tools",
+  "model-scanning": "How to evaluate ML model scanners and validation tools",
+  "adversarial-ml": "How to evaluate adversarial machine learning tools",
+  "supply-chain": "How to evaluate AI supply-chain security tools",
+  "agent-security": "How to evaluate AI agent and MCP security tools",
+  privacy: "How to evaluate privacy-preserving ML tools",
+};
+---
+
+<BaseLayout title={titleByCategory[category.id]} description={category.metaDescription} ogKey={`tools/${category.id}` as OgPageKey}>
+  <StructuredData data={schema} />
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol class="shell">
+      <li><a href="/">Home</a></li>
+      <li><a href="/tools/">Tool guides</a></li>
+      <li aria-current="page">{category.name}</li>
+    </ol>
+  </nav>
+
+  <section class="page-hero catalog-hero">
+    <div class="shell catalog-hero-grid">
+      <div>
+        <p class="eyebrow">Independent evaluation guide | {tools.length} synced entries</p>
+        <h1>{headingByCategory[category.id]}</h1>
+        <p class="catalog-deck">{category.shortDescription} Compare selection criteria here, then verify every claim against the linked first-party source.</p>
+        <div class="button-row">
+          <a class="button" href="#catalog">Browse catalog entries</a>
+          <a class="button-secondary" href={category.readmeUrl} data-analytics-event="Repo Outbound">Open GitHub catalog</a>
+        </div>
+      </div>
+
+      <aside class="source-panel" aria-labelledby="source-boundary-title">
+        <p class="eyebrow">Source boundary</p>
+        <h2 id="source-boundary-title">Guidance here. Catalog governance on GitHub.</h2>
+        <p>The README controls inclusion, descriptions, and corrections. This page adds evaluation context without replacing the community catalog.</p>
+        <dl class="catalog-facts">
+          <div><dt>Entries</dt><dd>{tools.length}</dd></div>
+          <div><dt>Technical review</dt><dd><time datetime={CATALOG_REVIEW_DATE}>{formattedCatalogReviewDate()}</time></dd></div>
+          <div><dt>Ordering</dt><dd>Alphabetical, never paid</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <div class="catalog-jump-band">
+    <nav class="shell catalog-jump-nav" aria-label="On this page">
+      <span>On this page</span>
+      <a href="#overview">Coverage</a>
+      <a href="#catalog">Catalog</a>
+      <a href="#evaluation">Evaluation</a>
+      <a href="#references">References</a>
+    </nav>
+  </div>
+
+  <section id="overview" class="content-section catalog-answer-section">
+    <div class="shell catalog-answer-grid">
+      <div class="section-heading">
+        <p class="eyebrow">Decision context</p>
+        <h2>What does {category.shortName.toLowerCase()} tooling need to cover?</h2>
+      </div>
+      <div class="catalog-answer prose">
+        <p>{category.intro[0]}</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalog" class="content-section catalog-section">
+    <div class="shell">
+      <div class="section-heading">
+        <p class="eyebrow">README-synced directory</p>
+        <h2>{category.name} catalog entries</h2>
+        <p>Each listing preserves the neutral description maintained in the Awesome MLSecOps README and links to the resource's first-party source.</p>
+      </div>
+      <ToolTable tools={tools} categoryId={category.id} categoryName={category.name} />
+    </div>
+  </section>
+
+  <section id="evaluation" class="content-section evaluation-section">
+    <div class="shell evaluation-layout">
+      <div class="section-heading">
+        <p class="eyebrow">Selection framework</p>
+        <h2>How should teams evaluate the options?</h2>
+      </div>
+      <div class="evaluation-content">
+        <p>{category.intro[1]}</p>
+        <ol class="evaluation-grid">
+          {category.evaluation.map((item, index) => (
+            <li><span>{String(index + 1).padStart(2, "0")}</span><strong>{item}</strong></li>
+          ))}
+        </ol>
+        <p class="evaluation-note">Record evidence and limitations for each criterion. A catalog listing is a discovery aid, not a security certification.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="references" class="content-section reference-section">
+    <div class="shell reference-layout">
+      <div>
+        <div class="section-heading">
+          <p class="eyebrow">Primary references</p>
+          <h2>Related threats and technical guidance</h2>
+        </div>
+        <ul class="reference-list">
+          {category.attackVectors.map((item) => <li><a href={item.url}>{item.name}</a></li>)}
+        </ul>
+      </div>
+      <aside class="catalog-methodology">
+        <p class="eyebrow">Catalog methodology</p>
+        <h2>Where do listings and corrections live?</h2>
+        <p>The <a href={REPOSITORY_URL}>Awesome MLSecOps GitHub repository</a> is the complete community catalog and contribution surface. This guide organizes a synced subset around evaluation decisions and links every entry back to its source.</p>
+        <div class="button-row">
+          <a class="button" href={category.readmeUrl} data-analytics-event="Repo Outbound">Review the source section</a>
+          <a class="button-secondary" href="/tools.json">Open tools JSON</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
