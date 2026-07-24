@@ -10,7 +10,7 @@ npm install
 npm run dev
 ```
 
-`npm run dev`, `npm run build`, and `npm run check` run `scripts/sync-readme.ts` first. The script parses the checked-out `README.md`, classifies eligible tool sections, removes known tracking parameters, validates the generated collection, and refuses to overwrite it if fewer than 60 entries are found. The output, `src/data/tools.json`, is generated and gitignored — edit the README, never the JSON.
+`npm run dev`, `npm run build`, and `npm run check` run `scripts/sync-readme.ts` first. The script parses the checked-out `README.md`, classifies eligible tool sections, removes known tracking parameters, validates the generated collection, and refuses to overwrite it if fewer than 60 entries are found. The output is a generated, gitignored tool-entry directory at `src/content/tools/` — edit the README, never the generated JSON.
 
 To test a remote source explicitly:
 
@@ -61,7 +61,7 @@ npm test
 
 ## Sponsors
 
-Sponsors are maintained only in `src/data/sponsors.json`. Keep at most three entries. An empty array collapses the row to a link to `/sponsor/`. Sponsor data never enters `src/data/tools.json`, and sponsor links render with `rel="sponsored"`.
+Sponsors are maintained only in `src/data/sponsors.json`. Keep at most three entries. An empty array collapses the row to a link to `/sponsor/`. Sponsor data never enters `src/content/tools/`, and sponsor links render with `rel="sponsored"`.
 
 ## Newsletter
 

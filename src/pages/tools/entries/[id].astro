@@ -1,0 +1,87 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import type { Graph } from "schema-dts";
+import StructuredData from "../../../components/StructuredData.astro";
+import { absoluteUrl, toolEntryPath } from "../../../config/site";
+import { CATEGORY_BY_ID } from "../../../data/categories";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const tools = await getCollection("tools");
+  return tools.map((tool) => ({ params: { id: tool.id }, props: { tool } }));
+}
+
+interface Props {
+  tool: CollectionEntry<"tools">;
+}
+
+const { tool } = Astro.props as Props;
+const category = CATEGORY_BY_ID.get(tool.data.category);
+
+if (!category) {
+  throw new Error(`Unknown tool category: ${tool.data.category}`);
+}
+
+const canonical = absoluteUrl(toolEntryPath(tool.id));
+const schema: Graph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${canonical}#page`,
+      url: canonical,
+      name: `${tool.data.name} | Awesome MLSecOps`,
+      description: tool.data.description,
+      isPartOf: {
+        "@type": "CollectionPage",
+        "@id": `${absoluteUrl("/tools/")}#page`,
+        url: absoluteUrl("/tools/"),
+        name: "MLSecOps Tools and Resources",
+      },
+      about: { "@id": `${canonical}#tool` },
+    },
+    {
+      "@type": "Thing",
+      "@id": `${canonical}#tool`,
+      name: tool.data.name,
+      description: tool.data.description,
+      url: canonical,
+      sameAs: tool.data.url,
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title={`${tool.data.name} | ${category.shortName} | Awesome MLSecOps`}
+  description={`${tool.data.description} Browse the Awesome MLSecOps directory entry, security category, and source link for ${tool.data.name}.`}
+  ogKey="tools"
+>
+  <StructuredData data={schema} />
+  <section class="page-hero">
+    <div class="shell">
+      <p class="eyebrow">Directory entry in {category.name}</p>
+      <h1>{tool.data.name}</h1>
+      <p>{tool.data.description}</p>
+      <div class="button-row">
+        <a class="button" href={tool.data.url}>Visit project source</a>
+        <a class="button-secondary" href={`/tools/${category.id}/`}>Browse {category.shortName.toLowerCase()}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="shell prose">
+      <h2>Why this entry exists</h2>
+      <p>This page gives the directory its own canonical reference for {tool.data.name} while preserving the upstream project link as the primary source for implementation details, release history, and maintainer claims.</p>
+      <p>Awesome MLSecOps includes software, commercial products, research artifacts, benchmarks, playbooks, and training projects. Inclusion supports discovery, not endorsement or proof of production safety. Verify maintenance status, licensing, threat coverage, and deployment fit against first-party documentation before adoption.</p>
+
+      <h2>Directory context</h2>
+      <p><strong>Category:</strong> <a href={`/tools/${category.id}/`}>{category.name}</a></p>
+      <p><strong>Canonical directory URL:</strong> <a href={canonical}>{canonical}</a></p>
+      <p><strong>External project URL:</strong> <a href={tool.data.url}>{tool.data.url}</a></p>
+      <p><strong>Source of truth:</strong> The community-maintained GitHub catalog remains the editorial source for inclusion and corrections.</p>
+    </div>
+  </section>
+</BaseLayout>

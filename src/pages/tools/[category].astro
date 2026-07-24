@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import type { ItemList, WithContext } from "schema-dts";
 import StructuredData from "../../components/StructuredData.astro";
+import { toolEntryUrl } from "../../config/site";
 import ToolTable from "../../components/ToolTable.astro";
 import { TOOL_CATEGORIES, type ToolCategory } from "../../data/categories";
 import type { OgPageKey } from "../../data/pageMeta";
@@ -29,7 +30,7 @@ const schema: WithContext<ItemList> = {
     position: index + 1,
     name: tool.data.name,
     description: tool.data.description,
-    url: tool.data.url,
+    url: toolEntryUrl(tool.id),
   })),
 };
 const titleByCategory: Record<ToolCategory["id"], string> = {

@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { toolEntryPath } from "../config/site";
 
 interface Props {
   tools: CollectionEntry<"tools">[];
@@ -20,7 +21,10 @@ const sortedTools = [...tools].sort((left, right) => left.data.name.localeCompar
     <tbody>
       {sortedTools.map((tool) => (
         <tr>
-          <th scope="row"><a href={tool.data.url}>{tool.data.name}</a></th>
+          <th scope="row">
+            <a href={toolEntryPath(tool.id)}>{tool.data.name}</a>
+            <div><a href={tool.data.url}>Visit project source</a></div>
+          </th>
           <td>{tool.data.description}</td>
         </tr>
       ))}

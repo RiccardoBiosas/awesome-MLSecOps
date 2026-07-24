@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { toString } from "mdast-util-to-string";
 import remarkGfm from "remark-gfm";
@@ -23,7 +23,8 @@ type ParsedTool = {
 };
 
 const README_SOURCE = process.env.README_SOURCE ?? "README.md";
-const OUTPUT_PATH = resolve("src/data/tools.json");
+const OUTPUT_DIR = resolve("src/content/tools");
+const LEGACY_OUTPUT_PATH = resolve("src/data/tools.json");
 
 const TOOL_SECTIONS = new Set([
   "open source security tools",
@@ -186,6 +187,11 @@ if (fallbackCategorized.length > 0) {
   );
 }
 
-await mkdir(resolve("src/data"), { recursive: true });
-await writeFile(OUTPUT_PATH, `${JSON.stringify(tools, null, 2)}\n`, "utf8");
-console.log(`Synced ${tools.length} tools from ${README_SOURCE} to ${OUTPUT_PATH}`);
+await mkdir(OUTPUT_DIR, { recursive: true });
+const existingFiles = (await readdir(OUTPUT_DIR)).filter((fileName) => fileName.endsWith(".json"));
+await Promise.all(existingFiles.map((fileName) => rm(resolve(OUTPUT_DIR, fileName), { force: true })));
+await Promise.all(
+  tools.map((tool) => writeFile(resolve(OUTPUT_DIR, `${tool.id}.json`), `${JSON.stringify(tool, null, 2)}\n`, "utf8")),
+);
+await rm(LEGACY_OUTPUT_PATH, { force: true });
+console.log(`Synced ${tools.length} tools from ${README_SOURCE} to ${OUTPUT_DIR}`);

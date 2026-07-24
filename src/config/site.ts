@@ -23,6 +23,14 @@ export function absoluteUrl(path: string): string {
   return new URL(path, SITE_URL).toString();
 }
 
+export function toolEntryPath(id: string): string {
+  return `/tools/entries/${id}/`;
+}
+
+export function toolEntryUrl(id: string): string {
+  return absoluteUrl(toolEntryPath(id));
+}
+
 export function formattedBuildDate(): string {
   return new Intl.DateTimeFormat("en", {
     dateStyle: "long",
