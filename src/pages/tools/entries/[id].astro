@@ -18,6 +18,11 @@ interface Props {
 
 const { tool } = Astro.props as Props;
 const category = CATEGORY_BY_ID.get(tool.data.category);
+const allTools = await getCollection("tools");
+const relatedTools = allTools
+  .filter((entry) => entry.data.category === tool.data.category && entry.id !== tool.id)
+  .sort((left, right) => left.data.name.localeCompare(right.data.name))
+  .slice(0, 8);
 
 if (!category) {
   throw new Error(`Unknown tool category: ${tool.data.category}`);
@@ -82,6 +87,13 @@ const schema: Graph = {
       <p><strong>Canonical directory URL:</strong> <a href={canonical}>{canonical}</a></p>
       <p><strong>External project URL:</strong> <a href={tool.data.url}>{tool.data.url}</a></p>
       <p><strong>Source of truth:</strong> The community-maintained GitHub catalog remains the editorial source for inclusion and corrections.</p>
+
+      {relatedTools.length > 0 && (
+        <>
+          <h2>More {category.shortName.toLowerCase()} tools</h2>
+          <ul class="related-links">{relatedTools.map((entry) => <li><a href={toolEntryPath(entry.id)}>{entry.data.name}</a></li>)}</ul>
+        </>
+      )}
     </div>
   </section>
 </BaseLayout>

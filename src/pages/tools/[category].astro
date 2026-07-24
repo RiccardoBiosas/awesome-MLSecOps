@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import type { ItemList, WithContext } from "schema-dts";
 import StructuredData from "../../components/StructuredData.astro";
-import { toolEntryUrl } from "../../config/site";
+import { toolEntryPath, toolEntryUrl } from "../../config/site";
 import ToolTable from "../../components/ToolTable.astro";
 import { TOOL_CATEGORIES, type ToolCategory } from "../../data/categories";
 import type { OgPageKey } from "../../data/pageMeta";
@@ -54,21 +54,25 @@ const titleByCategory: Record<ToolCategory["id"], string> = {
   </section>
 
   <section class="content-section">
-    <div class="shell prose category-intro">
-      {category.intro.map((paragraph) => <p>{paragraph}</p>)}
-      <h2>What to evaluate</h2>
-      <ul class="tag-list">{category.evaluation.map((item) => <li>{item}</li>)}</ul>
+    <div class="shell">
+      <div class="section-heading">
+        <p class="eyebrow">Community catalog</p>
+        <h2>Included tools and resources</h2>
+        <p>{tools.length} catalog entries currently map to this category. Listings support discovery and are not endorsements or evidence of production safety.</p>
+      </div>
+      <div class="prose">
+        <h3>Browse tool entries</h3>
+        <ul class="related-links">{tools.map((tool) => <li><a href={toolEntryPath(tool.id)}>{tool.data.name}</a></li>)}</ul>
+      </div>
+      <ToolTable tools={tools} />
     </div>
   </section>
 
   <section class="content-section">
-    <div class="shell">
-      <div class="section-heading">
-        <p class="eyebrow">Community catalog</p>
-        <h2>{category.name} tools and resources</h2>
-        <p>The catalog includes software, commercial products, research artifacts, benchmarks, playbooks, and training projects. Listings support discovery and are not endorsements or evidence of production safety. Confirm resource type, maintenance, licensing, deployment fit, and technical claims before use.</p>
-      </div>
-      <ToolTable tools={tools} />
+    <div class="shell prose category-intro">
+      {category.intro.map((paragraph) => <p>{paragraph}</p>)}
+      <h2>What to evaluate</h2>
+      <ul class="tag-list">{category.evaluation.map((item) => <li>{item}</li>)}</ul>
     </div>
   </section>
 

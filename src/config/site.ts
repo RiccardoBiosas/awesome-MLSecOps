@@ -6,7 +6,7 @@ export const GITHUB_SPONSORS_URL = "https://github.com/sponsors/RiccardoBiosas";
 export const NEWSLETTER_URL = "https://themlsecopshacker.com";
 export const NEWSLETTER_EMBED_URL = "https://themlsecopshacker.com/embed";
 export const CONTACT_EMAIL = "riccardobiosas@gmail.com";
-export const BUILD_DATE = process.env.BUILD_DATE ?? new Date().toISOString();
+export const BUILD_DATE = process.env.BUILD_DATE || new Date().toISOString();
 
 export const ENTITY_DESCRIPTION =
   "A curated list of awesome open-source tools, resources, and tutorials for MLSecOps (Machine Learning Security Operations).";
