@@ -46,11 +46,11 @@ const searchId = `catalog-search-${categoryId}`;
 </div>
 
 <script>
-  document.querySelectorAll<HTMLElement>("[data-tool-catalog]").forEach((catalog) => {
-    const search = catalog.querySelector<HTMLInputElement>("[data-tool-search]");
-    const count = catalog.querySelector<HTMLOutputElement>("[data-tool-count]");
-    const empty = catalog.querySelector<HTMLElement>("[data-tool-empty]");
-    const entries = [...catalog.querySelectorAll<HTMLElement>("[data-tool-entry]")];
+  document.querySelectorAll("[data-tool-catalog]").forEach((catalog) => {
+    const search = catalog.querySelector("[data-tool-search]");
+    const count = catalog.querySelector("[data-tool-count]");
+    const empty = catalog.querySelector("[data-tool-empty]");
+    const entries = [...catalog.querySelectorAll("[data-tool-entry]")];
 
     if (!search || !count || !empty) return;
 
