@@ -1130,7 +1130,7 @@ tbody tr:last-child > * {
 
 @media (max-width: 620px) {
   :root {
-    --shell: min(100% - 24px, 1180px);
+    --shell: min(1180px, calc(100% - 24px));
   }
 
   h1 {
