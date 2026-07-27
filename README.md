@@ -70,6 +70,7 @@ LLM security and red-teaming tools test prompts, model behavior, application con
 |------|-------------|
 | [Garak](https://github.com/NVIDIA/garak) | LLM vulnerability scanner |
 | [Promptfoo Scanner](https://github.com/promptfoo/promptfoo) | An open-source LLM red teaming tool |
+| [Humanbound] (https://github.com/humanbound)| A platform for continuous monitoring of your AI posture |
 
 ### AI Agent Security
 
