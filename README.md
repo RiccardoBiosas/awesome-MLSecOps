@@ -79,6 +79,7 @@ AI agent security tools assess memory, tools, permissions, workflows, and runtim
 |------|-------------|
 | [Agent Memory Guard](https://github.com/OWASP/www-project-agent-memory-guard) | OWASP project providing a runtime defense layer that screens AI agent memory reads and writes against prompt injection, secret leakage, and memory poisoning |
 | [Agent-Wiz](https://github.com/Repello-AI/Agent-Wiz) | Python CLI by Repello AI for extracting agentic workflows from LangChain/LangGraph/CrewAI/AutoGen and running automated threat modeling |
+| [trentclaw](https://github.com/trnt-ai/trent-openclaw-security-assessment) | Apache-2.0 scanner that assesses OpenClaw agent environments, covering gateway configuration, tool permissions, MCP servers, plugins, and chained attack paths |
 
 ### Privacy-Preserving Machine Learning
 
