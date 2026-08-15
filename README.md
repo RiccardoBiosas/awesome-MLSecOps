@@ -172,6 +172,7 @@ Commercial MLSecOps and AI security tools support model protection, application 
 | [HiddenLayer AI Detection and Response](https://www.hiddenlayer.com/platform) | Commercial AI detection and response platform from HiddenLayer |
 | [Guardian](https://protectai.com/guardian) | Model protection in CI/CD |
 | [NeuralTrust](https://neuraltrust.ai) | Tools to protect, secure and test GenAI Applications |
+| [Trent AI](https://trent.ai) | Agentic AI security platform that continuously assesses AI agents, MCP servers, LLM and AI-native applications, and code shipped with AI coding tools, traces attack chains, and verifies proposed fixes landed |
 
 
 <a id="data"></a>
