@@ -79,6 +79,7 @@ AI agent security tools assess memory, tools, permissions, workflows, and runtim
 |------|-------------|
 | [Agent Memory Guard](https://github.com/OWASP/www-project-agent-memory-guard) | OWASP project providing a runtime defense layer that screens AI agent memory reads and writes against prompt injection, secret leakage, and memory poisoning |
 | [Agent-Wiz](https://github.com/Repello-AI/Agent-Wiz) | Python CLI by Repello AI for extracting agentic workflows from LangChain/LangGraph/CrewAI/AutoGen and running automated threat modeling |
+| [MandateGuard](https://github.com/ezequiellich44-cmd/MandateGuard) | Deterministic payment policy enforcement for AI agents: pre-action gate enforcing budgets, allowlists, denylists, rate limits, and signed Ed25519 payment mandates with zero LLM in the decision path (reproducible verdicts). Tamper-evident SHA-256 chained audit ledger; official MCP server on the Model Context Protocol Registry |
 
 ### Privacy-Preserving Machine Learning
 
