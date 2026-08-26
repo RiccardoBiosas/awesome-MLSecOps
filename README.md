@@ -79,6 +79,7 @@ AI agent security tools assess memory, tools, permissions, workflows, and runtim
 |------|-------------|
 | [Agent Memory Guard](https://github.com/OWASP/www-project-agent-memory-guard) | OWASP project providing a runtime defense layer that screens AI agent memory reads and writes against prompt injection, secret leakage, and memory poisoning |
 | [Agent-Wiz](https://github.com/Repello-AI/Agent-Wiz) | Python CLI by Repello AI for extracting agentic workflows from LangChain/LangGraph/CrewAI/AutoGen and running automated threat modeling |
+| [Norviq](https://github.com/norviq-dev/norviq) | Apache-2.0 policy enforcement point for MCP tool calls, shipping in audit mode, that content-hash pins tool definitions at discovery and evaluates an OPA/Rego policy on each invocation |
 
 ### Privacy-Preserving Machine Learning
 
