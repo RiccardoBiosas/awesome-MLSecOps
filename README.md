@@ -79,6 +79,7 @@ AI agent security tools assess memory, tools, permissions, workflows, and runtim
 |------|-------------|
 | [Agent Memory Guard](https://github.com/OWASP/www-project-agent-memory-guard) | OWASP project providing a runtime defense layer that screens AI agent memory reads and writes against prompt injection, secret leakage, and memory poisoning |
 | [Agent-Wiz](https://github.com/Repello-AI/Agent-Wiz) | Python CLI by Repello AI for extracting agentic workflows from LangChain/LangGraph/CrewAI/AutoGen and running automated threat modeling |
+| [Prismor](https://github.com/PrismorSec/prismor) | Self-hosted runtime control plane that screens AI coding-agent tool calls against a signed policy before execution, blocking or routing to human approval secret exfiltration, prompt-injection-driven actions, and destructive commands across Claude Code, Codex, and MCP servers |
 
 ### Privacy-Preserving Machine Learning
 
