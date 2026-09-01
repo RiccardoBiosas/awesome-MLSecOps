@@ -61,6 +61,7 @@ Adversarial machine learning testing tools evaluate model robustness against eva
 |------|-------------|
 | [Adversarial Robustness Toolbox](https://github.com/IBM/adversarial-robustness-toolbox) | Library of defense methods for ML models against adversarial attacks |
 | [Foolbox](https://github.com/bethgelab/foolbox) | Python toolbox for creating and evaluating adversarial attacks and defenses |
+| [Provael](https://github.com/provael/provael) | Adversarial testing for vision-language-action robot policies in simulation; reports attack success rate with a 95% Wilson interval against a benign-control false-positive floor |
 
 ### LLM Security and Red Teaming
 
