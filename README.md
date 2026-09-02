@@ -80,6 +80,7 @@ AI agent security tools assess memory, tools, permissions, workflows, and runtim
 | [Agent Memory Guard](https://github.com/OWASP/www-project-agent-memory-guard) | OWASP project providing a runtime defense layer that screens AI agent memory reads and writes against prompt injection, secret leakage, and memory poisoning |
 | [Agent-Wiz](https://github.com/Repello-AI/Agent-Wiz) | Python CLI by Repello AI for extracting agentic workflows from LangChain/LangGraph/CrewAI/AutoGen and running automated threat modeling |
 | [trentclaw](https://github.com/trnt-ai/trent-openclaw-security-assessment) | Apache-2.0 scanner that assesses OpenClaw agent environments, covering gateway configuration, tool permissions, MCP servers, plugins, and chained attack paths |
+| [Prismor](https://github.com/PrismorSec/prismor) | Self-hosted runtime control plane that screens AI coding-agent tool calls against a signed policy before execution, blocking or routing to human approval secret exfiltration, prompt-injection-driven actions, and destructive commands across Claude Code, Codex, and MCP servers |
 
 ### Privacy-Preserving Machine Learning
 
@@ -173,6 +174,8 @@ Commercial MLSecOps and AI security tools support model protection, application 
 | [HiddenLayer AI Detection and Response](https://www.hiddenlayer.com/platform) | Commercial AI detection and response platform from HiddenLayer |
 | [Guardian](https://protectai.com/guardian) | Model protection in CI/CD |
 | [NeuralTrust](https://neuraltrust.ai) | Tools to protect, secure and test GenAI Applications |
+| [SourceryKit](https://github.com/ProvablyAI/sourcerykit) | Verifies an AI agent's outbound requests and MCP handoffs against a source of truth using zero-knowledge proofs, so a call only goes out if its claims check out; hooks the HTTP libraries, logs each outbound call, and blocks endpoints not on the trusted allow-list |
+| [Trent AI](https://trent.ai) | Agentic AI security platform that continuously assesses AI agents, MCP servers, LLM and AI-native applications, and code shipped with AI coding tools, traces attack chains, and verifies proposed fixes landed |
 
 
 <a id="data"></a>
