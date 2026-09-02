@@ -391,23 +391,37 @@ All contributions to this list are welcome! Please feel free to submit a pull re
 
 ## Contributors ✨
 
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/riccardobiosas"><img src="https://github.com/riccardobiosas.png" width="100px;" alt=""/><br /><sub><b>@riccardobiosas</b></sub></a></td>
-    <td align="center"><a href="https://github.com/badarahmed"><img src="https://github.com/badarahmed.png" width="100px;" alt=""/><br /><sub><b>@badarahmed</b></sub></a></td>
-    <td align="center"><a href="https://github.com/deadbits"><img src="https://github.com/deadbits.png" width="100px;" alt=""/><br /><sub><b>@deadbits</b></sub></a></td>
-    <td align="center"><a href="https://github.com/wearetyomsmnv"><img src="https://github.com/wearetyomsmnv.png" width="100px;" alt=""/><br /><sub><b>@wearetyomsmnv</b></sub></a></td>
-    <td align="center"><a href="https://github.com/anmorgan24"><img src="https://github.com/anmorgan24.png" width="100px;" alt=""/><br /><sub><b>@anmorgan24</b></sub></a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/mik0w"><img src="https://github.com/mik0w.png" width="100px;" alt=""/><br /><sub><b>@mik0w</b></sub></a></td>
-    <td align="center"><a href="https://github.com/alexcombessie"><img src="https://github.com/alexcombessie.png" width="100px;" alt=""/><br /><sub><b>@alexcombessie</b></sub></a></td>
-    <td align="center"><a href="https://github.com/Igralino"><img src="https://github.com/Igralino.png" width="100px;" alt=""/><br /><sub><b>@Igralino</b></sub></a></td>
-    <td align="center"><a href="https://github.com/typpo"><img src="https://github.com/typpo.png" width="100px;" alt=""/><br /><sub><b>@typpo</b></sub></a></td>
-    <td align="center"><a href="https://github.com/robvanderveer"><img src="https://github.com/robvanderveer.png" width="100px;" alt=""/><br /><sub><b>@robvanderveer</b></sub></a></td>
-  </tr>
-</table>
+As of **July 28, 2026**, this project recognizes **19 contributors**:
 
+<table>
+	<tr>
+		<td align="center"><a href="https://github.com/RiccardoBiosas"><img src="https://github.com/RiccardoBiosas.png" width="100px;" alt="@RiccardoBiosas"/><br /><sub><b>@RiccardoBiosas</b></sub></a></td>
+		<td align="center"><a href="https://github.com/wearetyomsmnv"><img src="https://github.com/wearetyomsmnv.png" width="100px;" alt="@wearetyomsmnv"/><br /><sub><b>@wearetyomsmnv</b></sub></a></td>
+		<td align="center"><a href="https://github.com/apps/copilot-swe-agent"><img src="https://avatars.githubusercontent.com/in/1143301?v=4" width="100px;" alt="@Copilot"/><br /><sub><b>@Copilot</b></sub><br /><sub>GitHub Copilot coding agent</sub></a></td>
+		<td align="center"><a href="https://github.com/badarahmed"><img src="https://github.com/badarahmed.png" width="100px;" alt="@badarahmed"/><br /><sub><b>@badarahmed</b></sub></a></td>
+		<td align="center"><a href="https://github.com/haksungjang"><img src="https://github.com/haksungjang.png" width="100px;" alt="@haksungjang"/><br /><sub><b>@haksungjang</b></sub></a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="https://github.com/deadbits"><img src="https://github.com/deadbits.png" width="100px;" alt="@deadbits"/><br /><sub><b>@deadbits</b></sub></a></td>
+		<td align="center"><a href="https://github.com/alespignaNT"><img src="https://github.com/alespignaNT.png" width="100px;" alt="@alespignaNT"/><br /><sub><b>@alespignaNT</b></sub></a></td>
+		<td align="center"><a href="https://github.com/alexcombessie"><img src="https://github.com/alexcombessie.png" width="100px;" alt="@alexcombessie"/><br /><sub><b>@alexcombessie</b></sub></a></td>
+		<td align="center"><a href="https://github.com/aryaman-titan"><img src="https://github.com/aryaman-titan.png" width="100px;" alt="@aryaman-titan"/><br /><sub><b>@aryaman-titan</b></sub></a></td>
+		<td align="center"><a href="https://github.com/typpo"><img src="https://github.com/typpo.png" width="100px;" alt="@typpo"/><br /><sub><b>@typpo</b></sub></a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="https://github.com/Igralino"><img src="https://github.com/Igralino.png" width="100px;" alt="@Igralino"/><br /><sub><b>@Igralino</b></sub></a></td>
+		<td align="center"><a href="https://github.com/eltociear"><img src="https://github.com/eltociear.png" width="100px;" alt="@eltociear"/><br /><sub><b>@eltociear</b></sub></a></td>
+		<td align="center"><a href="https://github.com/mik0w"><img src="https://github.com/mik0w.png" width="100px;" alt="@mik0w"/><br /><sub><b>@mik0w</b></sub></a></td>
+		<td align="center"><a href="https://github.com/omerzamir"><img src="https://github.com/omerzamir.png" width="100px;" alt="@omerzamir"/><br /><sub><b>@omerzamir</b></sub></a></td>
+		<td align="center"><a href="https://github.com/robvanderveer"><img src="https://github.com/robvanderveer.png" width="100px;" alt="@robvanderveer"/><br /><sub><b>@robvanderveer</b></sub></a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="https://github.com/clubanderson"><img src="https://github.com/clubanderson.png" width="100px;" alt="@clubanderson"/><br /><sub><b>@clubanderson</b></sub></a></td>
+		<td align="center"><a href="https://github.com/lab700xdev"><img src="https://github.com/lab700xdev.png" width="100px;" alt="@lab700xdev"/><br /><sub><b>@lab700xdev</b></sub></a></td>
+		<td align="center"><a href="https://github.com/mshirakawa-ssp"><img src="https://github.com/mshirakawa-ssp.png" width="100px;" alt="@mshirakawa-ssp"/><br /><sub><b>@mshirakawa-ssp</b></sub></a></td>
+		<td align="center"><a href="https://github.com/anmorgan24"><img src="https://github.com/anmorgan24.png" width="100px;" alt="@anmorgan24"/><br /><sub><b>@anmorgan24</b></sub></a></td>
+	</tr>
+</table>
 
 ## Repository Stats
 
