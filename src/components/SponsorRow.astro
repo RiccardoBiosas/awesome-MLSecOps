@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+import sponsorData from "../data/sponsors.json";
+
+const sponsors = sponsorData.length > 0 ? await getCollection("sponsors") : [];
+---
+
+<section class="sponsor-band" aria-labelledby="sponsor-heading">
+  <div class="section-heading">
+    <p class="eyebrow">Independent and transparent</p>
+    <h2 id="sponsor-heading">Project sponsors</h2>
+  </div>
+  {sponsors.length > 0 ? (
+    <div class="sponsor-grid">
+      {sponsors.slice(0, 3).map((sponsor) => (
+        <a class="sponsor-card" href={sponsor.data.url} rel="sponsored" data-analytics-event="Sponsor Outbound">
+          <span class="sponsor-label">Sponsor</span>
+          <img src={sponsor.data.logo} alt={`${sponsor.data.name} logo`} loading="lazy" />
+          <strong>{sponsor.data.name}</strong>
+          <span>{sponsor.data.tagline}</span>
+        </a>
+      ))}
+    </div>
+  ) : (
+    <a class="sponsor-empty" href="/sponsor/" data-analytics-event="Sponsor Page Visit">
+      <span class="sponsor-label">Open sponsorship</span>
+      <strong>Support the answer layer without influencing the catalog.</strong>
+      <span>Three clearly labeled, site-only positions are available.</span>
+    </a>
+  )}
+</section>

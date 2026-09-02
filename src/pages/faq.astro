@@ -1,0 +1,47 @@
+---
+import type { FAQPage, WithContext } from "schema-dts";
+import StructuredData from "../components/StructuredData.astro";
+import { FAQ_ITEMS } from "../data/faqs";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const schema: WithContext<FAQPage> = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+
+<BaseLayout
+  title="MLSecOps FAQ | Machine Learning and AI Security"
+  description="Direct answers about MLSecOps, MLOps security, LLM security, AI agents, adversarial machine learning, tools, ownership, and measurement."
+  ogKey="faq"
+>
+  <StructuredData data={schema} />
+  <section class="page-hero">
+    <div class="shell">
+      <p class="eyebrow">Concise, citation-ready answers</p>
+      <h1>MLSecOps FAQ</h1>
+      <p>Machine learning and AI security questions answered in direct, implementation-focused language.</p>
+    </div>
+  </section>
+  <section class="content-section">
+    <div class="shell faq-grid">
+      {FAQ_ITEMS.map((item) => (
+        <article class="faq-item">
+          <h2>{item.question}</h2>
+          <p>{item.answer}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="content-section">
+    <div class="shell prose">
+      <h2>Continue exploring</h2>
+      <p>Read the <a href="/what-is-mlsecops/">complete MLSecOps definition and lifecycle</a>, compare <a href="/mlsecops-vs-devsecops/">MLSecOps with DevSecOps</a>, or browse <a href="/tools/">security tools by category</a>.</p>
+    </div>
+  </section>
+</BaseLayout>

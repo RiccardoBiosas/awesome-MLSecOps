@@ -1,0 +1,25 @@
+---
+import { NEWSLETTER_EMBED_URL, NEWSLETTER_URL } from "../config/site";
+
+interface Props {
+  aboveFold?: boolean;
+  compact?: boolean;
+}
+
+const { aboveFold = false, compact = false } = Astro.props;
+const headingId = `newsletter-${aboveFold ? "top" : "bottom"}`;
+---
+
+<section class:list={["newsletter-cta", { compact }]} aria-labelledby={headingId}>
+  <div>
+    <p class="eyebrow">The MLSecOps Hacker</p>
+    <h2 id={headingId}>Security research worth opening</h2>
+    <p>Monthly field notes on model security, LLM attacks, MLOps vulnerabilities, tools, and defensive practice.</p>
+    <a class="text-link" href={NEWSLETTER_URL} data-analytics-event="Newsletter Signup">Subscribe or browse the archive</a>
+  </div>
+  <iframe
+    src={NEWSLETTER_EMBED_URL}
+    title="Subscribe to The MLSecOps Hacker newsletter"
+    loading={aboveFold ? "eager" : "lazy"}
+  ></iframe>
+</section>

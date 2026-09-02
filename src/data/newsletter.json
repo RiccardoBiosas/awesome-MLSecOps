@@ -1,0 +1,16 @@
+[
+  {
+    "id": "ai-security-model-serialization-attacks",
+    "title": "AI Security: Model Serialization Attacks",
+    "date": "2024-11-04",
+    "summary": "A practical review of model serialization risks, machine learning supply-chain vulnerabilities, and defensive practices for handling model artifacts safely.",
+    "link": "https://themlsecopshacker.com/p/ai-security-model-serialization-attacks"
+  },
+  {
+    "id": "what-is-mlsecops",
+    "title": "What is MLSecOps?",
+    "date": "2024-10-08",
+    "summary": "An introduction to the discipline of securing machine learning systems and the teams, controls, and operating practices that support it.",
+    "link": "https://themlsecopshacker.com/p/what-is-mlsecops"
+  }
+]

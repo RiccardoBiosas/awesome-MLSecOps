@@ -1,0 +1,163 @@
+---
+import { getCollection } from "astro:content";
+import type { Graph } from "schema-dts";
+import StructuredData from "../../components/StructuredData.astro";
+import {
+  CATALOG_REVIEW_DATE,
+  REPOSITORY_URL,
+  SITE_NAME,
+  SITE_URL,
+  absoluteUrl,
+  formattedCatalogReviewDate,
+} from "../../config/site";
+import { TOOL_CATEGORIES } from "../../data/categories";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const tools = await getCollection("tools");
+const pageUrl = absoluteUrl("/tools/");
+const listId = `${pageUrl}#categories`;
+const breadcrumbId = `${pageUrl}#breadcrumb`;
+const schema: Graph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": `${pageUrl}#page`,
+      url: pageUrl,
+      name: "MLSecOps security tool evaluation guides",
+      description: "Decision-focused guides for evaluating machine learning and AI security tools, synchronized from the Awesome MLSecOps GitHub catalog.",
+      dateModified: CATALOG_REVIEW_DATE,
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        url: SITE_URL,
+        name: SITE_NAME,
+      },
+      isBasedOn: REPOSITORY_URL,
+      mainEntity: { "@id": listId },
+      breadcrumb: { "@id": breadcrumbId },
+    },
+    {
+      "@type": "ItemList",
+      "@id": listId,
+      name: "MLSecOps security evaluation guide categories",
+      numberOfItems: TOOL_CATEGORIES.length,
+      itemListElement: TOOL_CATEGORIES.map((category, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: category.name,
+        url: `${SITE_URL}/tools/${category.id}/`,
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": breadcrumbId,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: "Tool evaluation guides", item: pageUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="MLSecOps Tool Evaluation Guides | Awesome MLSecOps"
+  description="Evaluate MLSecOps tools by security problem, with decision criteria and 74 source-linked entries synced from the Awesome MLSecOps GitHub catalog."
+  ogKey="tools"
+>
+  <StructuredData data={schema} />
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol class="shell">
+      <li><a href="/">Home</a></li>
+      <li aria-current="page">Tool guides</li>
+    </ol>
+  </nav>
+
+  <section class="page-hero catalog-hero catalog-hub-hero">
+    <div class="shell catalog-hero-grid">
+      <div>
+        <p class="eyebrow">Six decision guides | {tools.length} synced resources</p>
+        <h1>MLSecOps security tool evaluation guides</h1>
+        <p class="catalog-deck">Choose a security problem, define the evidence you need, and inspect neutral catalog descriptions before visiting each first-party source. The GitHub repository remains the complete community catalog and contribution surface.</p>
+        <div class="button-row">
+          <a class="button" href="#guides">Browse evaluation guides</a>
+          <a class="button-secondary" href={REPOSITORY_URL} data-analytics-event="Repo Outbound">Open GitHub catalog</a>
+        </div>
+      </div>
+
+      <aside class="source-panel" aria-labelledby="hub-source-title">
+        <p class="eyebrow">Catalog status</p>
+        <h2 id="hub-source-title">One source, two distinct jobs</h2>
+        <p>GitHub governs the catalog. This site adds selection context, machine-readable discovery, and category-level technical references.</p>
+        <dl class="catalog-facts">
+          <div><dt>Entries</dt><dd>{tools.length}</dd></div>
+          <div><dt>Guides</dt><dd>{TOOL_CATEGORIES.length}</dd></div>
+          <div><dt>Technical review</dt><dd><time datetime={CATALOG_REVIEW_DATE}>{formattedCatalogReviewDate()}</time></dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section id="guides" class="content-section catalog-guides-section">
+    <div class="shell">
+      <div class="section-heading">
+        <p class="eyebrow">Choose a security problem</p>
+        <h2>Start with the decision, not the product</h2>
+        <p>Each guide defines the threat coverage and evidence to compare, then presents the matching README-synced resources in alphabetical order.</p>
+      </div>
+      <div class="category-grid catalog-category-grid">
+      {TOOL_CATEGORIES.map((category) => {
+        const count = tools.filter((tool) => tool.data.category === category.id).length;
+        return (
+          <a class="category-card catalog-category-card" href={`/tools/${category.id}/`}>
+            <div class="catalog-category-meta">
+              <span class="count">{count} entries</span>
+              <span>Evaluation guide</span>
+            </div>
+            <h2>{category.name}</h2>
+            <p>{category.shortDescription}</p>
+            <strong>Open the {category.shortName.toLowerCase()} guide</strong>
+          </a>
+        );
+      })}
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section catalog-process-section">
+    <div class="shell">
+      <div class="section-heading">
+        <p class="eyebrow">Editorial boundary</p>
+        <h2>How the site complements the repository</h2>
+      </div>
+      <div class="catalog-process-grid">
+        <article>
+          <span>01</span>
+          <h3>GitHub governs inclusion</h3>
+          <p>The README is the source of truth for listings, neutral descriptions, corrections, and community contributions.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Guides frame evaluation</h3>
+          <p>Category pages add threat context, selection criteria, and primary references rather than duplicating the full README.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Adopters verify claims</h3>
+          <p>Every entry links to a first-party source. Inclusion is not certification, endorsement, or evidence of production safety.</p>
+        </article>
+      </div>
+
+      <div class="catalog-data-strip">
+        <div>
+          <p class="eyebrow">For agents and researchers</p>
+          <h2>Use the typed catalog, not scraped markup</h2>
+          <p><a href="/tools.json">tools.json</a> exposes stable IDs, categories, source URLs, and descriptions. <a href="/llms.txt">llms.txt</a> maps the site's citation-oriented human-readable guides.</p>
+        </div>
+        <a class="button" href="/tools.json">Open tools JSON</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

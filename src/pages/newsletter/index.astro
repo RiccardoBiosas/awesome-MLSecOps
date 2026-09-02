@@ -1,0 +1,47 @@
+---
+import { getCollection } from "astro:content";
+import NewsletterCta from "../../components/NewsletterCta.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const issues = (await getCollection("newsletter")).sort((left, right) => right.data.date.getTime() - left.data.date.getTime());
+const formatDate = (date: Date) => new Intl.DateTimeFormat("en", { dateStyle: "long", timeZone: "UTC" }).format(date);
+---
+
+<BaseLayout
+  title="The MLSecOps Hacker Newsletter and Archive"
+  description="Subscribe to The MLSecOps Hacker and browse dated issues covering machine learning security, model supply chains, LLM attacks, and MLOps risk."
+  ogKey="newsletter"
+>
+  <section class="page-hero">
+    <div class="shell">
+      <p class="eyebrow">Build an owned security signal</p>
+      <h1>The MLSecOps Hacker newsletter</h1>
+      <p>Research, tools, attack analysis, and practical controls for people building and defending machine learning systems.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="shell"><NewsletterCta aboveFold /></div>
+  </section>
+
+  <section class="content-section">
+    <div class="shell">
+      <div class="section-heading">
+        <p class="eyebrow">Dated archive</p>
+        <h2>Newsletter issues</h2>
+        <p>Each entry summarizes an original issue and links to the canonical post on The MLSecOps Hacker.</p>
+      </div>
+      <div class="job-grid">
+        {issues.map((issue) => (
+          <article class="job-card">
+            <time class="eyebrow" datetime={issue.data.date.toISOString()}>{formatDate(issue.data.date)}</time>
+            <h3>{issue.data.title}</h3>
+            <p>{issue.data.summary}</p>
+            <a class="text-link" href={issue.data.link} data-analytics-event="Newsletter Issue Outbound">Read the issue</a>
+          </article>
+        ))}
+      </div>
+      <p class="button-row"><a class="button-secondary" href="/rss.xml">Subscribe by RSS</a></p>
+    </div>
+  </section>
+</BaseLayout>
