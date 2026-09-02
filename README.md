@@ -68,6 +68,7 @@ LLM security and red-teaming tools test prompts, model behavior, application con
 
 | Tool | Description |
 |------|-------------|
+| [CrossGuard AI](https://github.com/crossguard-ai/crossguard-py) | Image sanitizer that destroys steganographic prompt-injection payloads embedded via LSB, DCT coefficients, or EXIF metadata before images reach a multimodal model. |
 | [Garak](https://github.com/NVIDIA/garak) | LLM vulnerability scanner |
 | [Promptfoo Scanner](https://github.com/promptfoo/promptfoo) | An open-source LLM red teaming tool |
 
