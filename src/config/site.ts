@@ -5,6 +5,20 @@ export const CONTRIBUTE_URL = `${REPOSITORY_URL}/blob/main/CONTRIBUTING.md`;
 export const GITHUB_SPONSORS_URL = "https://github.com/sponsors/RiccardoBiosas";
 export const NEWSLETTER_URL = "https://themlsecopshacker.com";
 export const NEWSLETTER_EMBED_URL = "https://themlsecopshacker.com/embed";
+export const NEWSLETTER_FEED_URL = "https://themlsecopshacker.com/feed";
+export const NEWSLETTER_NAME = "The MLSecOps Hacker";
+
+/**
+ * Newsletter link tagged so Substack's traffic report attributes the visit to this site
+ * and to the placement that produced it (header, footer, page CTA, related reading).
+ */
+export function newsletterUrl(placement: string, path = "/"): string {
+  const url = new URL(path, NEWSLETTER_URL);
+  url.searchParams.set("utm_source", "awesomemlsecops.com");
+  url.searchParams.set("utm_medium", "referral");
+  url.searchParams.set("utm_campaign", placement);
+  return url.toString();
+}
 export const CONTACT_EMAIL = "riccardobiosas@gmail.com";
 export const BUILD_DATE = process.env.BUILD_DATE || new Date().toISOString();
 export const CATALOG_REVIEW_DATE = "2026-07-23";

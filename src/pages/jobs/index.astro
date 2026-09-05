@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import type { Graph, JobPosting } from "schema-dts";
 import StructuredData from "../../components/StructuredData.astro";
-import { BUILD_DATE } from "../../config/site";
+import { BUILD_DATE, newsletterUrl } from "../../config/site";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { activeJobs } from "../../lib/activeJobs";
 
@@ -94,7 +94,7 @@ const formatDate = (date: Date) => new Intl.DateTimeFormat("en", { dateStyle: "m
           ))}
         </div>
       ) : (
-        <div class="sponsor-empty"><strong>No roles are currently active.</strong><span>Subscribe to the newsletter for future board updates.</span></div>
+        <div class="sponsor-empty"><strong>No roles are currently active.</strong><span><a href={newsletterUrl("jobs-empty")} data-analytics-event="Newsletter Signup">Subscribe to The MLSecOps Hacker</a> for future board updates.</span></div>
       )}
     </div>
   </section>

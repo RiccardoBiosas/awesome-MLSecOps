@@ -159,6 +159,11 @@ nav a {
   color: white;
 }
 
+.subscribe-link {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
 .repo-link:hover {
   border-color: var(--coral);
   background: var(--coral);
@@ -361,6 +366,71 @@ nav a {
 
 .newsletter-cta.compact {
   padding: 24px;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.benefit-grid li {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 6px 12px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+}
+
+.benefit-grid li span {
+  grid-row: 1 / span 2;
+  font-weight: 700;
+  color: var(--coral);
+}
+
+.benefit-grid li p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.reading-list {
+  margin-top: 28px;
+}
+
+.reading-list .reference-list li {
+  display: grid;
+  gap: 4px;
+}
+
+.reading-summary {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.newsletter-cta.no-embed {
+  grid-template-columns: 1fr;
+}
+
+.newsletter-latest {
+  display: grid;
+  gap: 4px;
+  padding: 12px 14px;
+  border-left: 4px solid var(--ink);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.newsletter-latest a {
+  font-weight: 700;
+}
+
+.newsletter-latest time {
+  font-size: 0.85rem;
+  opacity: 0.8;
 }
 
 .page-newsletter {

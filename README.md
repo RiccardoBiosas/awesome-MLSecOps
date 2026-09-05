@@ -8,9 +8,13 @@ This curated catalog helps security engineers, ML practitioners, developers, and
 
 ⭐ If this catalog is useful, [star the repository](https://github.com/RiccardoBiosas/awesome-MLSecOps) or read the [contribution guidelines](CONTRIBUTING.md) to suggest a resource.
 
+> [!TIP]
+> **📬 Get new tools and attack analysis by email.** The maintainer of this list writes [The MLSecOps Hacker](https://themlsecopshacker.com/?utm_source=github&utm_medium=readme&utm_campaign=top-callout), a free newsletter on model serialization attacks, LLM and agent exploitation, MLOps supply-chain risk, and the tools that hold up in practice. [Subscribe free →](https://themlsecopshacker.com/?utm_source=github&utm_medium=readme&utm_campaign=top-callout) · [Read the archive](https://awesomemlsecops.com/newsletter/)
+
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-YES-green.svg)](https://github.com/RiccardoBiosas/awesome-MLSecOps/graphs/commit-activity)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)
+[![Newsletter](https://img.shields.io/badge/Newsletter-The%20MLSecOps%20Hacker-FF6719?logo=substack&logoColor=white)](https://themlsecopshacker.com/?utm_source=github&utm_medium=readme&utm_campaign=badge)
 [![Follow](https://img.shields.io/twitter/follow/RBiosas.svg?style=social&label=Follow)](https://twitter.com/RBiosas)
 
 ![MLSecOps Banner](https://github.com/user-attachments/assets/966affca-442a-4859-b450-774b8d48c6cc)
@@ -25,6 +29,7 @@ This curated catalog helps security engineers, ML practitioners, developers, and
 - [AI Security and MLSecOps Beginner Resources](#ai-security-and-mlsecops-beginner-resources)
 - [Threat Modeling](#threat-modeling)
 - [Attack Vectors](#attack-vectors)
+- [The MLSecOps Hacker Newsletter](#the-mlsecops-hacker-newsletter)
 - [Blogs and Publications](#blogs-and-publications)
 - [MLOps Infrastructure Vulnerabilities](#mlops-infrastructure-vulnerabilities)
 - [MLSecOps Pipeline](#mlsecops-pipeline)
@@ -259,11 +264,26 @@ Machine learning systems can be attacked through poisoned data, adversarial inpu
 - [Architecture and Access-control attacks](https://genai.owasp.org/llmrisk/llm08-excessive-agency/)
 
 
+## The MLSecOps Hacker Newsletter
+
+[The MLSecOps Hacker](https://themlsecopshacker.com/?utm_source=github&utm_medium=readme&utm_campaign=newsletter-section) is the free newsletter written by the maintainer of this catalog. It maps the AI security landscape for CISOs, security engineers, and AI engineers: MLSecOps best practices, GenAI threat modeling, tooling field notes, attack vectors, and notable additions to this list.
+
+**[Subscribe free →](https://themlsecopshacker.com/?utm_source=github&utm_medium=readme&utm_campaign=newsletter-section)** · [Archive on awesomemlsecops.com](https://awesomemlsecops.com/newsletter/) · [RSS](https://awesomemlsecops.com/rss.xml)
+
+Latest issues:
+
+<!-- newsletter-issues:start -->
+- **August 28, 2026** — [Safetensors Won. Model Serialization Attacks Didn’t Stop.](https://themlsecopshacker.com/p/safetensors-won-model-serialization?utm_source=github&utm_medium=readme&utm_campaign=newsletter-section) — Safetensors became the default model storage format, yet serialization attacks moved into conversion pipelines, loaders, and unsafe infrastructure rather than disappearing.
+- **November 4, 2024** — [AI Security: Model Serialization Attacks](https://themlsecopshacker.com/p/ai-security-model-serialization-attacks?utm_source=github&utm_medium=readme&utm_campaign=newsletter-section) — A practical review of model serialization risks, machine learning supply-chain vulnerabilities, and defensive practices for handling model artifacts safely.
+- **October 8, 2024** — [What is MLSecOps?](https://themlsecopshacker.com/p/what-is-mlsecops?utm_source=github&utm_medium=readme&utm_campaign=newsletter-section) — An introduction to the discipline of securing machine learning systems and the teams, controls, and operating practices that support it.
+<!-- newsletter-issues:end -->
+
 ## Blogs and Publications
 
 These publications cover MLSecOps practices, adversarial machine learning research, LLM security, AI red teaming, privacy, and security measurement.
 
 - 📚 [What is MLSecOps](https://themlsecopshacker.com/p/what-is-mlsecops)
+- 🧨 [Safetensors Won. Model Serialization Attacks Didn't Stop.](https://themlsecopshacker.com/p/safetensors-won-model-serialization)
 - 🛡️ [Red-Teaming Large Language Models](https://huggingface.co/blog/red-teaming)
 - 🔍 [Google's AI red-team](https://blog.google/technology/safety-security/googles-ai-red-team-the-ethical-hackers-making-ai-safer/)
 - 🔒 [The MLSecOps Top 10 vulnerabilities](https://ethical.institute/security.html)
@@ -392,6 +412,8 @@ These books provide in-depth guidance on adversarial AI, privacy-preserving mach
 
 All contributions to this list are welcome! Please feel free to submit a pull request with any additions or improvements.
 
+Notable additions are featured in [The MLSecOps Hacker](https://themlsecopshacker.com/?utm_source=github&utm_medium=readme&utm_campaign=contributions) newsletter, so a merged entry also reaches its subscribers.
+
 ## Contributors ✨
 
 As of **July 28, 2026**, this project recognizes **19 contributors**:
@@ -442,7 +464,7 @@ As of **July 28, 2026**, this project recognizes **19 contributors**:
 
 ## Support Us
 
-If you find this project useful, please consider giving it a star ⭐️
+If you find this project useful, please consider giving it a star ⭐️ and [subscribing to The MLSecOps Hacker](https://themlsecopshacker.com/?utm_source=github&utm_medium=readme&utm_campaign=support-us) 📬, the maintainer's free newsletter that funds the time spent curating this list.
 
 [![GitHub Sponsor](https://img.shields.io/github/sponsors/RiccardoBiosas?style=social)](https://github.com/sponsors/RiccardoBiosas)
 
@@ -473,7 +495,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-<p align="center">Made with ❤️</p>
+<p align="center">Made with ❤️ · <a href="https://themlsecopshacker.com/?utm_source=github&utm_medium=readme&utm_campaign=footer">Subscribe to The MLSecOps Hacker</a></p>
 
 
 

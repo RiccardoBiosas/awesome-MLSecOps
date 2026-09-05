@@ -1,0 +1,44 @@
+name: Sync newsletter archive
+
+# Pulls the latest issues from The MLSecOps Hacker RSS feed into src/data/newsletter.json
+# and the "Latest issues" block of README.md, then commits if anything changed.
+# The daily Pages build (deploy-pages.yml) runs after this, so the site picks the change up.
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: "sync-newsletter"
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+      - name: Sync newsletter issues
+        run: npm run sync:newsletter
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- src/data/newsletter.json README.md; then
+            echo "Newsletter archive already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/newsletter.json README.md
+          git commit -m "chore: sync newsletter archive from The MLSecOps Hacker feed"
+          git push

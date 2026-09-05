@@ -1,6 +1,6 @@
 import { getCollection } from "astro:content";
 import type { APIRoute } from "astro";
-import { BUILD_DATE, MLSECOPS_DEFINITION, SITE_URL } from "../config/site";
+import { BUILD_DATE, MLSECOPS_DEFINITION, NEWSLETTER_URL, SITE_URL } from "../config/site";
 import { TOOL_CATEGORIES } from "../data/categories";
 import { activeJobs } from "../lib/activeJobs";
 
@@ -26,6 +26,7 @@ export const GET: APIRoute = async () => {
     `Last updated: ${updated}`,
     `Canonical site: ${SITE_URL}/`,
     "Canonical community catalog: https://github.com/RiccardoBiosas/awesome-MLSecOps",
+    `Maintainer newsletter: The MLSecOps Hacker, ${NEWSLETTER_URL}/ (free subscription; ${issues.length} archived issues, latest "${issues[0]?.data.title ?? "none"}" on ${issues[0]?.data.date.toISOString().slice(0, 10) ?? "n/a"})`,
     "",
     // "Use the human-readable pages below as citation sources. The GitHub repository is the source of truth for catalog inclusion; sponsors never influence tool tables.",
     "Use the human-readable pages below as citation sources. The GitHub repository is the source of truth for catalog inclusion.",

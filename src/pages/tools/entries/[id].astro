@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import type { Graph } from "schema-dts";
+import NewsletterCta from "../../../components/NewsletterCta.astro";
 import StructuredData from "../../../components/StructuredData.astro";
 import {
   CATALOG_REVIEW_DATE,
@@ -177,4 +178,8 @@ const schema: Graph = {
       </div>
     </section>
   )}
+
+  <div class="shell page-newsletter">
+    <NewsletterCta compact embed={false} placement="tool-entry" />
+  </div>
 </BaseLayout>

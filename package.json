@@ -14,8 +14,9 @@
     "check": "astro check",
     "dev": "astro dev",
     "preview": "astro preview",
-    "sync": "tsx scripts/sync-readme.ts",
-    "test": "vitest run"
+    "sync": "tsx scripts/sync-readme.ts && tsx scripts/sync-newsletter.ts",
+    "test": "vitest run",
+    "sync:newsletter": "tsx scripts/sync-newsletter.ts"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",

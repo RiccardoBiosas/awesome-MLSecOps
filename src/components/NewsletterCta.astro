@@ -1,25 +1,52 @@
 ---
-import { NEWSLETTER_EMBED_URL, NEWSLETTER_URL } from "../config/site";
+import { getCollection } from "astro:content";
+import { NEWSLETTER_EMBED_URL, NEWSLETTER_NAME, newsletterUrl } from "../config/site";
+import { sortIssues } from "../lib/newsletterFeed";
 
 interface Props {
   aboveFold?: boolean;
   compact?: boolean;
+  /** Render the Substack subscribe form. Set false for a lighter, text-only call to action. */
+  embed?: boolean;
+  /** Placement label recorded in the outbound link's utm_campaign. */
+  placement?: string;
 }
 
-const { aboveFold = false, compact = false } = Astro.props;
-const headingId = `newsletter-${aboveFold ? "top" : "bottom"}`;
+const { aboveFold = false, compact = false, embed = true, placement = aboveFold ? "cta-top" : "cta-bottom" } = Astro.props;
+const headingId = `newsletter-${placement}`;
+const [latest] = sortIssues(await getCollection("newsletter"));
+const formatDate = (date: Date) => new Intl.DateTimeFormat("en", { dateStyle: "medium", timeZone: "UTC" }).format(date);
 ---
 
-<section class:list={["newsletter-cta", { compact }]} aria-labelledby={headingId}>
+<section class:list={["newsletter-cta", { compact, "no-embed": !embed }]} aria-labelledby={headingId}>
   <div>
-    <p class="eyebrow">The MLSecOps Hacker</p>
+    <p class="eyebrow">{NEWSLETTER_NAME} newsletter</p>
     <h2 id={headingId}>Security research worth opening</h2>
-    <p>Monthly field notes on model security, LLM attacks, MLOps vulnerabilities, tools, and defensive practice.</p>
-    <a class="text-link" href={NEWSLETTER_URL} data-analytics-event="Newsletter Signup">Subscribe or browse the archive</a>
+    <p>
+      Field notes on model serialization attacks, LLM and agent exploitation, MLOps supply-chain risk, and the tools that hold up in practice.
+      Written by the maintainer of this catalog. Free, no spam, unsubscribe any time.
+    </p>
+    {latest && (
+      <p class="newsletter-latest">
+        <span class="eyebrow">Latest issue</span>
+        <a href={newsletterUrl(`${placement}-latest`, new URL(latest.data.link).pathname)} data-analytics-event="Newsletter Issue Outbound">{latest.data.title}</a>
+        <time datetime={latest.data.date.toISOString()}>{formatDate(latest.data.date)}</time>
+      </p>
+    )}
+    {embed ? (
+      <a class="text-link" href={newsletterUrl(placement)} data-analytics-event="Newsletter Signup">Subscribe or browse the archive</a>
+    ) : (
+      <div class="button-row">
+        <a class="button" href={newsletterUrl(placement)} data-analytics-event="Newsletter Signup">Subscribe free</a>
+        <a class="button-secondary" href="/newsletter/">Browse the archive</a>
+      </div>
+    )}
   </div>
-  <iframe
-    src={NEWSLETTER_EMBED_URL}
-    title="Subscribe to The MLSecOps Hacker newsletter"
-    loading={aboveFold ? "eager" : "lazy"}
-  ></iframe>
+  {embed && (
+    <iframe
+      src={NEWSLETTER_EMBED_URL}
+      title={`Subscribe to ${NEWSLETTER_NAME} newsletter`}
+      loading={aboveFold ? "eager" : "lazy"}
+    ></iframe>
+  )}
 </section>
