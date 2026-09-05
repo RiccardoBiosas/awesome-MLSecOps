@@ -56,6 +56,7 @@ export const GET: APIRoute = async () => {
     `- [Newsletter RSS](${SITE_URL}/rss.xml): Feed of dated newsletter archive entries.`,
     `- [XML sitemap](${SITE_URL}/sitemap.xml): Index of canonical human-readable routes.`,
     `- [Crawler policy](${SITE_URL}/robots.txt): Search and AI crawler access policy.`,
+    "- [Citation metadata](https://github.com/RiccardoBiosas/awesome-MLSecOps/blob/main/CITATION.cff): CITATION.cff with authors, title, license, release date, and canonical URLs for attributing this catalog.",
     "",
   ].join("\n");
 

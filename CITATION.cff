@@ -1,0 +1,49 @@
+# Citation metadata for Awesome MLSecOps.
+# Format: Citation File Format 1.2.0 (https://citation-file-format.github.io/).
+# GitHub renders this file as a "Cite this repository" button and exposes
+# APA and BibTeX entries. Zenodo, Zotero, and other reference managers
+# read it directly, and AI search engines use it to attribute this catalog.
+
+cff-version: 1.2.0
+message: >-
+  If you use or reference this catalog in research, documentation, tooling,
+  or teaching material, please cite it using the metadata below.
+type: dataset
+title: "Awesome MLSecOps: Machine Learning and AI Security Resources"
+abstract: >-
+  A curated, community-maintained catalog of MLSecOps (Machine Learning
+  Security Operations) resources: open-source and commercial AI security
+  tools, adversarial machine learning research repositories, LLM and AI
+  agent security tools, data privacy and anonymization tools, threat
+  modeling frameworks, attack vector references, MLOps infrastructure
+  vulnerabilities, learning resources, and books. MLSecOps is the practice
+  of integrating security throughout the machine learning lifecycle, from
+  data collection and model development to deployment, monitoring, and
+  incident response.
+authors:
+  - family-names: Biosas
+    given-names: Riccardo
+    alias: RiccardoBiosas
+    website: "https://github.com/RiccardoBiosas"
+  - name: "Awesome MLSecOps contributors"
+    website: "https://github.com/RiccardoBiosas/awesome-MLSecOps/graphs/contributors"
+repository-code: "https://github.com/RiccardoBiosas/awesome-MLSecOps"
+url: "https://awesomemlsecops.com"
+license: MIT
+date-released: 2023-04-01
+keywords:
+  - MLSecOps
+  - machine learning security
+  - AI security
+  - adversarial machine learning
+  - LLM security
+  - AI agent security
+  - prompt injection
+  - model serialization attacks
+  - AI supply chain security
+  - AI red teaming
+  - threat modeling
+  - data privacy
+  - MLOps security
+  - awesome list
+  - curated list

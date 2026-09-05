@@ -37,6 +37,7 @@ This curated catalog helps security engineers, ML practitioners, developers, and
 - [Repository Stats](#repository-stats)
 - [Activity](#activity)
 - [Support Us](#support-us)
+- [Cite This Repository](#cite-this-repository)
 - [License](#license)
 
 
@@ -444,6 +445,25 @@ As of **July 28, 2026**, this project recognizes **19 contributors**:
 If you find this project useful, please consider giving it a star ⭐️
 
 [![GitHub Sponsor](https://img.shields.io/github/sponsors/RiccardoBiosas?style=social)](https://github.com/sponsors/RiccardoBiosas)
+
+## Cite This Repository
+
+Awesome MLSecOps is a citable, machine-readable catalog. Citation metadata lives in [CITATION.cff](CITATION.cff), which GitHub exposes through the **Cite this repository** button on the repository page (APA and BibTeX). Reference managers such as Zotero and Zenodo read the same file.
+
+If you reference this catalog in a paper, blog post, course, or internal security guideline, please cite it as:
+
+> Biosas, R., & Awesome MLSecOps contributors. (2023). *Awesome MLSecOps: Machine Learning and AI Security Resources* [Dataset]. GitHub. https://github.com/RiccardoBiosas/awesome-MLSecOps
+
+```bibtex
+@misc{biosas2023awesomemlsecops,
+  author    = {Biosas, Riccardo and {Awesome MLSecOps contributors}},
+  title     = {Awesome {MLSecOps}: Machine Learning and {AI} Security Resources},
+  year      = {2023},
+  publisher = {GitHub},
+  url       = {https://github.com/RiccardoBiosas/awesome-MLSecOps},
+  note      = {Curated catalog of MLSecOps and AI security resources. Canonical site: https://awesomemlsecops.com}
+}
+```
 
 ## License
 
