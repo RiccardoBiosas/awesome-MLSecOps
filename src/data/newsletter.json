@@ -3,7 +3,7 @@
     "id": "safetensors-won-model-serialization",
     "title": "Safetensors Won. Model Serialization Attacks Didn’t Stop.",
     "date": "2026-08-28",
-    "summary": "Safetensors became the default model storage format, yet serialization attacks moved into conversion pipelines, loaders, and unsafe infrastructure rather than disappearing.",
+    "summary": "Safetensors became the default model format, yet serialization attacks moved into conversion pipelines, loaders, and unsafe infrastructure.",
     "link": "https://themlsecopshacker.com/p/safetensors-won-model-serialization"
   },
   {

@@ -368,6 +368,39 @@ nav a {
   padding: 24px;
 }
 
+.article-list {
+  display: grid;
+  gap: 14px;
+  margin: 0 0 22px;
+  padding: 0;
+  list-style: none;
+}
+
+.article-item {
+  display: grid;
+  gap: 6px;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--yellow);
+  border-radius: 6px;
+  background: var(--surface);
+}
+
+.article-item time {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--coral);
+}
+
+.article-item h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.article-item p {
+  margin: 0;
+}
+
 .benefit-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));

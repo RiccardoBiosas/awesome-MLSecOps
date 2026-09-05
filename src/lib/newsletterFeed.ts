@@ -25,6 +25,16 @@ function textOf(xml: string, tag: string): string | undefined {
   return decodeEntities(raw.replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
 }
 
+export const SUMMARY_MAX_LENGTH = 160;
+
+/** Cut a summary to roughly `max` characters at a word boundary, ending with an ellipsis. */
+export function truncateSummary(value: string, max = SUMMARY_MAX_LENGTH): string {
+  if (value.length <= max) return value;
+  const cut = value.slice(0, max - 1);
+  const boundary = cut.lastIndexOf(" ");
+  return `${(boundary > max * 0.6 ? cut.slice(0, boundary) : cut).replace(/[\s,;:.]+$/, "")}…`;
+}
+
 export function issueIdFromLink(link: string): string {
   const path = new URL(link).pathname.replace(/\/+$/, "");
   return path.split("/").filter(Boolean).pop() ?? path;
@@ -42,7 +52,7 @@ export function parseNewsletterFeed(xml: string): NewsletterIssue[] {
     if (!title || !link || !pubDate || !summary) continue;
     const date = new Date(pubDate);
     if (Number.isNaN(date.getTime())) continue;
-    issues.push({ id: issueIdFromLink(link), title, date: date.toISOString().slice(0, 10), summary, link });
+    issues.push({ id: issueIdFromLink(link), title, date: date.toISOString().slice(0, 10), summary: truncateSummary(summary), link });
   }
   return issues.sort((left, right) => right.date.localeCompare(left.date));
 }

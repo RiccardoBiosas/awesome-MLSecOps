@@ -14,22 +14,17 @@ const DATA_PATH = resolve("src/data/newsletter.json");
 const README_PATH = resolve(process.env.README_SOURCE ?? "README.md");
 const README_START = "<!-- newsletter-issues:start -->";
 const README_END = "<!-- newsletter-issues:end -->";
-const README_ISSUE_LIMIT = 5;
-
-function readmeUtm(link: string): string {
-  const url = new URL(link);
-  url.searchParams.set("utm_source", "github");
-  url.searchParams.set("utm_medium", "readme");
-  url.searchParams.set("utm_campaign", "newsletter-section");
-  return url.toString();
-}
+const README_ISSUE_LIMIT = 3;
+/** Overridable so the offline fallback can be exercised: NEWSLETTER_FEED_URL=https://127.0.0.1:9/feed npm run build */
+const FEED_URL = process.env.NEWSLETTER_FEED_URL ?? NEWSLETTER_FEED_URL;
 
 function formatReadmeDate(date: string): string {
   return new Intl.DateTimeFormat("en", { dateStyle: "long", timeZone: "UTC" }).format(new Date(`${date}T00:00:00Z`));
 }
 
 export function renderReadmeIssues(issues: NewsletterIssue[]): string {
-  const lines = issues.slice(0, README_ISSUE_LIMIT).map((issue) => `- **${formatReadmeDate(issue.date)}** — [${issue.title}](${readmeUtm(issue.link)}) — ${issue.summary}`);
+  // Article links stay canonical: the only tracking parameters in the README are on the subscribe link.
+  const lines = issues.slice(0, README_ISSUE_LIMIT).map((issue) => `- [${issue.title}](${issue.link}) — ${formatReadmeDate(issue.date)}`);
   return `${README_START}\n${lines.join("\n")}\n${README_END}`;
 }
 
@@ -37,14 +32,14 @@ async function fetchFeed(): Promise<string | undefined> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 10_000);
   try {
-    const response = await fetch(NEWSLETTER_FEED_URL, {
+    const response = await fetch(FEED_URL, {
       signal: controller.signal,
       headers: { accept: "application/rss+xml, application/xml, text/xml", "user-agent": "awesome-mlsecops-site newsletter sync" },
     });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return await response.text();
   } catch (error) {
-    console.warn(`Newsletter sync skipped: could not fetch ${NEWSLETTER_FEED_URL} (${error instanceof Error ? error.message : String(error)}).`);
+    console.warn(`Newsletter sync skipped: could not fetch ${FEED_URL} (${error instanceof Error ? error.message : String(error)}); using committed src/data/newsletter.json.`);
     return undefined;
   } finally {
     clearTimeout(timer);

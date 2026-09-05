@@ -6,7 +6,7 @@ Thank you for contributing to **Awesome MLSecOps**, a curated collection of tool
 
 This is an editorially curated technical resource - not a comprehensive vendor directory or promotional channel. Inclusion depends on relevance, evidence, maturity, and practical value.
 
-Accepted resources are also candidates for coverage in [The MLSecOps Hacker](https://themlsecopshacker.com/?utm_source=github&utm_medium=readme&utm_campaign=contributing), the maintainer's newsletter, which extends a merged entry's reach beyond this repository.
+Accepted resources are also candidates for coverage in [The MLSecOps Hacker](https://themlsecopshacker.com), the maintainer's newsletter, which extends a merged entry's reach beyond this repository.
 
 ## Technical Scope
 

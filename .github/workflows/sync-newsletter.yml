@@ -1,20 +1,27 @@
 name: Sync newsletter archive
 
-# Pulls the latest issues from The MLSecOps Hacker RSS feed into src/data/newsletter.json
-# and the "Latest issues" block of README.md, then commits if anything changed.
-# The daily Pages build (deploy-pages.yml) runs after this, so the site picks the change up.
+# Weekly: pull the latest issues from The MLSecOps Hacker RSS feed into
+# src/data/newsletter.json and the "Latest articles" block of README.md, then
+# open (or refresh) a pull request when anything changed. No diff, no PR.
+#
+# Requires "Allow GitHub Actions to create and approve pull requests" under
+# Settings → Actions → General → Workflow permissions.
 
 on:
   schedule:
-    - cron: "17 3 * * *"
+    - cron: "17 3 * * 1"
   workflow_dispatch:
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: "sync-newsletter"
   cancel-in-progress: true
+
+env:
+  SYNC_BRANCH: chore/sync-newsletter
 
 jobs:
   sync:
@@ -31,14 +38,33 @@ jobs:
         run: npm ci --ignore-scripts
       - name: Sync newsletter issues
         run: npm run sync:newsletter
-      - name: Commit changes
+      - name: Detect changes
+        id: changes
         run: |
           if git diff --quiet -- src/data/newsletter.json README.md; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "Newsletter archive already up to date."
-            exit 0
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --stat -- src/data/newsletter.json README.md
           fi
+      - name: Open or update pull request
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$SYNC_BRANCH"
           git add src/data/newsletter.json README.md
           git commit -m "chore: sync newsletter archive from The MLSecOps Hacker feed"
-          git push
+          git push --force origin "$SYNC_BRANCH"
+          if gh pr list --head "$SYNC_BRANCH" --state open --json number --jq 'length' | grep -q '^0$'; then
+            gh pr create \
+              --base main \
+              --head "$SYNC_BRANCH" \
+              --title "chore: sync newsletter archive" \
+              --body "Automated weekly sync of the newsletter archive (src/data/newsletter.json) and the README **Latest articles** block from https://themlsecopshacker.com/feed. Review titles, dates, and summaries, then merge."
+          else
+            echo "Existing pull request for $SYNC_BRANCH updated."
+          fi

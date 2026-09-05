@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { issueIdFromLink, mergeNewsletterIssues, parseNewsletterFeed } from "./newsletterFeed";
+import { issueIdFromLink, mergeNewsletterIssues, parseNewsletterFeed, truncateSummary } from "./newsletterFeed";
 
 const feed = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"><channel><title>The MLSecOps Hacker Newsletter</title>
@@ -41,6 +41,20 @@ describe("parseNewsletterFeed", () => {
 
   it("derives stable ids from the post slug", () => {
     expect(issueIdFromLink("https://themlsecopshacker.com/p/what-is-mlsecops/")).toBe("what-is-mlsecops");
+  });
+});
+
+describe("truncateSummary", () => {
+  it("leaves short summaries alone", () => {
+    expect(truncateSummary("Short.")).toBe("Short.");
+  });
+
+  it("cuts long summaries at a word boundary with an ellipsis", () => {
+    const long = "word ".repeat(60).trim();
+    const result = truncateSummary(long);
+    expect(result.length).toBeLessThanOrEqual(160);
+    expect(result.endsWith("…")).toBe(true);
+    expect(result).not.toMatch(/wor…$/);
   });
 });
 

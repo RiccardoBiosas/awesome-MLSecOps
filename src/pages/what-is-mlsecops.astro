@@ -1,7 +1,7 @@
 ---
 import type { FAQPage, WithContext } from "schema-dts";
 import StructuredData from "../components/StructuredData.astro";
-import { MLSECOPS_DEFINITION_LEAD, MLSECOPS_DEFINITION_SUPPORT, newsletterUrl } from "../config/site";
+import { MLSECOPS_DEFINITION_LEAD, MLSECOPS_DEFINITION_SUPPORT } from "../config/site";
 import { TOOL_CATEGORIES } from "../data/categories";
 import { WHAT_IS_FAQS } from "../data/faqs";
 import BaseLayout from "../layouts/BaseLayout.astro";
@@ -70,7 +70,7 @@ const faqSchema: WithContext<FAQPage> = {
 
       <h2>How to begin</h2>
       <p>Begin with one important AI service instead of a company-wide tooling purchase. Map its data, model, prompt, dependency, and tool-call paths. Identify the two or three failures with the greatest business or user impact. Add controls that produce reviewable evidence, assign an owner for every unresolved risk, and rehearse one containment scenario. Repeat the process as a release gate, then automate stable checks in the training and deployment pipeline.</p>
-      <p>The <a href="/tools/">MLSecOps tools and resources directory</a> organizes the community catalog by security problem. The <a href="/faq/">MLSecOps FAQ</a> answers implementation questions, while the GitHub repository remains the canonical place to evaluate and contribute resources. For a longer narrative on why the discipline emerged, read <a href={newsletterUrl("what-is-mlsecops-essay", "/p/what-is-mlsecops")} data-analytics-event="Newsletter Issue Outbound">What is MLSecOps?</a> on The MLSecOps Hacker, the newsletter written by this catalog's maintainer.</p>
+      <p>The <a href="/tools/">MLSecOps tools and resources directory</a> organizes the community catalog by security problem. The <a href="/faq/">MLSecOps FAQ</a> answers implementation questions, while the GitHub repository remains the canonical place to evaluate and contribute resources. For a longer narrative on why the discipline emerged, read <a href="https://themlsecopshacker.com/p/what-is-mlsecops" data-analytics-event="Newsletter Issue Outbound">What is MLSecOps?</a> on The MLSecOps Hacker, the newsletter written by this catalog's maintainer.</p>
 
       <h2>Primary references</h2>
       <p>This operating model synthesizes established security guidance rather than defining a new standard. Use the <a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI Risk Management Framework</a> for governance and lifecycle outcomes, <a href="https://atlas.mitre.org/">MITRE ATLAS</a> and <a href="https://csrc.nist.gov/pubs/ai/100/2/e2023/final">NIST AI 100-2</a> for adversarial-ML terminology, the <a href="https://genai.owasp.org/llm-top-10/">OWASP Top 10 for LLM Applications</a> for generative-AI risks, and <a href="https://slsa.dev/">SLSA</a> with <a href="https://www.sigstore.dev/">Sigstore</a> for software and artifact provenance controls. Apply each source within its stated scope; none independently establishes that an ML system is secure.</p>

@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import type { Graph } from "schema-dts";
 import NewsletterCta from "../../components/NewsletterCta.astro";
 import StructuredData from "../../components/StructuredData.astro";
-import { NEWSLETTER_NAME, NEWSLETTER_URL, SITE_URL, absoluteUrl, newsletterUrl } from "../../config/site";
+import { NEWSLETTER_AUTHOR, NEWSLETTER_NAME, NEWSLETTER_TAGLINE, NEWSLETTER_URL, SITE_URL, absoluteUrl, subscribeUrl } from "../../config/site";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { sortIssues } from "../../lib/newsletterFeed";
 
@@ -28,17 +28,29 @@ const schema: Graph = {
       "@id": `${pageUrl}#newsletter`,
       name: `${NEWSLETTER_NAME} Newsletter`,
       url: NEWSLETTER_URL,
-      description: "Mapping the AI security landscape: MLSecOps best practices, GenAI threat modeling, tooling, and attack vectors for CISOs, security professionals, and AI engineers.",
+      description: NEWSLETTER_TAGLINE,
       inLanguage: "en",
-      author: { "@type": "Person", name: "Riccardo Biosas", url: "https://github.com/RiccardoBiosas" },
-      publisher: { "@type": "Organization", name: "Awesome MLSecOps", url: SITE_URL },
+      author: { "@type": "Person", name: NEWSLETTER_AUTHOR.name, url: NEWSLETTER_AUTHOR.url },
+      publisher: { "@id": `${SITE_URL}/#organization` },
       blogPost: issues.map((issue) => ({
         "@type": "BlogPosting",
         headline: issue.data.title,
         url: issue.data.link,
         datePublished: issue.data.date.toISOString().slice(0, 10),
         description: issue.data.summary,
-        author: { "@type": "Person", name: "Riccardo Biosas" },
+        author: { "@type": "Person", name: NEWSLETTER_AUTHOR.name },
+      })),
+    },
+    {
+      "@type": "ItemList",
+      "@id": `${pageUrl}#archive`,
+      name: `${NEWSLETTER_NAME} archive`,
+      numberOfItems: issues.length,
+      itemListElement: issues.map((issue, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: issue.data.title,
+        url: issue.data.link,
       })),
     },
   ],
@@ -63,9 +75,10 @@ const benefits = [
     <div class="shell">
       <p class="eyebrow">Free newsletter from the Awesome MLSecOps maintainer</p>
       <h1>The MLSecOps Hacker newsletter</h1>
-      <p>Research, tools, attack analysis, and practical controls for people building and defending machine learning systems. Delivered by email; the full archive stays free to read.</p>
+      <p>{NEWSLETTER_TAGLINE}</p>
+      <p>Delivered by email. Every issue stays free to read in the archive below and on the newsletter site.</p>
       <div class="button-row">
-        <a class="button" href={newsletterUrl("newsletter-page-hero")} data-analytics-event="Newsletter Signup">Subscribe free</a>
+        <a class="button" href={subscribeUrl("newsletter-page-hero")} data-analytics-event="Newsletter Signup">Subscribe free</a>
         <a class="button-secondary" href="#archive">Read past issues</a>
       </div>
     </div>
@@ -102,12 +115,12 @@ const benefits = [
             <time class="eyebrow" datetime={issue.data.date.toISOString()}>{formatDate(issue.data.date)}</time>
             <h3>{issue.data.title}</h3>
             <p>{issue.data.summary}</p>
-            <a class="text-link" href={newsletterUrl("archive", new URL(issue.data.link).pathname)} data-analytics-event="Newsletter Issue Outbound">Read the issue</a>
+            <a class="text-link" href={issue.data.link} data-analytics-event="Newsletter Issue Outbound">Read the issue</a>
           </article>
         ))}
       </div>
       <p class="button-row">
-        <a class="button" href={newsletterUrl("archive-footer")} data-analytics-event="Newsletter Signup">Get the next issue by email</a>
+        <a class="button" href={subscribeUrl("archive-footer")} data-analytics-event="Newsletter Signup">Get the next issue by email</a>
         <a class="button-secondary" href="/rss.xml">Subscribe by RSS</a>
       </p>
     </div>

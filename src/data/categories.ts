@@ -1,4 +1,4 @@
-import { REPOSITORY_URL, newsletterUrl } from "../config/site";
+import { NEWSLETTER_URL, REPOSITORY_URL } from "../config/site";
 import type { ToolCategoryId } from "../lib/toolCategories";
 
 export type PublicCategoryId = ToolCategoryId;
@@ -23,12 +23,12 @@ export type ToolCategory = {
 const SERIALIZATION_READING = [
   {
     name: "Safetensors Won. Model Serialization Attacks Didn't Stop.",
-    url: newsletterUrl("category-reading", "/p/safetensors-won-model-serialization"),
+    url: `${NEWSLETTER_URL}/p/safetensors-won-model-serialization`,
     summary: "Why the shift to safetensors moved attacks into conversion pipelines and loader infrastructure instead of ending them.",
   },
   {
     name: "AI Security: Model Serialization Attacks",
-    url: newsletterUrl("category-reading", "/p/ai-security-model-serialization-attacks"),
+    url: `${NEWSLETTER_URL}/p/ai-security-model-serialization-attacks`,
     summary: "How pickle-based model formats enable remote code execution and which scanning and format controls reduce the risk.",
   },
 ];
