@@ -1,5 +1,12 @@
 [
   {
+    "id": "safetensors-won-model-serialization",
+    "title": "Safetensors Won. Model Serialization Attacks Didn’t Stop.",
+    "date": "2026-08-28",
+    "summary": "Safetensors became the default model format, yet serialization attacks moved into conversion pipelines, loaders, and unsafe infrastructure.",
+    "link": "https://themlsecopshacker.com/p/safetensors-won-model-serialization"
+  },
+  {
     "id": "ai-security-model-serialization-attacks",
     "title": "AI Security: Model Serialization Attacks",
     "date": "2024-11-04",

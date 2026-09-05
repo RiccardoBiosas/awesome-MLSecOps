@@ -1,5 +1,5 @@
 ---
-import { REPOSITORY_URL } from "../config/site";
+import { REPOSITORY_URL, subscribeUrl } from "../config/site";
 
 const navigation = [
   { href: "/what-is-mlsecops/", label: "What is MLSecOps" },
@@ -19,6 +19,7 @@ const navigation = [
     <nav aria-label="Primary navigation">
       {navigation.map((item) => <a href={item.href}>{item.label}</a>)}
       <a class="repo-link" href={REPOSITORY_URL} data-analytics-event="Repo Outbound">GitHub catalog</a>
+      <a class="repo-link subscribe-link" href={subscribeUrl("header")} data-analytics-event="Newsletter Signup">Subscribe</a>
     </nav>
   </div>
 </header>

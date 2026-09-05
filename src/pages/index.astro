@@ -4,12 +4,15 @@ import type { Graph } from "schema-dts";
 import NewsletterCta from "../components/NewsletterCta.astro";
 // import SponsorRow from "../components/SponsorRow.astro";
 import StructuredData from "../components/StructuredData.astro";
-import { CONTRIBUTE_URL, MLSECOPS_DEFINITION_LEAD, MLSECOPS_DEFINITION_SUPPORT, REPOSITORY_URL, SITE_URL } from "../config/site";
+import { CONTRIBUTE_URL, MLSECOPS_DEFINITION_LEAD, MLSECOPS_DEFINITION_SUPPORT, NEWSLETTER_NAME, REPOSITORY_URL, SITE_URL, subscribeUrl } from "../config/site";
+import { sortIssues } from "../lib/newsletterFeed";
 import { TOOL_CATEGORIES } from "../data/categories";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const tools = await getCollection("tools");
 const counts = new Map(TOOL_CATEGORIES.map((category) => [category.id, tools.filter((tool) => tool.data.category === category.id).length]));
+const latestIssues = sortIssues(await getCollection("newsletter")).slice(0, 5);
+const formatDate = (date: Date) => new Intl.DateTimeFormat("en", { dateStyle: "long", timeZone: "UTC" }).format(date);
 
 const schema: Graph = {
   "@context": "https://schema.org",
@@ -30,6 +33,25 @@ const schema: Graph = {
         position: index + 1,
         name: category.name,
         url: `${SITE_URL}/tools/${category.id}/`,
+      })),
+    },
+    {
+      "@type": "ItemList",
+      "@id": `${SITE_URL}/#latest-articles`,
+      name: `Latest articles from ${NEWSLETTER_NAME}`,
+      numberOfItems: latestIssues.length,
+      itemListElement: latestIssues.map((issue, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: issue.data.title,
+        url: issue.data.link,
+        item: {
+          "@type": "BlogPosting",
+          headline: issue.data.title,
+          url: issue.data.link,
+          datePublished: issue.data.date.toISOString().slice(0, 10),
+          description: issue.data.summary,
+        },
       })),
     },
     {
@@ -78,6 +100,29 @@ const schema: Graph = {
             <p>{category.shortDescription}</p>
           </a>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" aria-labelledby="latest-articles-title">
+    <div class="shell">
+      <div class="section-heading">
+        <p class="eyebrow">Newsletter</p>
+        <h2 id="latest-articles-title">Latest from {NEWSLETTER_NAME}</h2>
+        <p>Articles on MLSecOps tooling, AI supply-chain security, prompt injection, and agent security, published first on the maintainer's newsletter.</p>
+      </div>
+      <ol class="article-list">
+        {latestIssues.map((issue) => (
+          <li class="article-item">
+            <time datetime={issue.data.date.toISOString()}>{formatDate(issue.data.date)}</time>
+            <h3><a href={issue.data.link} data-analytics-event="Newsletter Issue Outbound">{issue.data.title}</a></h3>
+            <p>{issue.data.summary}</p>
+          </li>
+        ))}
+      </ol>
+      <div class="button-row">
+        <a class="button" href={subscribeUrl("home-latest")} data-analytics-event="Newsletter Signup">Subscribe</a>
+        <a class="button-secondary" href="/newsletter/">Full archive</a>
       </div>
     </div>
   </section>

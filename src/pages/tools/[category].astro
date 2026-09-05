@@ -191,6 +191,19 @@ const headingByCategory: Record<ToolCategory["id"], string> = {
         <ul class="reference-list">
           {category.attackVectors.map((item) => <li><a href={item.url}>{item.name}</a></li>)}
         </ul>
+        {category.reading && category.reading.length > 0 && (
+          <div class="reading-list">
+            <p class="eyebrow">From The MLSecOps Hacker</p>
+            <ul class="reference-list">
+              {category.reading.map((item) => (
+                <li>
+                  <a href={item.url} data-analytics-event="Newsletter Issue Outbound">{item.name}</a>
+                  <span class="reading-summary">{item.summary}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
       <aside class="catalog-methodology">
         <p class="eyebrow">Catalog methodology</p>

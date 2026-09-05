@@ -1,5 +1,7 @@
 # Awesome MLSecOps: Machine Learning and AI Security Resources 🛡️🤖
 
+Maintained by the author of [The MLSecOps Hacker](https://themlsecopshacker.com) newsletter → [subscribe](https://themlsecopshacker.com/subscribe?utm_source=github&utm_medium=readme)
+
 ## What is MLSecOps?
 
 **MLSecOps (Machine Learning Security Operations)** is the practice of integrating security throughout the machine learning lifecycle—from data collection and model development to deployment, monitoring, and incident response. It applies security testing, threat modeling, supply-chain protection, access controls, and continuous monitoring to machine learning models, MLOps pipelines, LLM applications, and AI agents.
@@ -11,13 +13,30 @@ This curated catalog helps security engineers, ML practitioners, developers, and
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-YES-green.svg)](https://github.com/RiccardoBiosas/awesome-MLSecOps/graphs/commit-activity)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)
-[![Follow](https://img.shields.io/twitter/follow/RBiosas.svg?style=social&label=Follow)](https://twitter.com/RBiosas)
+[![Newsletter](https://img.shields.io/badge/Newsletter-The%20MLSecOps%20Hacker-FF6719?logo=substack&logoColor=white)](https://themlsecopshacker.com)
+[![X](https://img.shields.io/badge/X-%40MLSecOpsHacker-000000?logo=x&logoColor=white)](https://x.com/MLSecOpsHacker)
+[![Instagram](https://img.shields.io/badge/Instagram-%40aisecurity.hacker-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/aisecurity.hacker/)
 
 ![MLSecOps Banner](https://github.com/user-attachments/assets/966affca-442a-4859-b450-774b8d48c6cc)
 
 
+## The MLSecOps Hacker Newsletter
+
+[The MLSecOps Hacker](https://themlsecopshacker.com) is the maintainer's newsletter on AI security for engineers: model supply-chain security (serialization, signing, provenance), prompt injection, and agent and MCP security, where new articles on MLSecOps tooling are published first.
+
+**[Subscribe](https://themlsecopshacker.com/subscribe?utm_source=github&utm_medium=readme)** · [Archive](https://awesomemlsecops.com/newsletter/) · [RSS](https://awesomemlsecops.com/rss.xml)
+
+Latest articles:
+
+<!-- newsletter-issues:start -->
+- [Safetensors Won. Model Serialization Attacks Didn’t Stop.](https://themlsecopshacker.com/p/safetensors-won-model-serialization) — August 28, 2026
+- [AI Security: Model Serialization Attacks](https://themlsecopshacker.com/p/ai-security-model-serialization-attacks) — November 4, 2024
+- [What is MLSecOps?](https://themlsecopshacker.com/p/what-is-mlsecops) — October 8, 2024
+<!-- newsletter-issues:end -->
+
 ## Table of Contents
 - [What is MLSecOps?](#what-is-mlsecops)
+- [The MLSecOps Hacker Newsletter](#the-mlsecops-hacker-newsletter)
 - [Open Source Security Tools](#open-source-security-tools)
 - [Commercial MLSecOps and AI Security Tools](#commercial-mlsecops-and-ai-security-tools)
 - [Data Privacy and Anonymization Tools](#data-privacy-and-anonymization-tools)
@@ -392,6 +411,8 @@ These books provide in-depth guidance on adversarial AI, privacy-preserving mach
 
 All contributions to this list are welcome! Please feel free to submit a pull request with any additions or improvements.
 
+Notable additions are featured in [The MLSecOps Hacker](https://themlsecopshacker.com) newsletter, so a merged entry also reaches its subscribers.
+
 ## Contributors ✨
 
 As of **July 28, 2026**, this project recognizes **19 contributors**:
@@ -442,7 +463,7 @@ As of **July 28, 2026**, this project recognizes **19 contributors**:
 
 ## Support Us
 
-If you find this project useful, please consider giving it a star ⭐️
+If you find this project useful, please consider giving it a star ⭐️ and [subscribing to The MLSecOps Hacker](https://themlsecopshacker.com/subscribe?utm_source=github&utm_medium=readme) 📬, the maintainer's free newsletter that funds the time spent curating this list.
 
 [![GitHub Sponsor](https://img.shields.io/github/sponsors/RiccardoBiosas?style=social)](https://github.com/sponsors/RiccardoBiosas)
 
@@ -473,7 +494,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-<p align="center">Made with ❤️</p>
+<p align="center">Made with ❤️ · <a href="https://themlsecopshacker.com/subscribe?utm_source=github&utm_medium=readme">Subscribe to The MLSecOps Hacker</a></p>
 
 
 

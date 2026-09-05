@@ -3,9 +3,12 @@ import {
   BUILD_DATE,
   ENTITY_DESCRIPTION,
   // GITHUB_SPONSORS_URL,
-  NEWSLETTER_URL,
+  INSTAGRAM_URL,
+  NEWSLETTER_NAME,
   REPOSITORY_URL,
+  X_URL,
   formattedBuildDate,
+  subscribeUrl,
 } from "../config/site";
 ---
 
@@ -29,7 +32,10 @@ import {
     <div>
       <h2>Connect</h2>
       <a href={REPOSITORY_URL} data-analytics-event="Repo Outbound">GitHub repository</a>
-      <a href={NEWSLETTER_URL}>The MLSecOps Hacker</a>
+      <a href={subscribeUrl("footer")} data-analytics-event="Newsletter Signup">Subscribe to {NEWSLETTER_NAME}</a>
+      <a href="/newsletter/">Newsletter archive</a>
+      <a href={X_URL} rel="me">@MLSecOpsHacker on X</a>
+      <a href={INSTAGRAM_URL} rel="me">@aisecurity.hacker on Instagram</a>
       {/* Sponsorship is temporarily disabled.
       <a href="/sponsor/">Sponsor the project</a>
       <a href={GITHUB_SPONSORS_URL}>GitHub Sponsors</a>

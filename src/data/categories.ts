@@ -1,4 +1,4 @@
-import { REPOSITORY_URL } from "../config/site";
+import { NEWSLETTER_URL, REPOSITORY_URL } from "../config/site";
 import type { ToolCategoryId } from "../lib/toolCategories";
 
 export type PublicCategoryId = ToolCategoryId;
@@ -15,8 +15,23 @@ export type ToolCategory = {
   evaluation: string[];
   verificationQuestions: string[];
   attackVectors: Array<{ name: string; url: string }>;
+  /** Long-form analysis from The MLSecOps Hacker newsletter that expands on this category. */
+  reading?: Array<{ name: string; url: string; summary: string }>;
   readmeUrl: string;
 };
+
+const SERIALIZATION_READING = [
+  {
+    name: "Safetensors Won. Model Serialization Attacks Didn't Stop.",
+    url: `${NEWSLETTER_URL}/p/safetensors-won-model-serialization`,
+    summary: "Why the shift to safetensors moved attacks into conversion pipelines and loader infrastructure instead of ending them.",
+  },
+  {
+    name: "AI Security: Model Serialization Attacks",
+    url: `${NEWSLETTER_URL}/p/ai-security-model-serialization-attacks`,
+    summary: "How pickle-based model formats enable remote code execution and which scanning and format controls reduce the risk.",
+  },
+];
 
 export const TOOL_CATEGORIES: ToolCategory[] = [
   {
@@ -68,6 +83,7 @@ export const TOOL_CATEGORIES: ToolCategory[] = [
       { name: "AI supply-chain attacks", url: "https://owasp.org/www-project-machine-learning-security-top-10/docs/ML06_2023-AI_Supply_Chain_Attacks" },
       { name: "Models as executable code", url: "https://hiddenlayer.com/research/models-are-code/" },
     ],
+    reading: SERIALIZATION_READING,
     readmeUrl: `${REPOSITORY_URL}#ml-code-security`,
   },
   {
@@ -120,6 +136,7 @@ export const TOOL_CATEGORIES: ToolCategory[] = [
       { name: "ClearML supply-chain research", url: "https://hiddenlayer.com/research/not-so-clear-how-mlops-solutions-can-muddy-the-waters-of-your-supply-chain/" },
       { name: "Model conversion risks", url: "https://hiddenlayer.com/research/silent-sabotage/" },
     ],
+    reading: SERIALIZATION_READING,
     readmeUrl: `${REPOSITORY_URL}#mlops-infrastructure-vulnerabilities`,
   },
   {

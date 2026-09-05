@@ -1,30 +1,108 @@
 ---
 import { getCollection } from "astro:content";
+import type { Graph } from "schema-dts";
 import NewsletterCta from "../../components/NewsletterCta.astro";
+import StructuredData from "../../components/StructuredData.astro";
+import { NEWSLETTER_AUTHOR, NEWSLETTER_NAME, NEWSLETTER_TAGLINE, NEWSLETTER_URL, SITE_URL, absoluteUrl, subscribeUrl } from "../../config/site";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { sortIssues } from "../../lib/newsletterFeed";
 
-const issues = (await getCollection("newsletter")).sort((left, right) => right.data.date.getTime() - left.data.date.getTime());
+const issues = sortIssues(await getCollection("newsletter"));
 const formatDate = (date: Date) => new Intl.DateTimeFormat("en", { dateStyle: "long", timeZone: "UTC" }).format(date);
+const pageUrl = absoluteUrl("/newsletter/");
+
+const schema: Graph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${pageUrl}#page`,
+      url: pageUrl,
+      name: `${NEWSLETTER_NAME} newsletter and archive`,
+      description: "Subscribe to The MLSecOps Hacker and browse dated issues on machine learning security, model supply chains, LLM attacks, and MLOps risk.",
+      isPartOf: { "@type": "WebSite", "@id": `${SITE_URL}/#website`, url: SITE_URL, name: "Awesome MLSecOps" },
+      mainEntity: { "@id": `${pageUrl}#newsletter` },
+    },
+    {
+      "@type": "Blog",
+      "@id": `${pageUrl}#newsletter`,
+      name: `${NEWSLETTER_NAME} Newsletter`,
+      url: NEWSLETTER_URL,
+      description: NEWSLETTER_TAGLINE,
+      inLanguage: "en",
+      author: { "@type": "Person", name: NEWSLETTER_AUTHOR.name, url: NEWSLETTER_AUTHOR.url },
+      publisher: { "@id": `${SITE_URL}/#organization` },
+      blogPost: issues.map((issue) => ({
+        "@type": "BlogPosting",
+        headline: issue.data.title,
+        url: issue.data.link,
+        datePublished: issue.data.date.toISOString().slice(0, 10),
+        description: issue.data.summary,
+        author: { "@type": "Person", name: NEWSLETTER_AUTHOR.name },
+      })),
+    },
+    {
+      "@type": "ItemList",
+      "@id": `${pageUrl}#archive`,
+      name: `${NEWSLETTER_NAME} archive`,
+      numberOfItems: issues.length,
+      itemListElement: issues.map((issue, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: issue.data.title,
+        url: issue.data.link,
+      })),
+    },
+  ],
+};
+
+const benefits = [
+  ["Attack analysis", "Model serialization exploits, prompt injection chains, agent abuse, and MLOps infrastructure compromises explained with primary sources."],
+  ["Tool field notes", "What the scanners, guardrails, and red-team frameworks in this catalog actually catch, and where they fall short."],
+  ["Catalog updates", "New Awesome MLSecOps entries and category changes, so you do not have to watch the repository."],
+  ["Practitioner focus", "Written for CISOs, security engineers, and AI engineers by the maintainer of this catalog. No vendor placements."],
+];
 ---
 
 <BaseLayout
   title="The MLSecOps Hacker Newsletter and Archive"
-  description="Subscribe to The MLSecOps Hacker and browse dated issues covering machine learning security, model supply chains, LLM attacks, and MLOps risk."
+  description="Subscribe to The MLSecOps Hacker, the free newsletter from the Awesome MLSecOps maintainer, and browse dated issues on machine learning security, model supply chains, LLM attacks, and MLOps risk."
   ogKey="newsletter"
+  newsletterAtEnd={false}
 >
+  <StructuredData data={schema} />
   <section class="page-hero">
     <div class="shell">
-      <p class="eyebrow">Build an owned security signal</p>
+      <p class="eyebrow">Free newsletter from the Awesome MLSecOps maintainer</p>
       <h1>The MLSecOps Hacker newsletter</h1>
-      <p>Research, tools, attack analysis, and practical controls for people building and defending machine learning systems.</p>
+      <p>{NEWSLETTER_TAGLINE}</p>
+      <p>Delivered by email. Every issue stays free to read in the archive below and on the newsletter site.</p>
+      <div class="button-row">
+        <a class="button" href={subscribeUrl("newsletter-page-hero")} data-analytics-event="Newsletter Signup">Subscribe free</a>
+        <a class="button-secondary" href="#archive">Read past issues</a>
+      </div>
     </div>
   </section>
 
   <section class="content-section">
-    <div class="shell"><NewsletterCta aboveFold /></div>
+    <div class="shell"><NewsletterCta aboveFold placement="newsletter-page" /></div>
   </section>
 
   <section class="content-section">
+    <div class="shell">
+      <div class="section-heading">
+        <p class="eyebrow">What subscribers get</p>
+        <h2>Why security teams read it</h2>
+      </div>
+      <ol class="benefit-grid">
+        {benefits.map(([title, body], index) => (
+          <li><span>{String(index + 1).padStart(2, "0")}</span><strong>{title}</strong><p>{body}</p></li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section id="archive" class="content-section">
     <div class="shell">
       <div class="section-heading">
         <p class="eyebrow">Dated archive</p>
@@ -41,7 +119,10 @@ const formatDate = (date: Date) => new Intl.DateTimeFormat("en", { dateStyle: "l
           </article>
         ))}
       </div>
-      <p class="button-row"><a class="button-secondary" href="/rss.xml">Subscribe by RSS</a></p>
+      <p class="button-row">
+        <a class="button" href={subscribeUrl("archive-footer")} data-analytics-event="Newsletter Signup">Get the next issue by email</a>
+        <a class="button-secondary" href="/rss.xml">Subscribe by RSS</a>
+      </p>
     </div>
   </section>
 </BaseLayout>
