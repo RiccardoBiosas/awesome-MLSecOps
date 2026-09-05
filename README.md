@@ -82,6 +82,16 @@ Adversarial machine learning testing tools evaluate model robustness against eva
 | [Adversarial Robustness Toolbox](https://github.com/IBM/adversarial-robustness-toolbox) | Library of defense methods for ML models against adversarial attacks |
 | [Foolbox](https://github.com/bethgelab/foolbox) | Python toolbox for creating and evaluating adversarial attacks and defenses |
 
+### Embodied AI and Robotics ML Security
+
+Embodied AI and robotics ML security tools test policies that emit actions rather than text, where a successful attack moves a robot out of its safe envelope rather than changing a prediction. Results below are simulation unless a project states otherwise.
+
+| Tool | Description |
+|------|-------------|
+| [BadVLA](https://github.com/Zxy-MLlab/BadVLA) | Backdoor attacks on vision-language-action models via objective-decoupled optimization; reference implementation for the paper |
+| [Provael](https://github.com/provael/provael) | Adversarial testing for vision-language-action robot policies in simulation; reports attack success rate with a 95% Wilson interval against a benign-control false-positive floor |
+| [roboticAttack](https://github.com/William-wAng618/roboticAttack) | Untargeted and targeted adversarial attacks on vision-language-action models; code for "Exploring the Adversarial Vulnerabilities of VLA Models in Robotics" |
+
 ### LLM Security and Red Teaming
 
 LLM security and red-teaming tools test prompts, model behavior, application controls, and safeguards against attacks such as prompt injection and jailbreaks.
