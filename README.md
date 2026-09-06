@@ -192,6 +192,7 @@ Commercial MLSecOps and AI security tools support model protection, application 
 |------|-------------|
 | [Citadel Lens](https://citadel-ai.com/products/lens/) | Commercial model-testing platform; verify supported standards and security checks in current product documentation |
 | [Cisco AI Defense (formerly Robust Intelligence)](https://www.cisco.com/site/us/en/products/security/ai-defense/index.html) | Commercial platform for AI model validation and runtime protection; Robust Intelligence was acquired by Cisco |
+| [DeepKeep](https://www.deepkeep.ai) | End-to-end AI security platform securing multimodal, multilingual GenAI systems across the entire lifecycle. |
 | [HiddenLayer AI Detection and Response](https://www.hiddenlayer.com/platform) | Commercial AI detection and response platform from HiddenLayer |
 | [Guardian](https://protectai.com/guardian) | Model protection in CI/CD |
 | [NeuralTrust](https://neuraltrust.ai) | Tools to protect, secure and test GenAI Applications |
