@@ -140,6 +140,7 @@ These projects support model validation, monitoring, robustness, safety, and com
 |------|-------------|
 | [TensorFlow Model Analysis](https://github.com/tensorflow/model-analysis) | A library for analyzing, validating, and monitoring machine learning models in production|
 | [CircleGuardBench](https://github.com/whitecircle/circle-guard-bench)| A full-fledged benchmark for evaluating protection capabilities of AI models|
+| [Council of AI GSPC](https://github.com/CSOAI-ORG/councilof-ai) | Publishes signed model and agent safety measurements with content-addressed public roots and offline verification |
 
 ### Additional Open-Source Tools
 
