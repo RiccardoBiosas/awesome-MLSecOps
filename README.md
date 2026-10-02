@@ -100,6 +100,7 @@ LLM security and red-teaming tools test prompts, model behavior, application con
 |------|-------------|
 | [Garak](https://github.com/NVIDIA/garak) | LLM vulnerability scanner |
 | [Promptfoo Scanner](https://github.com/promptfoo/promptfoo) | An open-source LLM red teaming tool |
+| [API Relay Audit](https://github.com/toby-bridges/api-relay-audit) | Local CLI probing third-party LLM relays for prompt-injection signals, package-command changes, error leakage, and SSE anomalies. |
 
 ### AI Agent Security
 
