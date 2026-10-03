@@ -209,6 +209,7 @@ Commercial MLSecOps and AI security tools support model protection, application 
 | [NeuralTrust](https://neuraltrust.ai) | Tools to protect, secure and test GenAI Applications |
 | [SourceryKit](https://github.com/ProvablyAI/sourcerykit) | Verifies an AI agent's outbound requests and MCP handoffs against a source of truth using zero-knowledge proofs, so a call only goes out if its claims check out; hooks the HTTP libraries, logs each outbound call, and blocks endpoints not on the trusted allow-list |
 | [Trent AI](https://trent.ai) | Agentic AI security platform that continuously assesses AI agents, MCP servers, LLM and AI-native applications, and code shipped with AI coding tools, traces attack chains, and verifies proposed fixes landed |
+| [DeepKeep AI Security Platform](https://www.deepkeep.ai/) | Commercial AI security platform for multimodal and multilingual AI systems, combining automated and human-steered Vibe AI red teaming with model scanning, agent attack-surface scanning, runtime AI Firewall controls, usage visibility, compliance evidence, and on-prem or air-gapped deployment support. |
 
 
 <a id="data"></a>
