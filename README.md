@@ -132,6 +132,7 @@ AI supply-chain security tools protect model artifacts, provenance, dependencies
 |------|-------------|
 | [Model Transparency](https://github.com/sigstore/model-transparency) | Generate model signing metadata for provenance verification |
 | [BomLens](https://github.com/sktelecom/bomlens) | Local-first SBOM generator that builds CycloneDX ML-BOMs for Hugging Face models, with license and known-vulnerability reports |
+| [k8s-aibom](https://github.com/GoogleCloudPlatform/k8s-aibom) | Unprivileged Kubernetes controller that generates CycloneDX 1.6 ML-BOMs for AI workloads at runtime, with evidence-based confidence tiers and Sigstore model-signature verification |
 
 ### Model Testing, Monitoring, and Evaluation
 
