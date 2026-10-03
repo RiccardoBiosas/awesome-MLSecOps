@@ -325,6 +325,7 @@ MLOps infrastructure introduces security risks across notebooks, training pipeli
 - [Uncovering Azure's Silent Threats: A Journey into Cloud Vulnerabilities](https://www.youtube.com/watch?v=tv8tei97Sv8) - Study on security issues of Azure MLAAS
 - [The MLOps Security Landscape](https://hackstery.com/wp-content/uploads/2023/11/mlops_owasp_oslo_2023.pdf)
 - [Confused Learning: Supply Chain Attacks through Machine Learning Models](https://blackhat.com/asia-24/briefings/schedule/#confused-learning-supply-chain-attacks-through-machine-learning-models-37794) 
+- [Baseten Truss Image Build Shell Injection](https://hackerbane.com/reports/hackerbane-HB-AR-2026.2-baseten-truss.html) - Review of Truss image builds in which a quote in an external_data download URL ran extra shell commands during docker build, fixed upstream in Truss PRs 2616 and 2627.
 
 ## MLSecOps Pipeline
 
