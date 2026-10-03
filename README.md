@@ -292,6 +292,10 @@ Machine learning systems can be attacked through poisoned data, adversarial inpu
 
 ## Blogs and Publications
 
+- [Securing a RAG Pipeline: Where Retrieval Actually Leaks](https://traztech.ca/blog/securing-rag-pipelines) - Analysis of data leakage vectors in retrieval-augmented generation pipelines.
+- [AI Governance for Startups Without a Compliance Department](https://traztech.ca/blog/ai-governance-framework-for-startups) - Practical AI governance framework for startups building with LLMs.
+- [Is ChatGPT Safe for Company Data?](https://traztech.ca/blog/is-chatgpt-safe-for-company-data) - Analysis of ChatGPT data handling from a compliance auditor perspective.
+
 These publications cover MLSecOps practices, adversarial machine learning research, LLM security, AI red teaming, privacy, and security measurement.
 
 - 📚 [What is MLSecOps](https://themlsecopshacker.com/p/what-is-mlsecops)
