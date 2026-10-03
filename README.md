@@ -114,6 +114,7 @@ AI agent security tools assess memory, tools, permissions, workflows, and runtim
 | [Prismor](https://github.com/PrismorSec/prismor) | Self-hosted runtime control plane that screens AI coding-agent tool calls against a signed policy before execution, blocking or routing to human approval secret exfiltration, prompt-injection-driven actions, and destructive commands across Claude Code, Codex, and MCP servers |
 | [Bifrost](https://github.com/maximhq/bifrost) | Go-native AI gateway that enforces guardrails, rate limits, and fine-grained access controls across LLM and MCP traffic. |
 | [Humanbound](https://github.com/humanbound/humanbound) | Open-source CLI that sends LLM-generated adversarial attacks to an agent's HTTP endpoint and scores results against OWASP LLM Top 10, OWASP Agentic Top 10, NIST, and EU AI Act mappings |
+| [ShellWard](https://github.com/jnMetaCode/shellward) | Zero-dependency security middleware for AI agents: intercepts tool calls at runtime to block prompt injection, data exfiltration and dangerous commands. |
 
 ### Privacy-Preserving Machine Learning
 
