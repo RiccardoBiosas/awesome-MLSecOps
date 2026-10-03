@@ -112,6 +112,7 @@ AI agent security tools assess memory, tools, permissions, workflows, and runtim
 | [Agent-Wiz](https://github.com/Repello-AI/Agent-Wiz) | Python CLI by Repello AI for extracting agentic workflows from LangChain/LangGraph/CrewAI/AutoGen and running automated threat modeling |
 | [HOL Guard](https://github.com/hashgraph-online/hol-guard) | Open-source local-first runtime security layer for AI agents that evaluates supported tool actions and local artifacts for prompt injection, secret exposure, unsafe commands, package risks, and MCP threats |
 | [Prismor](https://github.com/PrismorSec/prismor) | Self-hosted runtime control plane that screens AI coding-agent tool calls against a signed policy before execution, blocking or routing to human approval secret exfiltration, prompt-injection-driven actions, and destructive commands across Claude Code, Codex, and MCP servers |
+| [Skill Safe](https://skillsafe.online/) | Free hosted security scanner that reviews agent skill URLs or uploaded source files for prompt injection, data exfiltration, unsafe actions, and permission risks before installation |
 | [Bifrost](https://github.com/maximhq/bifrost) | Go-native AI gateway that enforces guardrails, rate limits, and fine-grained access controls across LLM and MCP traffic. |
 | [Humanbound](https://github.com/humanbound/humanbound) | Open-source CLI that sends LLM-generated adversarial attacks to an agent's HTTP endpoint and scores results against OWASP LLM Top 10, OWASP Agentic Top 10, NIST, and EU AI Act mappings |
 
