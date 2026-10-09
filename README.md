@@ -132,6 +132,7 @@ AI supply-chain security tools protect model artifacts, provenance, dependencies
 |------|-------------|
 | [Model Transparency](https://github.com/sigstore/model-transparency) | Generate model signing metadata for provenance verification |
 | [BomLens](https://github.com/sktelecom/bomlens) | Local-first SBOM generator that builds CycloneDX ML-BOMs for Hugging Face models, with license and known-vulnerability reports |
+| [SkillTotal](https://github.com/pezhik/skilltotal) | Open-source static scanner for MCP servers, agent skills and npm/PyPI packages that reports shell, network and file-access capabilities, prompt-injection surfaces and exfiltration paths with file and line evidence, and outputs SARIF for CI. |
 
 ### Model Testing, Monitoring, and Evaluation
 
