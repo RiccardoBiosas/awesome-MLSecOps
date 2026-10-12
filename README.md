@@ -116,6 +116,18 @@ AI agent security tools assess memory, tools, permissions, workflows, and runtim
 | [Humanbound](https://github.com/humanbound/humanbound) | Open-source CLI that sends LLM-generated adversarial attacks to an agent's HTTP endpoint and scores results against OWASP LLM Top 10, OWASP Agentic Top 10, NIST, and EU AI Act mappings |
 | [OrcaReplay](https://github.com/Continuum-AI-Corp/OrcaReplay) | Apache-2.0 CLI that records an agent's model-provider exchange at the wire level for post-incident analysis, then replays the recorded run offline so a captured prompt injection becomes a repeatable test case against a candidate guardrail |
 
+### Rogue Agents and Autonomous Agent Security
+
+Rogue AI agents act outside their intended scope, ownership, or objectives without needing an external attacker: through goal drift, agentic misalignment, covert side tasks, orphaned or shadow deployments, and collusion between agents. OWASP tracks this risk as ASI10 Rogue Agents in the [Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications/); the research literature calls it agentic misalignment, sabotage, or AI insider threat. The AI Agent Security tools above harden an agent against hostile input. The tools below treat the agent itself as the threat: they elicit misaligned behaviour under test, monitor live actions and reasoning against a declared remit, and enforce deterministic policy, audit, and shutdown controls.
+
+| Tool | Description |
+|------|-------------|
+| [Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) | MIT-licensed Microsoft toolkit, in public preview, that intercepts every agent tool call, message, and delegation in deterministic code against a YAML policy, adds per-agent identity, sandboxing, and tamper-evident audit trails, and maps its controls to all ten OWASP Agentic Top 10 risks including ASI10 rogue agents |
+| [Adrian](https://github.com/secureagentics/Adrian) | Apache-2.0 runtime monitoring and control engine that judges an agent's tool calls, outputs, and reasoning traces against its declared remit to detect misaligned, off-policy, or out-of-remit behaviour and block or hold actions in flight, with self-hosted deployment and SDKs for LangChain, Anthropic, TypeScript, and Claude Code |
+| [ControlArena](https://github.com/UKGovernmentBEIS/control-arena) | MIT-licensed library from the UK AI Security Institute and Redwood Research for AI control experiments that pair benign main tasks with covert sabotage side tasks and measure how monitors, defer-to-trusted protocols, and audit-and-shutdown procedures contain an untrusted, possibly misaligned agent |
+| [Petri](https://github.com/meridianlabs-ai/inspect_petri) | MIT-licensed alignment auditing agent released by Anthropic and built on Inspect that runs multi-turn audits of a target model with simulated users and tools and scores transcripts for deception, oversight subversion, power-seeking, and other misaligned agentic behaviour |
+| [Agentic Misalignment Research Framework](https://github.com/anthropic-experimental/agentic-misalignment) | MIT-licensed harness behind Anthropic's agentic misalignment study that generates fictional corporate scenarios with blackmail, leaking, and replacement-threat conditions, runs them across 40+ models, and classifies whether the agent carried out the harmful insider action |
+
 ### Privacy-Preserving Machine Learning
 
 Privacy-preserving machine learning tools help limit sensitive-data exposure through differential privacy, encrypted computation, anonymization, and privacy testing.
@@ -289,6 +301,7 @@ Machine learning systems can be attacked through poisoned data, adversarial inpu
 - [Gradient Leakage Attacks](https://ieeexplore.ieee.org/document/10107713)
 - [Cloud Infrastructure Attacks](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7931962/)
 - [Architecture and Access-control attacks](https://genai.owasp.org/llmrisk/llm08-excessive-agency/)
+- [OWASP Top 10 for Agentic Applications 2026 (ASI10 Rogue Agents)](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications/)
 
 
 ## Blogs and Publications
@@ -316,6 +329,11 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 - 🧰 [WTF-blog - MLSecOps frameworks ... Which ones are available and what is the difference?](https://blog.wearetyomsmnv.wtf/articles/mlsecops-frameworks-...-which-ones-are-available-and-what-is-the-difference)
 - 📚 [DreadNode Paper Stack](https://dreadnode.notion.site/2582fe5306274c60b85a5e37cf99da7e?v=74ab79ed1452441dab8a1fa02099fed)
 - 🛡️ [CircleGuardBench: New Standard for Evaluating AI Moderation Models](https://huggingface.co/blog/whitecircle-ai/circleguardbench)
+- 🕴️ [Agentic Misalignment: How LLMs Could Be Insider Threats](https://www.anthropic.com/research/agentic-misalignment) ([paper](https://arxiv.org/abs/2510.05179))
+- 🕶️ [SHADE-Arena: Evaluating Sabotage and Monitoring in LLM Agents](https://arxiv.org/abs/2506.15740)
+- 🐀 [MOLE: Detecting Insider Threats in AI Agents](https://arxiv.org/abs/2609.06966)
+- 📐 [AgentMisalignment: Measuring the Propensity for Misaligned Behaviour in LLM-Based Agents](https://arxiv.org/abs/2506.04018)
+- 🗂️ [Taxonomy of Failure Modes in Agentic AI Systems](https://www.microsoft.com/en-us/security/blog/2025/04/24/new-whitepaper-outlines-the-taxonomy-of-failure-modes-in-ai-agents)
 
 ## MLOps Infrastructure Vulnerabilities
 
