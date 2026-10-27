@@ -239,6 +239,7 @@ Data privacy and anonymization tools help reduce exposure of personal or sensiti
 | [Tool for DATA anonymization](https://github.com/PacktPublishing/Adversarial-AI---Attacks-Mitigations-and-Defense-Strategies/blob/main/ch10/notebooks/Data%20Anonymization.ipynb)| Data anonymization|
 | [BMW Anonymization API](https://github.com/BMW-InnovationLab/BMW-Anonymization-API) | This repository allows you to anonymize sensitive information in images/videos. The solution is fully compatible with the DL-based training/inference solutions that we already published/will publish for Object Detection and Semantic Segmentation |
 | [DeepPrivacy2](https://github.com/hukkelas/deep_privacy2)| A Toolbox for Realistic Image Anonymization |
+| [decima-pii](https://huggingface.co/amyrmahdy/decima-pii) | Small (140M) offline PII tagger for Arabic, Persian, Urdu, Turkish and English text, to strip personal data before it reaches an LLM; runs on a CPU or in the browser |
 
 ## ML Code Security
 
