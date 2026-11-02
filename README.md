@@ -29,9 +29,9 @@ This curated catalog helps security engineers, ML practitioners, developers, and
 Latest articles:
 
 <!-- newsletter-issues:start -->
+- [Research roundup #1: Rogue Agents, Provenance Engineering and Vulnerable Agent Skills](https://themlsecopshacker.com/p/research-roundup-1-rogue-agents-provenance) — October 16, 2026
 - [Safetensors Won. Model Serialization Attacks Didn’t Stop.](https://themlsecopshacker.com/p/safetensors-won-model-serialization) — August 28, 2026
 - [AI Security: Model Serialization Attacks](https://themlsecopshacker.com/p/ai-security-model-serialization-attacks) — November 4, 2024
-- [What is MLSecOps?](https://themlsecopshacker.com/p/what-is-mlsecops) — October 8, 2024
 <!-- newsletter-issues:end -->
 
 ## Table of Contents
