@@ -408,6 +408,7 @@ MLSecOps communities and security frameworks connect practitioners with threat k
 - [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
 - [OWASP LLMSVS](https://owasp.org/www-project-llm-verification-standard/)
 - [OWASP Periodic Table of AI Security](https://owaspai.org/goto/periodictable/)
+- [LLM Threat Coverage Matrix](https://llmthreat.com/coverage-matrix) - Dataset scoring LLM-security vendors against the OWASP LLM Top 10 and MITRE ATLAS.
 - [OWASP SLACK](https://owasp.org/slack/invite)
 - [Awesome LLM Security](https://github.com/corca-ai/awesome-llm-security)
 - [Hackstery](https://hackstery.com/)
