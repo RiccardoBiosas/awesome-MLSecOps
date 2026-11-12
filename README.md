@@ -423,6 +423,7 @@ MLSecOps communities and security frameworks connect practitioners with threat k
 - [MLSecOps Reference Repository](https://github.com/disesdi/mlsecops_references)
 - [Awesome LVLM Attack](https://github.com/liudaizong/Awesome-LVLM-Attack)
 - [Awesome MLLM Safety](https://github.com/isXinLiu/Awesome-MLLM-Safety)
+- [Agent Security Index](https://agentsecurityindex.com/) - Vendor-neutral directory of 102 AI agent security tools across guardrails, MCP gateways, runtime security, red teaming, agent identity and audit, each checked against vendor sources.
 
 
 ## Books
