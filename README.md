@@ -441,6 +441,8 @@ These books provide in-depth guidance on adversarial AI, privacy-preserving mach
 ### AI Security Market Map
 [![Market Map](https://i.postimg.cc/15ZxH0q9/marketmap.png)](https://menlovc.com/perspective/security-for-ai-genai-risks-and-the-emerging-startup-landscape/)
 
+- [AI Security Startups Map](https://startups.prompt.security) - Interactive map of 477 AI and LLM security vendors across 14 categories that records each vendor's capabilities, deployment model, protections, funding and acquisitions, with the dataset available as JSON, CSV and an MCP server.
+
 ## Contributions
 
 All contributions to this list are welcome! Please feel free to submit a pull request with any additions or improvements.
