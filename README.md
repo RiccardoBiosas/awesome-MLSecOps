@@ -337,6 +337,8 @@ Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 - 📐 [AgentMisalignment: Measuring the Propensity for Misaligned Behaviour in LLM-Based Agents](https://arxiv.org/abs/2506.04018)
 - 🗂️ [Taxonomy of Failure Modes in Agentic AI Systems](https://www.microsoft.com/en-us/security/blog/2025/04/24/new-whitepaper-outlines-the-taxonomy-of-failure-modes-in-ai-agents)
 
+- 📰 [Why AI Agents Leak Sensitive Data (and How to Stop Them)](https://www.pastagi.com/news/ai-agent-data-leakage-prevention/) - Five agent data-leak scenarios with boundary controls and serving-side checks
+
 ## MLOps Infrastructure Vulnerabilities
 
 MLOps infrastructure introduces security risks across notebooks, training pipelines, model registries, artifact formats, cloud services, Kubernetes workloads, and inference endpoints. These resources document vulnerabilities, exploits, and defensive controls affecting the operational ML lifecycle.
