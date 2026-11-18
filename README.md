@@ -155,6 +155,7 @@ These projects support model validation, monitoring, robustness, safety, and com
 |------|-------------|
 | [TensorFlow Model Analysis](https://github.com/tensorflow/model-analysis) | A library for analyzing, validating, and monitoring machine learning models in production|
 | [CircleGuardBench](https://github.com/whitecircle/circle-guard-bench)| A full-fledged benchmark for evaluating protection capabilities of AI models|
+| [Decision Models as Guardrails](https://github.com/raxITlabs/decision-models-as-guardrails) | Apache-2.0 benchmark that runs 19 systems, including Amazon Bedrock Guardrails, on 9,975 labelled guardrail checks across prompt attacks, content, denied topics, profanity, PII and grounding, scoring balanced accuracy and cost per 1,000 checks |
 
 ### Additional Open-Source Tools
 
