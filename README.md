@@ -224,6 +224,7 @@ Commercial MLSecOps and AI security tools support model protection, application 
 | [SourceryKit](https://github.com/ProvablyAI/sourcerykit) | Verifies an AI agent's outbound requests and MCP handoffs against a source of truth using zero-knowledge proofs, so a call only goes out if its claims check out; hooks the HTTP libraries, logs each outbound call, and blocks endpoints not on the trusted allow-list |
 | [Speakeasy](https://www.speakeasy.com/product/ai-control-plane) | AI control plane for managing agent access to MCPs, Skills, and Assistants with role-scoped permissions, policy enforcement, threat detection, and event logging |
 | [Trent AI](https://trent.ai) | Agentic AI security platform that continuously assesses AI agents, MCP servers, LLM and AI-native applications, and code shipped with AI coding tools, traces attack chains, and verifies proposed fixes landed |
+| [PrivacyScrubber](https://privacyscrubber.com) | Client-side data sanitization tool, Node.js/WASM SDK (`@privacyscrubber/sdk`), and MCP server (`@privacyscrubber/mcp-server`) that replaces sensitive entities with reversible surrogate tokens in local memory before prompts or documents reach LLM APIs and AI agents |
 
 
 <a id="data"></a>
