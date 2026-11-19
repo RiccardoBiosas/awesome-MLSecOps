@@ -225,6 +225,7 @@ Commercial MLSecOps and AI security tools support model protection, application 
 | [Speakeasy](https://www.speakeasy.com/product/ai-control-plane) | AI control plane for managing agent access to MCPs, Skills, and Assistants with role-scoped permissions, policy enforcement, threat detection, and event logging |
 | [Trent AI](https://trent.ai) | Agentic AI security platform that continuously assesses AI agents, MCP servers, LLM and AI-native applications, and code shipped with AI coding tools, traces attack chains, and verifies proposed fixes landed |
 | [Harden Agentic Integrity Foundation (AIF)](https://harden.run) | Commercial runtime control for AI coding agents that runs on the developer machine at the agent's pre-execution hook and checks each command, file edit and push against the session's intent before it executes, with decisions made locally |
+| [BaseLLM](https://llm.baseinteractive.com.tr/en/docs/overview) | Self-hosted LLM gateway that scans prompts for secrets and personal data, detects prompt injection, enforces per-project limits before the model call, and keeps a tamper-evident audit log exported to SIEM; 30-day evaluation available |
 
 
 <a id="data"></a>
