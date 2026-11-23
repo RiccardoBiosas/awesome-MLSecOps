@@ -207,6 +207,7 @@ The following tools and research prototypes address additional MLSecOps testing,
 | [TrustGate](https://github.com/NeuralTrust/TrustGate) | An open-source Generative Application Firewall (GAF) |
 | [Whistleblower](https://github.com/Repello-AI/whistleblower) | Open-source offensive tool by Repello AI for testing LLM apps against system prompt leakage |
 | [IronClaw](https://github.com/IronSecCo/ironclaw) | Self-hosted runtime that sandboxes autonomous AI agents with isolated execution, restricted networking, and human-approval gating |
+| [Vibe Security Checklist](https://github.com/zColdWater/vibe-security-checklist) | MIT-licensed pre-launch security guardrails for AI-built web apps with `.cursor/rules/security.mdc` agent rules, a zero-dependency local bundle secret scanner, 8 deployment/RLS templates, and empirical 2026 audit data |
 
 
 <a id="commercial-tools"></a>
