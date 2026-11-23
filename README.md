@@ -72,6 +72,7 @@ Model and artifact security tools detect unsafe serialization, malicious payload
 |------|-------------|
 | [ModelScan](https://github.com/protectai/modelscan) | Protection Against ML Model Serialization Attacks |
 | [Safetensors](https://github.com/huggingface/safetensors) | Tensor storage format designed to avoid executable deserialization; it does not establish model provenance or behavioral safety |
+| [pickle-sentry](https://github.com/Sun-Wukhan/pickle-sentry) | Open-source scanner for unsafe pickle deserialization in Python code and ML model files; inspects pickle streams by disassembly only and never executes them |
 
 ### Adversarial Machine Learning Testing
 
