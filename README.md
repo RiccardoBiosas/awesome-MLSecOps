@@ -115,6 +115,7 @@ AI agent security tools assess memory, tools, permissions, workflows, and runtim
 | [Bifrost](https://github.com/maximhq/bifrost) | Go-native AI gateway that enforces guardrails, rate limits, and fine-grained access controls across LLM and MCP traffic. |
 | [Humanbound](https://github.com/humanbound/humanbound) | Open-source CLI that sends LLM-generated adversarial attacks to an agent's HTTP endpoint and scores results against OWASP LLM Top 10, OWASP Agentic Top 10, NIST, and EU AI Act mappings |
 | [OrcaReplay](https://github.com/Continuum-AI-Corp/OrcaReplay) | Apache-2.0 CLI that records an agent's model-provider exchange at the wire level for post-incident analysis, then replays the recorded run offline so a captured prompt injection becomes a repeatable test case against a candidate guardrail |
+| [Argus](https://github.com/gy15901580825/Argus) | Apache-2.0 CLI that sends red-team probes to an AI agent through its HTTP chat endpoint, a browser, MCP tools or a mock payment merchant and reports findings mapped to OWASP LLM Top 10, MITRE ATLAS and NIST AI RMF in SARIF, JUnit XML and HTML |
 
 ### Rogue Agents and Autonomous Agent Security
 
