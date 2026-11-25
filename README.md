@@ -70,6 +70,7 @@ Model and artifact security tools detect unsafe serialization, malicious payload
 
 | Tool | Description |
 |------|-------------|
+| [Marea](https://github.com/indecenti/marea) | Windows tool that rates pickle-based model files by their imports without unpickling them and flags GGUF chat templates with Jinja sandbox-escape patterns, with a JSON command line for automated checks |
 | [ModelScan](https://github.com/protectai/modelscan) | Protection Against ML Model Serialization Attacks |
 | [Safetensors](https://github.com/huggingface/safetensors) | Tensor storage format designed to avoid executable deserialization; it does not establish model provenance or behavioral safety |
 
