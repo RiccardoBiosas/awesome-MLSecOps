@@ -424,6 +424,7 @@ MLSecOps communities and security frameworks connect practitioners with threat k
 - [MLSecOps Reference Repository](https://github.com/disesdi/mlsecops_references)
 - [Awesome LVLM Attack](https://github.com/liudaizong/Awesome-LVLM-Attack)
 - [Awesome MLLM Safety](https://github.com/isXinLiu/Awesome-MLLM-Safety)
+- [AI Security Tracker](https://aisecuritytracker.com/) - Pattern-focused catalog of AI security risks for security leaders; each entry cites dated public sources and lists key controls.
 
 
 ## Books
