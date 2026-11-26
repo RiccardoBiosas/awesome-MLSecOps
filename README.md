@@ -427,7 +427,6 @@ MLSecOps communities and security frameworks connect practitioners with threat k
 - [AI Security Tracker](https://aisecuritytracker.com/) - Pattern-focused catalog of AI security risks for security leaders; each entry cites dated public sources and lists key controls.
 
 
-
 ## Books
 
 These books provide in-depth guidance on adversarial AI, privacy-preserving machine learning, threat modeling, and generative AI security.
