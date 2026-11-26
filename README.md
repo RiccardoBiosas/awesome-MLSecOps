@@ -222,7 +222,9 @@ Commercial MLSecOps and AI security tools support model protection, application 
 | [Guardian](https://protectai.com/guardian) | Model protection in CI/CD |
 | [NeuralTrust](https://neuraltrust.ai) | Tools to protect, secure and test GenAI Applications |
 | [SourceryKit](https://github.com/ProvablyAI/sourcerykit) | Verifies an AI agent's outbound requests and MCP handoffs against a source of truth using zero-knowledge proofs, so a call only goes out if its claims check out; hooks the HTTP libraries, logs each outbound call, and blocks endpoints not on the trusted allow-list |
+| [Speakeasy](https://www.speakeasy.com/product/ai-control-plane) | AI control plane for managing agent access to MCPs, Skills, and Assistants with role-scoped permissions, policy enforcement, threat detection, and event logging |
 | [Trent AI](https://trent.ai) | Agentic AI security platform that continuously assesses AI agents, MCP servers, LLM and AI-native applications, and code shipped with AI coding tools, traces attack chains, and verifies proposed fixes landed |
+| [Harden Agentic Integrity Foundation (AIF)](https://harden.run) | Commercial runtime control for AI coding agents that runs on the developer machine at the agent's pre-execution hook and checks each command, file edit and push against the session's intent before it executes, with decisions made locally |
 | [PrivacyScrubber](https://privacyscrubber.com) | Client-side data sanitization tool, Node.js/WASM SDK (`@privacyscrubber/sdk`), and MCP server (`@privacyscrubber/mcp-server`) that replaces sensitive entities with reversible surrogate tokens in local memory before prompts or documents reach LLM APIs and AI agents |
 
 
@@ -408,6 +410,7 @@ MLSecOps communities and security frameworks connect practitioners with threat k
 - [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
 - [OWASP LLMSVS](https://owasp.org/www-project-llm-verification-standard/)
 - [OWASP Periodic Table of AI Security](https://owaspai.org/goto/periodictable/)
+- [LLM Threat Coverage Matrix](https://llmthreat.com/coverage-matrix) - Dataset scoring LLM-security vendors against the OWASP LLM Top 10 and MITRE ATLAS.
 - [OWASP SLACK](https://owasp.org/slack/invite)
 - [Awesome LLM Security](https://github.com/corca-ai/awesome-llm-security)
 - [Hackstery](https://hackstery.com/)
@@ -528,7 +531,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <p align="center">Made with ❤️ · <a href="https://themlsecopshacker.com/subscribe?utm_source=github&utm_medium=readme">Subscribe to The MLSecOps Hacker</a></p>
-
 
 
 
